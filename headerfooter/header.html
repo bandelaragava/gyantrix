@@ -327,8 +327,8 @@
 /* === Mobile Navbar === */
 @media (max-width: 768px) {
   .student-btn {
-    font-size: 13px;
-    padding: 7px 14px;
+    font-size: 11px;
+    padding: 7px 12px;
     margin-top: 8px;
   }
   .site-header{
@@ -348,29 +348,29 @@
     flex-wrap: wrap;
   }
 
-  .site-header .navbar {
-    top: 72px;
+  .hamburger {
+    display: block;
   }
 
-  .site-header .hamburger {
-    display: block !important;
-    border: none;
-    color: #0c2d57;
-    font-size: 2rem;
-    padding: 0.3rem 0.6rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
-  }
-
-  .site-header .navbar nav {
-    display: none;
+  .navbar nav {
+    display: none !important;
     flex-direction: column;
     width: 100%;
-    background: #fff;
-    padding: 0.5rem 0;
+    background: white;
+    padding: 10px 0;
     border-top: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .navbar nav.active {
+    display: flex !important;
+  }
+
+  .dropdown-content {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    background: #f7f7f9;
+    box-shadow: none;
   }
 
   .site-header .navbar nav.active {
@@ -435,7 +435,7 @@
   }
 
   .site-header .navbar nav {
-    display: flex !important;
+    display: flex ;
     flex-direction: row;
     position: static;
     box-shadow: none;

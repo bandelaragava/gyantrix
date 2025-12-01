@@ -1973,11 +1973,44 @@ form button {
   margin-bottom: 0.5rem;
 }
 .labels .start,.end{
-  color: #61dafb;
+  background: rgba(255, 255, 255, 0.1); /* transparency */
+  backdrop-filter: blur(10px);           /* glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 6px;
+  border-radius: 14px;
 } 
+.labels .start::after{
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255,255,255,0.2);
+}
 .labels .end{
-  padding-left: 87%;
-  padding-bottom: 3%;
+  margin-left: 87%;
+  margin-bottom: 3%;
+}
+.labels .end::before{
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid rgba(255, 255, 255, 0.15);
 }
 
 .career-roadmap {

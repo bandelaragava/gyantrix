@@ -2642,8 +2642,7 @@ form button {
     width: 10rem;
     height: 3rem;
     left: -5%;
-    top: -10%;
-    /* bottom: 40%; */
+    bottom: 80%;
   }
 }
 
@@ -2672,8 +2671,7 @@ form button {
   }
 
   .cta-btn {
-    /* bottom: 40%;   */
-    top: -10%;
+    bottom: 80%;  
     left: -5%;    
     transform: translateX(-50%);
     width: 10rem;

@@ -2310,9 +2310,9 @@ form button {
     display: none; 
   }
 
-  .labels .end{
+  /* .labels .end{
   padding-left: 50%;
-  }
+  } */
 }
 
 /* Extra small screens (phones ≤ 480px) */
@@ -2639,8 +2639,8 @@ form button {
   .cta-btn {
     width: 12rem;
     height: 3rem;
-    left: 10%;
-    bottom: 3%;
+    left: 5%;
+    bottom: 5%;
   }
 }
 

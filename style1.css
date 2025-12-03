@@ -2639,10 +2639,10 @@ form button {
     height: 55vh;      
   }
   .cta-btn {
-    width: 10rem;
+    width: 8rem;
     height: 3rem;
     left: -5%;
-    bottom: 35%;
+    bottom: 45%;
   }
 }
 

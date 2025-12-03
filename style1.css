@@ -2639,10 +2639,10 @@ form button {
     height: 55vh;      
   }
   .cta-btn {
-    width: 10rem;
+    width: 12rem;
     height: 3rem;
     left: -5%;
-    bottom: 80%;
+    bottom: 10%;
   }
 }
 
@@ -2671,10 +2671,10 @@ form button {
   }
 
   .cta-btn {
-    bottom: 80%;  
+    bottom: 10%;  
     left: -5%;    
     transform: translateX(-50%);
-    width: 10rem;
+    width: 12rem;
     height: 2.8rem;
     font-size: 0.9rem;
   }

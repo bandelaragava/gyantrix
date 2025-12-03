@@ -1018,7 +1018,7 @@
 .place-right {
   flex: 2;
   display: flex;
-  gap: 25px; /* 🔹 Slightly more spacing between columns */
+  gap: 25px;
   overflow: hidden;
   height: 100%;
 }
@@ -1054,10 +1054,10 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.place-card:hover {
+/* .place-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-}
+} */
 
 .place-card img {
   width: 60px;

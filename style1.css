@@ -2639,6 +2639,7 @@ form button {
   .cta-btn {
     width: 12rem;
     height: 3rem;
+    left: 20%;
   }
 }
 

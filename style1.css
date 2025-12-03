@@ -2311,7 +2311,7 @@ form button {
   }
 
   .labels .end{
-  padding-left: 78%;
+  padding-left: 50%;
   }
 }
 
@@ -2639,7 +2639,8 @@ form button {
   .cta-btn {
     width: 12rem;
     height: 3rem;
-    left: 20%;
+    left: 10%;
+    bottom: 3%;
   }
 }
 

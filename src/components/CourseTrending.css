@@ -1,0 +1,181 @@
+.trending-section {
+    padding: 3rem 5%;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    /* Deep blue gradient */
+    color: white;
+    position: relative;
+    text-align: left;
+}
+
+.trending-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.trending-section h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.view-all-btn {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background: #fff;
+    color: #1e3c72;
+}
+
+.scroll-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background: #fff;
+    color: #1e3c72;
+}
+
+/* Updated for horizontal scrolling */
+.trending-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    /* Space for shadow/hover */
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.trending-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.trending-card {
+    min-width: 350px;
+    /* Fixed width for flex items */
+    background: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+}
+
+.trending-card:hover {
+    transform: translateY(-5px);
+}
+
+.trending-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.duration-pill {
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #555;
+    border: 1px solid #e0e0e0;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1.1rem;
+}
+
+.trending-card h3 {
+    font-size: 1.1rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    min-height: 3rem;
+}
+
+.trending-card p {
+    display: none;
+}
+
+.trending-card .buttons {
+    margin-top: auto;
+}
+
+.trending-card .btn-schedule {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid #1e3c72;
+    color: #1e3c72;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    background: white;
+}
+
+.trending-card .btn-schedule:hover {
+    background: #1e3c72;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .trending-card {
+        min-width: 280px;
+    }
+
+    .trending-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,106 @@
+.placement-section {
+    padding: 3rem 5%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.placement-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.placement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.placement-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.placement-card:hover {
+    transform: translateY(-5px);
+}
+
+.placement-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.placement-card .content {
+    padding: 1.5rem;
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.placement-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.placement-card .buttons {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.placement-card .btn {
+    flex: 1;
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.placement-card .btn-outline {
+    border: 1px solid #333;
+    color: #333;
+}
+
+.placement-card .btn-outline:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.placement-card .btn-fill {
+    background-color: #0056b3;
+    color: #fff;
+    border: 1px solid #0056b3;
+}
+
+.placement-card .btn-fill:hover {
+    background-color: #004494;
+}
+
+.view-all-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #ff6b6b;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background-color: #fa5252;
+}

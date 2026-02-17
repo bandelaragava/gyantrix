@@ -1,0 +1,143 @@
+.interview-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    min-height: 80vh;
+}
+
+.interview-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Left Column: Questions */
+.questions-column {
+    flex: 1;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.questions-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.questions-header h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.questions-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.iq-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.iq-item.active {
+    border-color: #007bff;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+}
+
+.iq-question {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.iq-question:hover {
+    background: #f1f8ff;
+}
+
+.iq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: #007bff;
+    transition: transform 0.3s;
+}
+
+.iq-item.active .iq-question::after {
+    transform: rotate(45deg);
+}
+
+.iq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    background: #fafafa;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.iq-item.active .iq-answer {
+    padding: 20px;
+    max-height: 200px;
+    /* Adjust based on content */
+    opacity: 1;
+    border-top: 1px solid #eee;
+}
+
+.iq-answer p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Right Column: Image */
+.q-a-img {
+    flex: 0 0 40%;
+    position: sticky;
+    top: 100px;
+}
+
+.q-a-img img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.q-a-img img:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .interview-container {
+        flex-direction: column;
+    }
+
+    .q-a-img {
+        flex: auto;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        position: static;
+    }
+}

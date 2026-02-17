@@ -1,0 +1,152 @@
+/* Extracting styles from legacy header.html */
+.site-header {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  position: relative;
+  z-index: 2000;
+  margin-bottom: 5rem;
+}
+
+/* === Top Bar === */
+.site-header .top-bar {
+  background-color: #0c2d57;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 50px;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  transition: top 0.4s ease;
+}
+
+.site-header .top-bar.hidden {
+  top: -100px;
+}
+
+.site-header .top-left,
+.site-header .top-right {
+  display: flex;
+  align-items: center;
+}
+
+.site-header .top-left span {
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.site-header .top-left a img {
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.site-header .top-left a img:hover {
+  transform: scale(1.1);
+}
+
+.site-header .top-right span {
+  margin-left: 15px;
+  font-weight: 400;
+}
+
+.site-header .top-right .svgicon {
+  margin-right: -0.5rem;
+}
+
+.student-btn {
+  display: inline-block;
+  padding: 6px 15px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(90deg, navy, teal, #3b82f6);
+  background-size: 300%;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(228, 58, 178, 0.4);
+}
+
+.student-btn:hover {
+  background-position: 100% 0;
+  box-shadow: 0 0 35px rgba(228, 58, 178, 0.7),
+    0 0 20px rgba(59, 130, 246, 0.6);
+  transform: translateY(-3px);
+}
+
+.student-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+.student-btn:hover::before {
+  left: 120%;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(228, 58, 178, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+  }
+}
+
+.student-btn {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .student-btn {
+    font-size: 11px;
+    padding: 7px 12px;
+    margin-top: 8px;
+  }
+
+  .site-header {
+    margin-bottom: 10rem;
+  }
+
+  .site-header .top-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .site-header .top-left,
+  .site-header .top-right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 769px) {
+  .student-btn {
+    padding: 7px 16px;
+    font-size: 14px;
+  }
+}

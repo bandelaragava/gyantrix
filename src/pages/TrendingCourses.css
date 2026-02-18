@@ -23,33 +23,29 @@
 /* Search and Filter Section */
 .search-filter-container {
     display: flex;
-    gap: 3rem;
-    /* Increased gap between inputs */
+    gap: 2rem;
     align-items: center;
     margin-bottom: 2rem;
     flex-wrap: wrap;
-    /* Allow wrapping on small screens */
+    justify-content: space-between;
+    /* Pushes inputs left and buttons right */
 }
 
 .search-input-wrapper {
     position: relative;
-    flex: 2;
-    /* Search bar takes more space */
-    min-width: 25rem;
+    flex: 1;
+    min-width: 300px;
 }
 
 .search-input {
     width: 100%;
     padding: 1.3rem 1rem;
     padding-right: 40px;
-    /* Space for icon */
     border: 1px solid #777;
-    /* Darker border for visibility */
     border-radius: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     outline: none;
     height: 48px;
-    /* Fixed height for alignment */
     color: #333;
 }
 
@@ -64,12 +60,9 @@
 }
 
 .category-select {
-    position: relative;
-    left: 6rem;
-    flex: 1;
-    min-width: 19rem;
+    flex: 0.8;
+    min-width: 200px;
     padding: 0 15px;
-    /* Adjust padding, height handles vertical */
     border: 1px solid #777;
     border-radius: 0.5rem;
     font-size: 1.1rem;
@@ -77,26 +70,27 @@
     outline: none;
     cursor: pointer;
     height: 48px;
-    /* Fixed height match */
     color: #333;
 }
 
+.search-btn-group {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    justify-content: flex-end;
+}
+
 .search-btn {
-    position: relative;
-    right: -11rem;
-    margin-left: auto;
-    /* Pushes button group to the right */
     padding: 0 2rem;
     height: 48px;
     background-color: #305caf;
-    /* Deep blue */
     color: white;
     border: none;
     border-radius: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,20 +98,18 @@
 
 .search-btn:hover {
     background-color: white;
-    border: 3px solid #305caf;
-    color: #000;
+    border: 2px solid #305caf;
+    color: #305caf;
 }
 
 .reset-btn {
-    position: relative;
-    right: -9.5rem;
     padding: 0 2rem;
     height: 48px;
     background-color: transparent;
-    color: #1e3c72;
-    border: 2.5px solid #305caf;
-    border-radius: 5px;
-    font-size: 1.2rem;
+    color: #305caf;
+    border: 2px solid #305caf;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s;
@@ -133,12 +125,10 @@
 
 /* Results Header */
 .results-header {
-    position: relative;
-    top: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .results-count {
@@ -148,21 +138,16 @@
 }
 
 .sort-select {
-    position: relative;
-    right: -48rem;
-    padding: 0.5rem 5rem;
+    padding: 0 1.5rem;
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background: white;
     outline: none;
     cursor: pointer;
+    min-width: 15rem;
 }
-
-/* .sort-select ::placeholder {
-    text-align: left;
-    justify-content: flex-start;
-} */
 
 /* Existing Grid and Card Styles */
 .trending-courses-grid {
@@ -227,11 +212,12 @@
 
 .trending-card .buttons {
     margin-top: auto;
+    display: flex;
+    gap: 10px;
 }
 
-.trending-card .btn-schedule {
-    display: block;
-    width: 100%;
+.btn-know-more {
+    flex: 1;
     padding: 10px 0;
     text-align: center;
     border: 1px solid #1e3c72;
@@ -239,8 +225,30 @@
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
-    transition: background 0.3s ease;
-    background: white;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.btn-know-more:hover {
+    background: rgba(30, 60, 114, 0.05);
+}
+
+.btn-enroll {
+    flex: 1;
+    padding: 10px 0;
+    text-align: center;
+    background: #1e3c72;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #1e3c72;
+}
+
+.btn-enroll:hover {
+    background: #162c55;
+    border-color: #162c55;
 }
 
 .trending-card .btn-schedule:hover {

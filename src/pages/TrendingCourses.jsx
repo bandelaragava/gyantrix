@@ -9,13 +9,11 @@ const TrendingCourses = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    // State for filters and pagination
+    // State for filters
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('');
     const [sortOption, setSortOption] = useState('Newest');
     const [filteredCourses, setFilteredCourses] = useState(coursesData);
-    const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 9;
 
     // Categories derived from data
     const categories = ['IT', 'Non-IT', 'Pharma', 'Agriculture', 'Management'];
@@ -43,10 +41,12 @@ const TrendingCourses = () => {
             // Keep default
         } else if (sortOption === 'Popular') {
             results = [...results].reverse();
+        } else if (sortOption === 'Rating') {
+            // Mock rating sort
+            results = [...results].sort((a, b) => b.title.length - a.title.length);
         }
 
         setFilteredCourses(results);
-        setCurrentPage(1); // Reset to first page on search
     };
 
     const handleReset = () => {
@@ -54,18 +54,6 @@ const TrendingCourses = () => {
         setSelectedCategory('');
         setSortOption('Newest');
         setFilteredCourses(coursesData);
-        setCurrentPage(1);
-    };
-
-    // Pagination Logic
-    const indexOfLastItem = currentPage * itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = filteredCourses.slice(indexOfFirstItem, indexOfLastItem);
-    const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
-
-    const paginate = (pageNumber) => {
-        setCurrentPage(pageNumber);
-        window.scrollTo(0, 0);
     };
 
     // Auto-search on sort change
@@ -138,8 +126,8 @@ const TrendingCourses = () => {
 
                 {/* Grid */}
                 <div className="trending-courses-grid">
-                    {currentItems.length > 0 ? (
-                        currentItems.map((course, index) => (
+                    {filteredCourses.length > 0 ? (
+                        filteredCourses.map((course, index) => (
                             <div key={index} className="trending-card">
                                 <img src={getAssetUrl(course.img)} alt={course.title} />
 
@@ -151,7 +139,8 @@ const TrendingCourses = () => {
                                 <h3>{course.title}</h3>
 
                                 <div className="buttons">
-                                    <Link to={course.link} className="btn-schedule">Schedule an Appointment</Link>
+                                    <Link to={course.link} className="btn-know-more">Know More</Link>
+                                    <Link to="/contact" className="btn-enroll">Enroll Now</Link>
                                 </div>
                             </div>
                         ))
@@ -161,38 +150,6 @@ const TrendingCourses = () => {
                         </p>
                     )}
                 </div>
-
-                {/* Pagination Section */}
-                {filteredCourses.length > itemsPerPage && (
-                    <div className="pagination-wrapper">
-                        <div className="pagination-info">
-                            Showing {indexOfFirstItem + 1} - {Math.min(indexOfLastItem, filteredCourses.length)} of {filteredCourses.length} results
-                        </div>
-                        <div className="pagination-buttons">
-                            <button
-                                className={`page-btn ${currentPage === 1 ? 'disabled' : ''}`}
-                                onClick={() => currentPage > 1 && paginate(currentPage - 1)}
-                            >
-                                Previous
-                            </button>
-                            {[...Array(totalPages)].map((_, i) => (
-                                <button
-                                    key={i + 1}
-                                    className={`page-btn ${currentPage === i + 1 ? 'active' : ''}`}
-                                    onClick={() => paginate(i + 1)}
-                                >
-                                    {i + 1}
-                                </button>
-                            ))}
-                            <button
-                                className={`page-btn ${currentPage === totalPages ? 'disabled' : ''}`}
-                                onClick={() => currentPage < totalPages && paginate(currentPage + 1)}
-                            >
-                                Next
-                            </button>
-                        </div>
-                    </div>
-                )}
 
                 {/* Upskill CTA Section */}
                 <div className="upskill-cta-section">

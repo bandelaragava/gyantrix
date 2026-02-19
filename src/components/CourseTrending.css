@@ -67,13 +67,15 @@
     display: flex;
     overflow-x: auto;
     gap: 2rem;
-    padding-bottom: 2rem;
+    padding: 1rem 5% 3rem;
+    /* Compressing cards with 5% side padding */
     /* Space for shadow/hover */
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+    scroll-snap-type: x mandatory;
 }
 
 .trending-grid::-webkit-scrollbar {
@@ -81,8 +83,9 @@
 }
 
 .trending-card {
-    min-width: 350px;
-    /* Fixed width for flex items */
+    flex: 0 0 calc((90% - 4rem) / 3);
+    /* 90% container width makes cards slightly narrower */
+    scroll-snap-align: center;
     background: #fff;
     border-radius: 20px;
     padding: 15px;
@@ -163,9 +166,17 @@
     color: white;
 }
 
+@media (max-width: 1024px) {
+    .trending-card {
+        flex: 0 0 calc((100% - 2rem) / 2);
+        /* 2 cards on tablets */
+    }
+}
+
 @media (max-width: 768px) {
     .trending-card {
-        min-width: 280px;
+        flex: 0 0 85%;
+        /* 1 card partially showing next one */
     }
 
     .trending-header {

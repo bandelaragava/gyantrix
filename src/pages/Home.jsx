@@ -9,9 +9,49 @@ import CareerServices from '../components/CareerServices';
 
 const Home = () => {
     const [openFaq, setOpenFaq] = useState(null);
+    const [activeOffer, setActiveOffer] = useState(0);
+
+    const offers = [
+        {
+            title: "Live & Recorded",
+            icon: "fas fa-video",
+            subtitle: "Hybrid Learning Experience",
+            description: "Engage in real-time with industry veterans during our intensive live sessions. Missed a class? No worries—get lifetime access to our HD recording library and comprehensive study materials.",
+            features: ["Doubt Clearing Sessions", "Self-Paced Learning", "High-Quality Video Content", "Access Anywhere"]
+        },
+        {
+            title: "Real-World Projects",
+            icon: "fas fa-project-diagram",
+            subtitle: "Portfolio-Grade Assignments",
+            description: "Bridge the gap between theory and practice. Work on 10+ industry-grade projects curated by tech leads from top MNCs, simulating real challenges you'll face in the professional world.",
+            features: ["End-to-End Development", "Case Study Analysis", "GitHub Profile Enhancement", "Peer Review System"]
+        },
+        {
+            title: "AI-Powered LMS",
+            icon: "fas fa-robot",
+            subtitle: "Next-Gen Learning Platform",
+            description: "Experience the futures of education. Our AI-enabled Learning Management System tracks your performance, suggests personalized resources, and helps you master complex topics faster.",
+            features: ["Personalized Dashboards", "Automated Assessments", "Resource Recommendation", "Progress Tracking"]
+        },
+        {
+            title: "Mentor Access",
+            icon: "fas fa-user-tie",
+            subtitle: "1-on-1 Career Guidance",
+            description: "Don't just learn; be guided. Get direct access to senior professionals who provide personalized career coaching, technical mentorship, and technical advice to help you scale.",
+            features: ["Direct Interaction", "Career Coaching", "Resume Support", "Technical Reviews"]
+        },
+        {
+            title: "Career Support",
+            icon: "fas fa-briefcase",
+            subtitle: "Global Placement Network",
+            description: "Your success is our priority. Benefit from our extensive network of 999+ hiring partners. We provide end-to-end placement assistance until you land your dream job.",
+            features: ["Mock Interviews", "Placement Drives", "Global Network", "Salary Negotiation Support"]
+        }
+    ];
 
     return (
         <div className="home-page">
+            {/* ... hero and other sections ... */}
             {/* Hero Section */}
             <section className="hero">
                 <div className="hero-content">
@@ -68,7 +108,7 @@ const Home = () => {
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
                         <img src={getAssetUrl("/images/goL.png")} alt="Go" />
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
-                        <img src="https://static.vecteezy.com/system/resources/previews/043/987/991/non_2x/sql-3d-icon-png.png" alt="SQL" />
+                        <img src="https://cdn-icons-png.flaticon.com/512/2772/2772128.png" alt="SQL" />
                     </div>
 
                     <div className="center">
@@ -152,14 +192,66 @@ const Home = () => {
             {/* Feature Section */}
             <FeaturesSection />
 
-            <section className="offer">
-                <h2>WHAT WE OFFER</h2>
-                <div className="offer-grid">
-                    <div className="offer-card">Live & Recorded</div>
-                    <div className="offer-card">Real Projects</div>
-                    <div className="offer-card">AI Based LMS</div>
-                    <div className="offer-card">Mentor Access</div>
-                    <div className="offer-card">Career Support</div>
+            {/* Premium Interactive Stepper Section */}
+            <section className="offer-stepper">
+                <div className="container">
+                    <div className="stepper-header">
+                        <span className="badge">Why Choose Gyantrix?</span>
+                        <h2>Unmatched Training Ecosystem</h2>
+                        <p>Experience a professional learning journey designed for modern tech careers.</p>
+                    </div>
+
+                    <div className="stepper-layout">
+                        {/* Left: Navigation Steps */}
+                        <div className="stepper-nav">
+                            {offers.map((offer, index) => (
+                                <button
+                                    key={index}
+                                    className={`stepper-item ${activeOffer === index ? 'active' : ''}`}
+                                    onClick={() => setActiveOffer(index)}
+                                    onMouseEnter={() => setActiveOffer(index)}
+                                >
+                                    <div className="stepper-icon-box">
+                                        <i className={offer.icon}></i>
+                                    </div>
+                                    <div className="stepper-text">
+                                        <h3>{offer.title}</h3>
+                                        <span>{offer.subtitle}</span>
+                                    </div>
+                                    <div className="active-indicator"></div>
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Right: Feature Showcase */}
+                        <div className="stepper-showcase">
+                            <div className="showcase-content" key={activeOffer}>
+                                <div className="showcase-info">
+                                    <span className="showcase-tag">Features Overview</span>
+                                    <h1>{offers[activeOffer].title}</h1>
+                                    <p>{offers[activeOffer].description}</p>
+
+                                    <div className="feature-tags">
+                                        {offers[activeOffer].features.map((feat, i) => (
+                                            <span key={i} className="feat-tag">
+                                                <i className="fas fa-check-circle"></i> {feat}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    <Link to="/courses" className="showcase-btn">
+                                        Explored Programs <i className="fas fa-arrow-right"></i>
+                                    </Link>
+                                </div>
+                                <div className="showcase-visual">
+                                    <div className="floating-sphere"></div>
+                                    <div className="icon-large">
+                                        <i className={offers[activeOffer].icon}></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 

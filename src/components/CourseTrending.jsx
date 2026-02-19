@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { coursesData } from '../data/courses';
 import { getAssetUrl } from '../utils/assets';
@@ -7,15 +7,35 @@ import './CourseTrending.css';
 const CourseTrending = () => {
     const scrollRef = useRef(null);
 
+    // Auto-scroll Logic
+    useEffect(() => {
+        const interval = setInterval(() => {
+            scroll('right');
+        }, 3000); // 3 seconds
+        return () => clearInterval(interval);
+    }, []);
+
     // Scroll Logic
     const scroll = (direction) => {
         const { current } = scrollRef;
         if (current) {
-            const scrollAmount = 400; // Approx card width + gap
-            current.scrollBy({
-                left: direction === 'left' ? -scrollAmount : scrollAmount,
-                behavior: 'smooth'
-            });
+            // Get the width of one card (including gap)
+            const firstCard = current.querySelector('.trending-card');
+            const cardWidth = firstCard ? firstCard.offsetWidth + 32 : 400; // 32px is 2rem gap
+
+            const maxScroll = current.scrollWidth - current.clientWidth;
+
+            // Loop logic: if at the end, jump back to start
+            if (direction === 'right' && current.scrollLeft >= maxScroll - 10) {
+                current.scrollTo({ left: 0, behavior: 'smooth' });
+            } else if (direction === 'left' && current.scrollLeft <= 10) {
+                current.scrollTo({ left: maxScroll, behavior: 'smooth' });
+            } else {
+                current.scrollBy({
+                    left: direction === 'left' ? -cardWidth : cardWidth,
+                    behavior: 'smooth'
+                });
+            }
         }
     };
 
@@ -43,7 +63,7 @@ const CourseTrending = () => {
             </div>
 
             <div className="trending-grid" ref={scrollRef}>
-                {coursesData.map((course, index) => (
+                {coursesData.filter(c => c.isTrending2026).map((course, index) => (
                     <div key={index} className="trending-card">
                         <img src={getAssetUrl(course.img)} alt={course.title} />
 

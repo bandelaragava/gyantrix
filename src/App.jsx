@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -24,6 +24,7 @@ import Dashboard from './pages/Dashboard';
 import LeadFormPage from './pages/LeadFormPage';
 import PlacementCourses from './pages/PlacementCourses';
 import TrendingCourses from './pages/TrendingCourses';
+import StudentPrograms from './pages/StudentPrograms';
 import SparkleBackground from './components/SparkleBackground';
 import CurtainEffect from './components/CurtainEffect';
 
@@ -33,7 +34,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="courses" element={<Courses />} />
+                    <Route path="courses" element={<TrendingCourses />} />
+                    <Route path="trending-courses" element={<TrendingCourses />} />
                     <Route path="courses/:courseId" element={<CourseDetail />} />
                     <Route path="about" element={<About />} />
                     <Route path="faqs" element={<FAQs />} />
@@ -64,7 +66,9 @@ function App() {
                     <Route path="management" element={<NonIT />} />
                     <Route path="curtain" element={<CurtainEffect />} />
                     <Route path="placement-guarantee" element={<PlacementCourses />} />
-                    <Route path="trending-courses" element={<TrendingCourses />} />
+                    <Route path="student-programs" element={<StudentPrograms />} />
+                    <Route path="index.html" element={<Navigate to="/" replace />} />
+                    <Route path="events.html" element={<Navigate to="/" replace />} />
                     {/* Add other nested routes here */}
                 </Route>
             </Routes>

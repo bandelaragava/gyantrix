@@ -61,11 +61,11 @@ const CourseDetail = () => {
     // I will use reference to the hardcoded list but maybe we should randomize or just keep it as "Institute Placements".
 
     const placementStudents = [
-        { name: 'Priya Sharma', company: 'Future Invo Solutions', img: 'https://styles.redditmedia.com/t5_oswi3/styles/communityIcon_wsky8qhnr5b61.jpg?format=pjpg&s=ca49d14582ee9d23cc79c84fdda5a81fdc7b8141' },
-        { name: 'Rahul Verma', company: 'Infoz IT', img: 'https://img.freepik.com/premium-photo/indian-male-college-student-campus-with-books-bag_466689-96712.jpg?w=2000' },
+        { name: 'Priya Sharma', company: 'Future Invo Solutions', img: 'https://xsgames.co/randomusers/assets/avatars/female/9.jpg' },
+        { name: 'Rahul Verma', company: 'Infoz IT', img: 'https://xsgames.co/randomusers/assets/avatars/male/8.jpg' },
         { name: 'Neha Gupta', company: 'Wipro', img: 'https://cdn-icons-png.flaticon.com/512/3135/3135768.png' },
-        { name: 'Vikas Kumar', company: 'Tech Mahindra', img: 'https://img.freepik.com/premium-photo/indian-male-college-student-campus-with-books-bag_466689-96704.jpg' },
-        { name: 'Ritu Singh', company: 'Capgemini', img: 'https://img.freepik.com/premium-photo/serious-young-woman-leadership-conference_706399-18492.jpg' }
+        { name: 'Vikas Kumar', company: 'Tech Mahindra', img: 'https://xsgames.co/randomusers/assets/avatars/male/9.jpg' },
+        { name: 'Ritu Singh', company: 'Capgemini', img: 'https://xsgames.co/randomusers/assets/avatars/female/10.jpg' }
     ];
 
     const [newReview, setNewReview] = useState({ name: '', role: '', review: '' });
@@ -293,15 +293,15 @@ const CourseDetail = () => {
                 <div className="career-highlight-grid">
                     {(course.highlights || [
                         { title: "Worldwide Placements", icon: "https://cdn-icons-png.flaticon.com/512/2640/2640822.png" },
-                        { title: "80% Practical Training", icon: "https://tse4.mm.bing.net/th/id/OIP.NAsxztMZEdzzIeHo6KNoAgHaHa?pid=ImgDet&w=474&h=474&rs=1" },
-                        { title: "Global Certifications", icon: "https://cdn1.iconfinder.com/data/icons/nerd-thick-line/1000/7672-Diploma-512.png" },
-                        { title: "Integrated Internship", icon: "https://static.vecteezy.com/system/resources/previews/012/879/277/non_2x/education-icon-style-vector.jpg" },
+                        { title: "80% Practical Training", icon: "https://cdn-icons-png.flaticon.com/512/3233/3233514.png" },
+                        { title: "Global Certifications", icon: "https://cdn.simpleicons.org/coursera/0056D2" },
+                        { title: "Integrated Internship", icon: "https://cdn-icons-png.flaticon.com/512/3135/3135810.png" },
                         { title: "Personalised Career Coach", icon: "https://cdn-icons-png.flaticon.com/512/10547/10547540.png" },
-                        { title: "Instant Doubt Solving", icon: "https://tse1.mm.bing.net/th/id/OIP.29kY2Y6bS2qUnvQyXtVh8QHaHa?rs=1&pid=ImgDetMain" },
-                        { title: "Alumni Network", icon: "https://cdn2.iconfinder.com/data/icons/education-543/64/Feed_back-Sharing-512.png" },
-                        { title: "Multi-Domain Interviews", icon: "https://cdn1.iconfinder.com/data/icons/immigration-4/492/11383_-_Interview-1024.png" },
-                        { title: "Profile Building Session", icon: "https://icon-library.com/images/icon-resume/icon-resume-11.jpg" },
-                        { title: "Job Assistance", icon: "https://cdn0.iconfinder.com/data/icons/business-human-resources-icons/547/Teamwork-512.png" }
+                        { title: "Instant Doubt Solving", icon: "https://cdn-icons-png.flaticon.com/512/9408/9408175.png" },
+                        { title: "Alumni Network", icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png" },
+                        { title: "Multi-Domain Interviews", icon: "https://cdn-icons-png.flaticon.com/512/3135/3135729.png" },
+                        { title: "Profile Building Session", icon: "https://cdn-icons-png.flaticon.com/512/3135/3135755.png" },
+                        { title: "Job Assistance", icon: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png" }
                     ]).map((highlight, index) => (
                         <div key={index} className="career-card">
                             <div className="card-glass-effect"></div>

@@ -61,11 +61,11 @@ const CourseDetail = () => {
     // I will use reference to the hardcoded list but maybe we should randomize or just keep it as "Institute Placements".
 
     const placementStudents = [
-        { name: 'Priya Sharma', company: 'Future Invo Solutions', img: 'https://xsgames.co/randomusers/assets/avatars/female/9.jpg' },
-        { name: 'Rahul Verma', company: 'Infoz IT', img: 'https://xsgames.co/randomusers/assets/avatars/male/8.jpg' },
-        { name: 'Neha Gupta', company: 'Wipro', img: 'https://cdn-icons-png.flaticon.com/512/3135/3135768.png' },
-        { name: 'Vikas Kumar', company: 'Tech Mahindra', img: 'https://xsgames.co/randomusers/assets/avatars/male/9.jpg' },
-        { name: 'Ritu Singh', company: 'Capgemini', img: 'https://xsgames.co/randomusers/assets/avatars/female/10.jpg' }
+        { name: 'Priya Sharma', company: 'Future Invo Solutions', img: 'https://ui-avatars.com/api/?name=Priya+Sharma&background=E91E63&color=fff&size=128' },
+        { name: 'Rahul Verma', company: 'Infoz IT', img: 'https://ui-avatars.com/api/?name=Rahul+Verma&background=2196F3&color=fff&size=128' },
+        { name: 'Neha Gupta', company: 'Wipro', img: 'https://ui-avatars.com/api/?name=Neha+Gupta&background=00BCD4&color=fff&size=128' },
+        { name: 'Vikas Kumar', company: 'Tech Mahindra', img: 'https://ui-avatars.com/api/?name=Vikas+Kumar&background=607D8B&color=fff&size=128' },
+        { name: 'Ritu Singh', company: 'Capgemini', img: 'https://ui-avatars.com/api/?name=Ritu+Singh&background=F44336&color=fff&size=128' }
     ];
 
     const [newReview, setNewReview] = useState({ name: '', role: '', review: '' });
@@ -149,10 +149,9 @@ const CourseDetail = () => {
                     <div className="forge-content-wrapper">
                         <div className="forge-editorial">
                             <span className="forge-eyebrow">Professional Track</span>
-                            <h1>Forge Your Future as a <br /><span className="title-highlight">{course.title}</span> Expert</h1>
+                            <h1>Shape Tomorrow with the Power of <br /><span className="title-highlight">{course.title}</span></h1>
                             <p>
-                                Step confidently into the cutting-edge world of technology with our {course.title} Training in Hyderabad.
-                                Guided by industry experts, you'll learn to solve real-world problems with hands-on projects and IIT-inspired curriculum.
+                                {course.programDescription || `Step confidently into the cutting-edge world of technology with our ${course.title} Training in Hyderabad. Guided by industry experts, you'll learn to solve real-world problems with hands-on projects and IIT-inspired curriculum.`}
                             </p>
 
                             <div className="tech-specs-grid">

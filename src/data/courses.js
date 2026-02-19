@@ -9,6 +9,7 @@ export const coursesData = [
         desc: "Artificial Intelligence is the development of computer systems that can perform tasks requiring human-like intelligence.",
         link: "/courses/artificialintelligence",
         isTrending2026: true,
+        programDescription: "Become an AI-powered data analyst with our comprehensive program in Hyderabad. Learn to combine traditional analytics with artificial intelligence to automate insights and predictions. Our industry-focused training equips you with both analytical thinking and AI implementation skills.",
         modules: [
             { title: 'Python Programming', tag: '#Backend', content: 'Master Python syntax, data structures, and libraries essential for AI and Data Science.' },
             { title: 'SQL & Database', tag: '#Database', content: 'Master SQL queries to extract and manage data from relational databases.' },
@@ -34,8 +35,8 @@ export const coursesData = [
             { name: 'Jupyter', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png' }
         ],
         reviews: [
-            { name: "Arun Kumar", role: "Data Analyst", review: "The AI & Data Science course specific curriculum helped me switch from a non-tech role.", img: "https://xsgames.co/randomusers/assets/avatars/male/1.jpg" },
-            { name: "Sneha Reddy", role: "ML Engineer", review: "Hands-on projects in Machine Learning were incredibly useful for my interviews.", img: "https://xsgames.co/randomusers/assets/avatars/female/1.jpg" }
+            { name: "Arun Kumar", role: "Data Analyst", review: "The AI & Data Science course specific curriculum helped me switch from a non-tech role.", img: "https://ui-avatars.com/api/?name=Arun+Kumar&background=0D8ABC&color=fff&size=128" },
+            { name: "Sneha Reddy", role: "ML Engineer", review: "Hands-on projects in Machine Learning were incredibly useful for my interviews.", img: "https://ui-avatars.com/api/?name=Sneha+Reddy&background=E91E8C&color=fff&size=128" }
         ],
         faqs: [
             { question: "What are the career opportunities after completing this course?", answer: "Graduates can apply for roles like AI Engineer, Data Scientist, ML Engineer, and Business Intelligence Analyst across various industries." },
@@ -77,8 +78,8 @@ export const coursesData = [
             { name: 'AWS', img: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' }
         ],
         reviews: [
-            { name: 'Swati Nair', role: 'Full Stack Developer', review: 'Gyantrix Academy completely changed my career path. The mentors are industry experts who guide you at every step.', img: 'https://xsgames.co/randomusers/assets/avatars/female/2.jpg' },
-            { name: 'Karthik Goud', role: 'MERN Developer', review: 'The practical approach with real projects helped me build confidence and land a high-paying job.', img: 'https://xsgames.co/randomusers/assets/avatars/male/2.jpg' }
+            { name: 'Swati Nair', role: 'Full Stack Developer', review: 'Gyantrix Academy completely changed my career path. The mentors are industry experts who guide you at every step.', img: 'https://ui-avatars.com/api/?name=Swati+Nair&background=9C27B0&color=fff&size=128' },
+            { name: 'Karthik Goud', role: 'MERN Developer', review: 'The practical approach with real projects helped me build confidence and land a high-paying job.', img: 'https://ui-avatars.com/api/?name=Karthik+Goud&background=FF5722&color=fff&size=128' }
         ],
         faqs: [
             { question: "What is the primary focus of the Full Stack course?", answer: "We focus on end-to-end development, covering React for frontend, Node/Python/Java for backend, and MongoDB/SQL for databases." },
@@ -117,7 +118,7 @@ export const coursesData = [
             { name: 'Spark', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Apache_Spark_logo.svg/1200px-Apache_Spark_logo.svg.png' }
         ],
         reviews: [
-            { name: "Ananya Gupta", role: "Data Scientist", review: "The program at Gyantrix helped me gain job-ready skills and land my first internship in less than three months.", img: "https://xsgames.co/randomusers/assets/avatars/female/3.jpg" }
+            { name: "Ananya Gupta", role: "Data Scientist", review: "The program at Gyantrix helped me gain job-ready skills and land my first internship in less than three months.", img: "https://ui-avatars.com/api/?name=Ananya+Gupta&background=4CAF50&color=fff&size=128" }
         ],
         faqs: [
             { question: "Is Python mandatory for Data Science?", answer: "Python is the most popular language for Data Science due to its extensive library support, and it is a core part of our training." },
@@ -155,7 +156,7 @@ export const coursesData = [
             { name: 'Visio', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Microsoft_Visio_logo_%282019-present%29.svg/1200px-Microsoft_Visio_logo_%282019-present%29.svg.png' }
         ],
         reviews: [
-            { name: "Ritu Singh", role: "Business Analyst", review: "The Agile and Scrum modules were incredibly practical. I learned how to manage stakeholders effectively.", img: "https://xsgames.co/randomusers/assets/avatars/female/4.jpg" }
+            { name: "Ritu Singh", role: "Business Analyst", review: "The Agile and Scrum modules were incredibly practical. I learned how to manage stakeholders effectively.", img: "https://ui-avatars.com/api/?name=Ritu+Singh&background=F44336&color=fff&size=128" }
         ],
         faqs: [
             { question: "What is the primary role of a Business Analyst?", answer: "A BA acts as a bridge between business stakeholders and technical teams, translating business needs into technical requirements." },
@@ -193,7 +194,7 @@ export const coursesData = [
             { name: 'Python', img: 'https://cdn-icons-png.flaticon.com/512/5968/5968350.png' }
         ],
         reviews: [
-            { name: "Suresh Raina", role: "Junior Data Analyst", review: "The visualization modules in Power BI and Tableau were excellent. I can now create dashboards that wow my team.", img: "https://xsgames.co/randomusers/assets/avatars/male/3.jpg" }
+            { name: "Suresh Raina", role: "Junior Data Analyst", review: "The visualization modules in Power BI and Tableau were excellent. I can now create dashboards that wow my team.", img: "https://ui-avatars.com/api/?name=Suresh+Raina&background=2196F3&color=fff&size=128" }
         ],
         faqs: [
             { question: "What is the difference between Data Science and Data Analytics?", answer: "Data Analytics focuses more on interpreting existing data to provide insights, while Data Science involves building predictive models." },
@@ -212,6 +213,7 @@ export const coursesData = [
         desc: "Medical Coding is the process of translating healthcare diagnoses, procedures, and treatments into standardized codes for records and billing.",
         link: "/courses/medicalCoding",
         isTrending2026: true,
+        programDescription: "Launch your healthcare career with our comprehensive Medical Coding program. Gain the specialized skills needed to accurately translate medical procedures and diagnoses into universal codes, ensuring proper billing and maintaining patient record integrity.",
         modules: [
             { title: 'Medical Terminology and Anatomy', tag: '#Basic', content: 'Master medical terms and human anatomy essentials for accurate coding.' },
             { title: 'ICD-10-CM Training', tag: '#ICD10', content: 'Deep dive into diagnosis coding with the latest ICD-10-CM standards.' },
@@ -230,7 +232,7 @@ export const coursesData = [
             { name: 'AAPC', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966436.png' }
         ],
         reviews: [
-            { name: "Neha Gupta", role: "Medical Coder", review: "The certification exam preparation was extremely helpful. I cleared my CPC on the first attempt.", img: "https://xsgames.co/randomusers/assets/avatars/female/5.jpg" }
+            { name: "Neha Gupta", role: "Medical Coder", review: "The certification exam preparation was extremely helpful. I cleared my CPC on the first attempt.", img: "https://ui-avatars.com/api/?name=Neha+Gupta&background=00BCD4&color=fff&size=128" }
         ],
         faqs: [
             { question: "What certifications are covered?", answer: "We prepare you for global certifications like AAPC (CPC) and AHIMA, which are highly recognized in the healthcare industry." },
@@ -265,7 +267,7 @@ export const coursesData = [
             { name: 'Cerner', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966504.png' }
         ],
         reviews: [
-            { name: "Siddharth Verma", role: "Medical Scribe", review: "The EHR training was fantastic. I felt completely prepared when I started my first day at the clinic.", img: "https://xsgames.co/randomusers/assets/avatars/male/4.jpg" }
+            { name: "Siddharth Verma", role: "Medical Scribe", review: "The EHR training was fantastic. I felt completely prepared when I started my first day at the clinic.", img: "https://ui-avatars.com/api/?name=Siddharth+Verma&background=607D8B&color=fff&size=128" }
         ],
         faqs: [
             { question: "What exactly does a Medical Scribe do?", answer: "A scribe works alongside doctors to document patient encounters in real-time within the EHR system, freeing the physician to focus on care." },
@@ -301,7 +303,7 @@ export const coursesData = [
             { name: 'Bioinformatics Tools', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966367.png' }
         ],
         reviews: [
-            { name: "Simran Kaur", role: "Geneticist", review: "The CRISPR and gene editing modules were world-class. Excellent research support provided here.", img: "https://xsgames.co/randomusers/assets/avatars/female/6.jpg" }
+            { name: "Simran Kaur", role: "Geneticist", review: "The CRISPR and gene editing modules were world-class. Excellent research support provided here.", img: "https://ui-avatars.com/api/?name=Simran+Kaur&background=8BC34A&color=fff&size=128" }
         ],
         faqs: [
             { question: "What is the focus of the Genetic Engineering course?", answer: "The course focuses on molecular biology, CRISPR/Cas9 gene editing, and recombinant DNA technology." },
@@ -336,7 +338,7 @@ export const coursesData = [
             { name: 'MedDRA', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966468.png' }
         ],
         reviews: [
-            { name: "Sandeep Rao", role: "PV Specialist", review: "The deep dive into MedDRA coding and Argus Safety was exactly what I needed for my promotion.", img: "https://xsgames.co/randomusers/assets/avatars/male/5.jpg" }
+            { name: "Sandeep Rao", role: "PV Specialist", review: "The deep dive into MedDRA coding and Argus Safety was exactly what I needed for my promotion.", img: "https://ui-avatars.com/api/?name=Sandeep+Rao&background=FF9800&color=fff&size=128" }
         ],
         faqs: [
             { question: "What is Pharmacovigilance (PV)?", answer: "PV is the science and activities relating to the detection, assessment, understanding, and prevention of adverse effects of medicines." },
@@ -374,7 +376,7 @@ export const coursesData = [
             { name: 'Semrush', img: 'https://cdn.iconscout.com/icon/free/png-256/semrush-1-1175065.png' }
         ],
         reviews: [
-            { name: "Priya Sharma", role: "Digital Marketer", review: "The Google Ads module changed my perspective on PPC. I saw immediate results in my client projects.", img: "https://xsgames.co/randomusers/assets/avatars/female/7.jpg" }
+            { name: "Priya Sharma", role: "Digital Marketer", review: "The Google Ads module changed my perspective on PPC. I saw immediate results in my client projects.", img: "https://ui-avatars.com/api/?name=Priya+Sharma&background=E91E63&color=fff&size=128" }
         ],
         faqs: [
             { question: "What are the most in-demand skills in Digital Marketing?", answer: "SEO, Performance Marketing (Ads), Social Media Strategy, and Content Marketing are currently the top skills sought by employers." },
@@ -411,7 +413,7 @@ export const coursesData = [
             { name: 'Amplitude', img: 'https://cdn-icons-png.flaticon.com/512/906/906314.png' }
         ],
         reviews: [
-            { name: "Varun Mehta", role: "Associate PM", review: "The case study methodology used here is excellent. It really taught me how to think like a product owner.", img: "https://xsgames.co/randomusers/assets/avatars/male/6.jpg" }
+            { name: "Varun Mehta", role: "Associate PM", review: "The case study methodology used here is excellent. It really taught me how to think like a product owner.", img: "https://ui-avatars.com/api/?name=Varun+Mehta&background=3F51B5&color=fff&size=128" }
         ],
         faqs: [
             { question: "What is an MVP?", answer: "An MVP (Minimum Viable Product) is the simplest version of a product that allows a team to collect maximum validated learning about customers with the least effort." },
@@ -447,7 +449,7 @@ export const coursesData = [
             { name: 'SAP SuccessFactors', img: 'https://cdn.iconscout.com/icon/free/png-256/sap-4-1175133.png' }
         ],
         reviews: [
-            { name: "Megha Rao", role: "HR Generalist", review: "The module on HR Analytics opened my eyes to how much impact data can have on hiring efficiency.", img: "https://xsgames.co/randomusers/assets/avatars/female/8.jpg" }
+            { name: "Megha Rao", role: "HR Generalist", review: "The module on HR Analytics opened my eyes to how much impact data can have on hiring efficiency.", img: "https://ui-avatars.com/api/?name=Megha+Rao&background=009688&color=fff&size=128" }
         ],
         faqs: [
             { question: "What is the most important skill for an HR professional?", answer: "A mix of empathy, communication, and organizational skills is essential for success in HR." },
@@ -517,7 +519,7 @@ export const coursesData = [
             { name: 'Trailhead', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966412.png' }
         ],
         reviews: [
-            { name: "Rahul Deshmukh", role: "Salesforce Admin", review: "The hands-on Flow Builder training was a lifesaver. I can now automate complex business logic in minutes.", img: "https://xsgames.co/randomusers/assets/avatars/male/7.jpg" }
+            { name: "Rahul Deshmukh", role: "Salesforce Admin", review: "The hands-on Flow Builder training was a lifesaver. I can now automate complex business logic in minutes.", img: "https://ui-avatars.com/api/?name=Rahul+Deshmukh&background=795548&color=fff&size=128" }
         ],
         faqs: [
             { question: "Do I need to know coding for Salesforce?", answer: "Not initially. You can start as a Salesforce Administrator (No-Code). Coding (Apex) is needed for the Developer track, which we also cover." },

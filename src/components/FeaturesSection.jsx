@@ -90,7 +90,7 @@ const FeaturesSection = () => {
                     <div
                         key={f.id}
                         className={`feature-card ${activeFeature === f.id ? 'active' : ''}`}
-                        onClick={() => setActiveFeature(f.id)}
+                        onMouseEnter={() => setActiveFeature(f.id)}
                     >
                         <img src={getAssetUrl(`/images/${f.icon}`)} alt={f.label} className="feature-logo" />
                         <h4>{f.label}</h4>
@@ -98,12 +98,15 @@ const FeaturesSection = () => {
                 ))}
             </section>
 
-            <div className="feature-content active">
+            <div className={`feature-content active`} key={activeFeature}>
                 <div className="sec1">
                     <h1>{featureContent[activeFeature].title}</h1>
                     <p>{featureContent[activeFeature].text1}</p>
                     <p>{featureContent[activeFeature].text2}</p>
-                    <Link to={featureContent[activeFeature].link}>{featureContent[activeFeature].linkText}</Link>
+                    <Link to={featureContent[activeFeature].link} className="btn">
+                        <span>{featureContent[activeFeature].linkText}</span>
+                        <div className="liquid"></div>
+                    </Link>
                 </div>
                 <div className="sec2">
                     <img src={featureContent[activeFeature].image} alt={activeFeature} />

@@ -74,16 +74,18 @@ const Dashboard = () => {
                     Dashboard
                 </h2>
                 <button
-                    className={activeSection === 'home' ? 'active' : ''}
+                    className={`sidebar-btn ${activeSection === 'home' ? 'active' : ''}`}
                     onClick={() => setActiveSection('home')}
                 >
-                    🏠 Home
+                    <span>🏠 Home</span>
+                    <div className="liquid"></div>
                 </button>
                 <button
-                    className={activeSection === 'leads' ? 'active' : ''}
+                    className={`sidebar-btn ${activeSection === 'leads' ? 'active' : ''}`}
                     onClick={() => setActiveSection('leads')}
                 >
-                    📋 Leads
+                    <span>📋 Leads</span>
+                    <div className="liquid"></div>
                 </button>
             </div>
 

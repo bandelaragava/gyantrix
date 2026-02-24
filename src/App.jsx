@@ -21,9 +21,13 @@ import TermsConditions from './pages/TermsConditions';
 import Refund from './pages/Refund';
 import Referral from './pages/Referral';
 import Dashboard from './pages/Dashboard';
+import Management from './pages/Management';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import ForgotPassword from './pages/ForgotPassword';
 import LeadFormPage from './pages/LeadFormPage';
 import PlacementCourses from './pages/PlacementCourses';
-import TrendingCourses from './pages/TrendingCourses';
+// import TrendingCourses from './pages/TrendingCourses';
 import StudentPrograms from './pages/StudentPrograms';
 import SparkleBackground from './components/SparkleBackground';
 import CurtainEffect from './components/CurtainEffect';
@@ -34,8 +38,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="courses" element={<TrendingCourses />} />
-                    <Route path="trending-courses" element={<TrendingCourses />} />
+                    {/* <Route path="courses" element={<TrendingCourses />} /> */}
+                    {/* <Route path="trending-courses" element={<TrendingCourses />} /> */}
                     <Route path="courses/:courseId" element={<CourseDetail />} />
                     <Route path="about" element={<About />} />
                     <Route path="faqs" element={<FAQs />} />
@@ -63,7 +67,10 @@ function App() {
                     <Route path="enroll" element={<LeadFormPage />} />
                     <Route path="guidance-form" element={<LeadFormPage />} />
                     <Route path="background" element={<SparkleBackground />} />
-                    <Route path="management" element={<NonIT />} />
+                    <Route path="management" element={<Management />} />
+                    <Route path="login" element={<Login />} />
+                    <Route path="signup" element={<Signup />} />
+                    <Route path="forgot-password" element={<ForgotPassword />} />
                     <Route path="curtain" element={<CurtainEffect />} />
                     <Route path="placement-guarantee" element={<PlacementCourses />} />
                     <Route path="student-programs" element={<StudentPrograms />} />

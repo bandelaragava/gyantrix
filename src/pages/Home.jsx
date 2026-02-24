@@ -5,7 +5,9 @@ import { getAssetUrl } from '../utils/assets';
 import { handleFormSubmit } from '../utils/leadForm';
 import CourseTrending from '../components/CourseTrending';
 import FeaturesSection from '../components/FeaturesSection';
-import CareerServices from '../components/CareerServices';
+import isoLogo from '../assets/ISO.png';
+import msmeLogo from '../assets/msme.png';
+import skillIndiaLogo from '../assets/skillindia.png';
 
 const Home = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -57,10 +59,27 @@ const Home = () => {
                 <div className="hero-content">
                     <h1>Building Next Generation AI and Tech Professionals</h1>
                     <h3>India’s Leading and <span className="highlight">Trusted IT Training</span></h3>
-                    <p>
-                        Empowering learners with classroom and online training, in collaboration with top global organizations. Gain hands-on experience, real-world skills, and industry exposure with
-                    </p>
-                    <p id="com_name">IBM, Microsoft, Infosys, Meta, AWS, Amazon, Google, Wipro, YouTube, Oracle, TCS, and Deloitte.</p>
+                    <div className="infosection hero-info">
+                        <p className="pp"><span className="highlightbtn">Gain real-world experience with guidance from industry experts.</span></p>
+                        <p>Powered by an <span className="hgbtn">AI-Enabled LMS,</span> we’re empowering the next generation of</p>
+                        <div className="course-slider">
+                            <div className="course-list">
+                                <p>Artificial Intelligence</p>
+                                <p>Full Stack Developer</p>
+                                <p>Data Analyst</p>
+                                <p>Data Science</p>
+                                <p>Business Analyst</p>
+                                <p>Medical Coding</p>
+                                <p>Medical Scribing</p>
+                                <p>Genetic Engineering</p>
+                                <p>Pharmacovigilance</p>
+                                <p>Product Management</p>
+                                <p>Digital Marketing</p>
+                                <p>Human Resources</p>
+                                <p>Nano Science & Technology</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div className="company-logos">
                         <img src={getAssetUrl("/images/IBM.png")} alt="IBM" />
@@ -68,21 +87,29 @@ const Home = () => {
                         <img src={getAssetUrl("/images/infosys_logo.png")} alt="Infosys" />
                         <img src={getAssetUrl("/images/Meta.png")} alt="Meta" />
                         <img src={getAssetUrl("/images/AWS.png")} alt="AWS" />
-                        <img src={getAssetUrl("/images/Amazon.png")} alt="Amazon" />
+                        <img src={getAssetUrl("/images/amazon.png")} alt="Amazon" />
                         <img src={getAssetUrl("/images/goggle.png")} alt="Goggle" />
                         <img src={getAssetUrl("/images/wipro.png")} alt="Wipro" />
                         <img src={getAssetUrl("/images/youtube.png")} alt="Youtube" />
                     </div>
 
-                    <p>
-                        Unlock your potential through world-class courses, insightful blogs, exciting hackathons, and a vibrant community of tech enthusiasts.
-                    </p>
-
                     <div className="course-buttons">
-                        <Link to="/courses/artificialintelligence" className="btn blue">Artificial Intelligence</Link>
-                        <Link to="/courses/fullstack" className="btn orange">Web Developer</Link>
-                        <Link to="/courses/medicalCoding" className="btn red">Medical Coding</Link>
-                        <Link to="/courses/geneticeng" className="btn sky">Genetic Engineering</Link>
+                        <Link to="/courses/artificialintelligence" className="btn blue">
+                            <span>Artificial Intelligence</span>
+                            <div className="liquid"></div>
+                        </Link>
+                        <Link to="/courses/fullstack" className="btn orange">
+                            <span>Web Developer</span>
+                            <div className="liquid"></div>
+                        </Link>
+                        <Link to="/courses/medicalCoding" className="btn red">
+                            <span>Medical Coding</span>
+                            <div className="liquid"></div>
+                        </Link>
+                        <Link to="/courses/geneticeng" className="btn sky">
+                            <span>Genetic Engineering</span>
+                            <div className="liquid"></div>
+                        </Link>
                     </div>
                 </div>
 
@@ -116,74 +143,26 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="stats">
-                    <div className="stat-box">
-                        <h2>5000+</h2>
-                        <p>Learners</p>
-                    </div>
-                    <div className="stat-box">
-                        <h2>100%</h2>
-                        <p>Success Rate</p>
-                    </div>
-                </div>
+
             </section>
 
-            {/* Contact Section */}
-            <section className="contact">
-                <div className="form-section">
-                    <h3>Let’s Level up your career together!</h3>
-                    <form className="lead-table" onSubmit={(e) => handleFormSubmit(e, 'home')}>
-                        <label htmlFor="name">Name<span className="star">*</span>:</label>
-                        <input type="text" id="home-name" name="name" required />
 
-                        <label htmlFor="number">Mobile<span className="star">*</span>:</label>
-                        <input type="tel" id="home-number" name="mobileNumber" required />
-
-                        <label htmlFor="email">Email<span className="star">*</span>:</label>
-                        <input type="email" id="home-email" name="email" required />
-
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-
-                <div className="infosection">
-                    <p className="pp"><span className="highlightbtn">Gain real-world experience with guidance from industry experts.</span></p>
-                    <p>Powered by an <span className="hgbtn">AI-Enabled LMS,</span> we’re empowering the next generation of</p>
-                    <div className="course-slider">
-                        <div className="course-list">
-                            <p>Artificial Intelligence</p>
-                            <p>Full Stack Developer</p>
-                            <p>Data Analyst</p>
-                            <p>Data Science</p>
-                            <p>Business Analyst</p>
-                            <p>Medical Coding</p>
-                            <p>Medical Scribing</p>
-                            <p>Genetic Engineering</p>
-                            <p>Pharmacovigilance</p>
-                            <p>Product Management</p>
-                            <p>Digital Marketing</p>
-                            <p>Human Resources</p>
-                            <p>Nano Science & Technology</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <section className="acrdt">
                 <p>We are Collaborated & Accredited by</p>
                 <div className="logo-slider">
                     <div className="logo-track">
                         <div className="logos"><img src={getAssetUrl("/images/nsdclogo.jpg")} alt="NSDC" /></div>
-                        <div className="logos"><img src={getAssetUrl("/images/skillindia.jpeg")} alt="Skill India" /></div>
+                        <div className="logos"><img src={skillIndiaLogo} alt="Skill India" /></div>
                         <div className="logos"><img src={getAssetUrl("/images/MCA.png")} alt="MCA" /></div>
-                        <div id="msme" className="logos"><img src={getAssetUrl("/images/msme.png")} alt="MSME" /></div>
-                        <div className="logos"><img src={getAssetUrl("/images/ISO.jpeg")} alt="ISO" /></div>
+                        <div id="msme" className="logos"><img src={msmeLogo} alt="MSME" /></div>
+                        <div className="logos"><img src={isoLogo} alt="ISO" /></div>
                         <div className="logos"><img src={getAssetUrl("/images/nasscom1.png")} alt="NASSCOM" /></div>
                         <div className="logos"><img src={getAssetUrl("/images/nsdclogo.jpg")} alt="NSDC" /></div>
-                        <div className="logos"><img src={getAssetUrl("/images/skillindia.jpeg")} alt="Skill India" /></div>
+                        <div className="logos"><img src={skillIndiaLogo} alt="Skill India" /></div>
                         <div className="logos"><img src={getAssetUrl("/images/MCA.png")} alt="MCA" /></div>
-                        <div className="logos"><img src={getAssetUrl("/images/msme.png")} alt="MSME" /></div>
-                        <div className="logos"><img src={getAssetUrl("/images/ISO.jpeg")} alt="ISO" /></div>
+                        <div className="logos"><img src={msmeLogo} alt="MSME" /></div>
+                        <div className="logos"><img src={isoLogo} alt="ISO" /></div>
                         <div className="logos"><img src={getAssetUrl("/images/nasscom1.png")} alt="NASSCOM" /></div>
                     </div>
                 </div>
@@ -239,8 +218,9 @@ const Home = () => {
                                         ))}
                                     </div>
 
-                                    <Link to="/courses" className="showcase-btn">
-                                        Explored Programs <i className="fas fa-arrow-right"></i>
+                                    <Link to="/courses" className="btn showcase-btn">
+                                        <span>Explored Programs</span>
+                                        <div className="liquid"></div>
                                     </Link>
                                 </div>
                                 <div className="showcase-visual">
@@ -370,7 +350,10 @@ const Home = () => {
                                 <input type="email" id="skill-email" name="email" required />
                                 <label>Message</label>
                                 <textarea rows="3" name="message"></textarea>
-                                <button type="submit">Submit</button>
+                                <button type="submit" className="btn">
+                                    <span>Submit</span>
+                                    <div className="liquid"></div>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -417,14 +400,14 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Career Services Section */}
-            <CareerServices />
-
             {/* FAQ Section */}
             <section className="faq-section home-faq">
                 <h2>Frequently Asked Questions</h2>
                 <p>Got more questions? Feel free to contact us for more information.</p>
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/contact" className="btn" style={{ width: 'auto', padding: '0.8rem 2rem' }}>
+                    <span>Contact Us</span>
+                    <div className="liquid"></div>
+                </Link>
                 <div className="faq-content">
                     <div className="faq-column">
                         {[
@@ -523,23 +506,83 @@ const Home = () => {
             </section>
 
             {/* Connect Section */}
-            <section className="connectplan">
-                <h1>Let's Connect and Plan Your Career Ahead</h1>
-                <p>Our team of expert career guide ninjas are ready to help you choose the right path with clarity and confidence.</p>
-                <div className="connectform-container">
-                    <div className="connectform">
-                        <form className="lead-table" onSubmit={(e) => handleFormSubmit(e, 'footerSection')}>
-                            <label htmlFor="conn-name">Your Name<span className="star">*</span>:</label>
-                            <input type="text" id="conn-name" name="name" required />
-                            <label htmlFor="conn-email">Email Address<span className="star">*</span>:</label>
-                            <input type="email" id="conn-email" name="email" required />
-                            <label htmlFor="conn-number">Mobile Number<span className="star">*</span>:</label>
-                            <input type="tel" id="conn-number" name="mobileNumber" required />
-                            <button type="submit">Submit</button>
-                        </form>
+            <section className="connect-premium">
+                <div className="bg-glow-orb-1"></div>
+                <div className="bg-glow-orb-2"></div>
+
+                <div className="connect-header">
+                    <span className="badge">Get in Touch</span>
+                    <h1>Let's Connect and Plan <br /><span>Your Career Ahead</span></h1>
+                    <p>Our team of expert career guide ninjas are ready to help you choose the right path with clarity and confidence.</p>
+                </div>
+
+                <div className="connect-grid-container">
+                    <div className="info-card-premium address-info">
+                        <div className="icon-box">
+                            <i className="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Central Office</h3>
+                        <p className="address-text">
+                            5th floor, cropwork.hub,<br />
+                            Plot No. 81, Jubilee Enclave,<br />
+                            HITEC City, Hyderabad – 500081
+                        </p>
+                        <div className="map-iframe-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d14510.461431223623!2d78.37496775!3d17.458629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1771933319846!5m2!1sen!2sin"
+                                width="100%"
+                                height="200"
+                                style={{ border: 0, borderRadius: '16px' }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Office Location"
+                            ></iframe>
+                        </div>
+
+                        <div className="contact-small">
+                            <div className="contact-item">
+                                <i className="fas fa-envelope"></i>
+                                <span>support@gyantrix.com</span>
+                            </div>
+                            <div className="contact-item">
+                                <i className="fas fa-phone-alt"></i>
+                                <span>+91 73868 79818</span>
+                            </div>
+                        </div>
                     </div>
-                    <div className="connectform">
-                        <img src={getAssetUrl("/images/contact.png")} alt="Career Guidance" />
+
+                    <div className="form-card-premium">
+                        <form onSubmit={(e) => handleFormSubmit(e, 'footerSection')}>
+                            <div className="input-group-grid">
+                                <div className="input-field">
+                                    <label>Full Name</label>
+                                    <input type="text" name="name" placeholder="John Doe" required />
+                                </div>
+                                <div className="input-field">
+                                    <label>Email Address</label>
+                                    <input type="email" name="email" placeholder="john@example.com" required />
+                                </div>
+                            </div>
+                            <div className="input-field">
+                                <label>Mobile Number</label>
+                                <input type="tel" name="mobileNumber" placeholder="+91 00000 00000" required />
+                            </div>
+                            <div className="input-field">
+                                <label>How can we help?</label>
+                                <select name="interest" className="custom-select">
+                                    <option value="career-guidance">Career Guidance</option>
+                                    <option value="course-info">Course Information</option>
+                                    <option value="placement-support">Placement Support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" className="submit-btn-premium">
+                                <span>Schedule Consultation</span>
+                                <div className="liquid"></div>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </section>

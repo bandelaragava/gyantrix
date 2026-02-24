@@ -109,7 +109,10 @@ const VideoLectures = () => {
                             <option>Cybersecurity</option>
                         </select>
 
-                        <button type="submit" className="submit-btn">Submit</button>
+                        <button type="submit" className="submit-btn btn">
+                            <span>Submit</span>
+                            <div className="liquid"></div>
+                        </button>
                     </form>
                 </div>
 
@@ -119,7 +122,10 @@ const VideoLectures = () => {
                         <div className="popup-box">
                             🎉 Thank you for your interest! <br /> We’ll notify you soon.
                             <br /><br />
-                            <button onClick={() => setShowPopup(false)}>OK</button>
+                            <button onClick={() => setShowPopup(false)} className="btn" style={{ marginTop: '1rem', padding: '0.4rem 2rem' }}>
+                                <span>OK</span>
+                                <div className="liquid"></div>
+                            </button>
                         </div>
                     </div>
                 )}

@@ -47,7 +47,10 @@ const CareerForm = () => {
 
                         <input type="hidden" name="source" value="careerForm" />
 
-                        <button type="submit">Submit</button>
+                        <button type="submit" className="btn">
+                            <span>Submit</span>
+                            <div className="liquid"></div>
+                        </button>
                     </form>
                 </div>
                 <div className="connectform">

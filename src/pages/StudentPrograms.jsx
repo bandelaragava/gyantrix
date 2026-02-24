@@ -57,7 +57,8 @@ const StudentPrograms = () => {
                         className={`filter-btn ${activeCategory === category.id ? 'active' : ''}`}
                         onClick={() => setActiveCategory(category.id)}
                     >
-                        {category.label}
+                        <span>{category.label}</span>
+                        <div className="liquid"></div>
                     </button>
                 ))}
             </div>
@@ -71,8 +72,14 @@ const StudentPrograms = () => {
                         <span>{course.price}</span>
 
                         <div className="card-buttons">
-                            <Link to={course.link} className="know-more-btn">Know More</Link>
-                            <Link to="/contact" className="payment-btn">Enroll</Link>
+                            <Link to={course.link} className="know-more-btn btn">
+                                <span>Know More</span>
+                                <div className="liquid"></div>
+                            </Link>
+                            <Link to="/contact" className="payment-btn btn">
+                                <span>Enroll</span>
+                                <div className="liquid"></div>
+                            </Link>
                         </div>
                     </div>
                 ))}

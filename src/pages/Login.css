@@ -1,0 +1,383 @@
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 2rem;
+    margin-top: -1.5rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.login-card {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    min-height: 650px;
+}
+
+/* === Left Carousel Section === */
+.login-carousel-section {
+    flex: 1.2;
+    background: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)),
+        url('/images/background.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.login-card.signup-reversed {
+    flex-direction: row-reverse;
+}
+
+.login-carousel-section.signup-bg {
+    background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)),
+        url('/images/background.png');
+    background-size: cover;
+    background-position: center;
+    border-right: none;
+    border-left: 1px solid #eee;
+}
+
+.carousel-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.carousel-slide.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-image-wrapper {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 2rem;
+}
+
+.slide-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.slide-text h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.slide-text p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.explore-btn {
+    position: relative;
+    display: inline-block;
+    padding: 0.8rem 2.2rem;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.explore-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.explore-btn .liquid {
+    position: absolute;
+    top: -121px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: #fff;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .1);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.explore-btn:hover {
+    color: #1e3c72;
+}
+
+.explore-btn:hover .liquid {
+    top: -30px;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #fff;
+    width: 24px;
+    border-radius: 10px;
+}
+
+/* === Right Form Section === */
+.login-form-section {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.login-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    position: relative;
+    left: -1rem;
+}
+
+.login-logo img {
+    height: 50px;
+}
+
+.gyantrix_content {
+    position: relative;
+    top: 0.9rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: serif;
+    background: linear-gradient(to right, #7B2CFF, #66D6FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+
+.social-login-grid {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    color: #444;
+}
+
+.social-btn:hover {
+    background-color: #f9f9f9;
+    border-color: #ccc;
+}
+
+.social-btn img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.auth-divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.auth-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #eee;
+}
+
+.auth-divider span {
+    position: relative;
+    background: #fff;
+    padding: 0 0.8rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.auth-form-guvi {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #1e3c72;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#forgot-link {
+    font-size: 0.8rem;
+    color: #1e3c72;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.guvi-login-btn {
+    position: relative;
+    margin-top: 1rem;
+    padding: 0.85rem;
+    background: transparent;
+    color: #1e3c72;
+    border: 2px solid #1e3c72;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.guvi-login-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.guvi-login-btn .liquid {
+    position: absolute;
+    top: -121px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: #1e3c72;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.guvi-login-btn:hover {
+    color: #fff;
+}
+
+.guvi-login-btn:hover .liquid {
+    top: -30px;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.signup-link a {
+    color: #1e3c72;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+    .login-card {
+        flex-direction: column;
+        max-width: 450px;
+    }
+
+    .login-carousel-section {
+        display: none;
+    }
+
+    .login-form-section {
+        padding: 2.5rem 1.5rem;
+    }
+}

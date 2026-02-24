@@ -54,7 +54,10 @@ const Contact = () => {
                         <label htmlFor="number">Mobile Number<span className="star">*</span>:</label>
                         <input type="tel" id="number" name="mobileNumber" required />
 
-                        <button type="submit">Submit</button>
+                        <button type="submit" className="btn">
+                            <span>Submit</span>
+                            <div className="liquid"></div>
+                        </button>
                     </form>
                 </div>
 

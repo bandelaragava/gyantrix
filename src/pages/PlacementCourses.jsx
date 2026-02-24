@@ -22,8 +22,14 @@ const PlacementCourses = () => {
                         <div className="content">
                             <h3>{course.title}</h3>
                             <div className="buttons">
-                                <Link to={course.link} className="btn btn-outline">View Programme</Link>
-                                <Link to="/contact" className="btn btn-fill">Schedule Appointment</Link>
+                                <Link to={course.link} className="btn btn-outline">
+                                    <span>View Programme</span>
+                                    <div className="liquid"></div>
+                                </Link>
+                                <Link to="/contact" className="btn btn-fill">
+                                    <span>Schedule Appointment</span>
+                                    <div className="liquid"></div>
+                                </Link>
                             </div>
                         </div>
                     </div>

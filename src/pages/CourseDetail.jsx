@@ -61,11 +61,18 @@ const CourseDetail = () => {
     // I will use reference to the hardcoded list but maybe we should randomize or just keep it as "Institute Placements".
 
     const placementStudents = [
-        { name: 'Priya Sharma', company: 'Future Invo Solutions', img: 'https://ui-avatars.com/api/?name=Priya+Sharma&background=E91E63&color=fff&size=128' },
-        { name: 'Rahul Verma', company: 'Infoz IT', img: 'https://ui-avatars.com/api/?name=Rahul+Verma&background=2196F3&color=fff&size=128' },
-        { name: 'Neha Gupta', company: 'Wipro', img: 'https://ui-avatars.com/api/?name=Neha+Gupta&background=00BCD4&color=fff&size=128' },
-        { name: 'Vikas Kumar', company: 'Tech Mahindra', img: 'https://ui-avatars.com/api/?name=Vikas+Kumar&background=607D8B&color=fff&size=128' },
-        { name: 'Ritu Singh', company: 'Capgemini', img: 'https://ui-avatars.com/api/?name=Ritu+Singh&background=F44336&color=fff&size=128' }
+        { name: 'Priya Sharma', company: 'Future Invo Solutions', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150' },
+        { name: 'Rahul Verma', company: 'Infoz IT', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150' },
+        { name: 'Neha Gupta', company: 'Wipro', img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=150&h=150' },
+        { name: 'Vikas Kumar', company: 'Tech Mahindra', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150' },
+        { name: 'Ritu Singh', company: 'Capgemini', img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150&h=150' },
+        { name: 'Amit Patel', company: 'Infosys', img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=150&h=150' },
+        { name: 'Sonal Jain', company: 'TCS', img: 'https://images.unsplash.com/photo-1567532939604-b6c5b0ad2e01?auto=format&fit=crop&q=80&w=150&h=150' },
+        { name: 'Karan Singh', company: 'HCL', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150' },
+        { name: 'Megha Rao', company: 'Genpact', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150' },
+        { name: 'Arjun Das', company: 'Accenture', img: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=150&h=150' },
+        { name: 'Tanvi Shah', company: 'Deloitte', img: 'https://images.unsplash.com/photo-1531123897727-8f129e16fd3f?auto=format&fit=crop&q=80&w=150&h=150' },
+        { name: 'Rohan Gupta', company: 'Cisco', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150&h=150' }
     ];
 
     const [newReview, setNewReview] = useState({ name: '', role: '', review: '' });
@@ -84,53 +91,6 @@ const CourseDetail = () => {
 
     return (
         <div className="course-detail-page">
-            {/* Course Banner */}
-            <section className="course-banner">
-                <div className="banner-left">
-                    <div className="rating">
-                        <span className="rating-value">5.0 <span className="str">★★★★★</span></span>
-                        <span className="reviews">{reviews.length > 0 ? `${reviews.length + 2300} Reviews` : '2000+ Reviews'}</span>
-                    </div>
-                    <h1>Best {course.title} Training</h1>
-                    <ul className="key-points">
-                        <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> Build complete solutions</li>
-                        <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> Master core technologies</li>
-                        <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> Learn industry practices</li>
-                        <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> Develop professional portfolios</li>
-                        <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> 100% Placement Assistance</li>
-                    </ul>
-                    <Link to="/contact" className="enroll-btn">Enroll Now</Link>
-                </div>
-
-                <div className="banner-center">
-                    <img src={getAssetUrl(course.img)} alt={course.title} />
-                </div>
-
-                <div className="banner-right">
-                    <h2>Connect with Our Experts</h2>
-                    <form className="syllabus-form">
-                        <label htmlFor="name">Name <span className="redstar">*</span></label>
-                        <input type="text" id="name" placeholder="Enter your full name" required />
-
-                        <label htmlFor="email">Email <span className="redstar">*</span></label>
-                        <input type="email" id="email" placeholder="Enter your email address" required />
-
-                        <label htmlFor="mobile">Mobile No <span className="redstar">*</span></label>
-                        <input type="tel" id="mobile" placeholder="Enter your mobile number" required />
-
-                        <label htmlFor="course">Course <span className="redstar">*</span></label>
-                        <select id="course" required defaultValue={course.title}>
-                            <option value={course.title}>{course.title}</option>
-                            {coursesData.filter(c => c.title !== course.title).map((c, i) => (
-                                <option key={i} value={c.title}>{c.title}</option>
-                            ))}
-                        </select>
-
-                        <button type="submit" className="download-btn">Submit</button>
-                    </form>
-                </div>
-            </section>
-
             {/* Course Overview - Advanced V2 Redesign */}
             <section className="future-forge-section v2">
                 <div className="forge-aurora">
@@ -202,42 +162,125 @@ const CourseDetail = () => {
 
                 {/* Commented out section divider deleted for cleanliness */}
             </section>
+            {/* Course Banner */}
+            <section className="course-banner">
+                <div className="banner-left">
+                    <div className="rating">
+                        <span className="rating-value">5.0 <span className="str">★★★★★</span></span>
+                        <span className="reviews">{reviews.length > 0 ? `${reviews.length + 2300} Reviews` : '2000+ Reviews'}</span>
+                    </div>
+                    <h1>Best {course.title} Training</h1>
+                    <ul className="key-points">
+                        <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> Build complete solutions</li>
+                        <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> Master core technologies</li>
+                        <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> Learn industry practices</li>
+                        <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> Develop professional portfolios</li>
+                        <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> 100% Placement Assistance</li>
+                    </ul>
+                    <Link to="/contact" className="enroll-btn">
+                        <span>Enroll Now</span>
+                        <div className="liquid"></div>
+                    </Link>
+                </div>
 
+                <div className="banner-center">
+                    <img src={getAssetUrl(course.img)} alt={course.title} />
+                </div>
 
+                <div className="banner-right">
+                    <h2>Connect with Our Experts</h2>
+                    <form className="syllabus-form">
+                        <label htmlFor="name">Name <span className="redstar">*</span></label>
+                        <input type="text" id="name" placeholder="Enter your full name" required />
 
-            {/* What We Offer - Static for now as it's general academy info */}
-            <section className="offer-section">
-                <h2 className="section-title">What do we offer</h2>
-                <div className="offer-grid">
-                    <div className="offer-card">
-                        <div className="icon-circle">📚</div>
-                        <h3>Live learning</h3>
-                        <p>Learn live with expert mentors who bring real-world experience into every session. Ask questions, engage in discussions, and get your concepts crystal clear — in real time.</p>
+                        <label htmlFor="email">Email <span className="redstar">*</span></label>
+                        <input type="email" id="email" placeholder="Enter your email address" required />
+
+                        <label htmlFor="mobile">Mobile No <span className="redstar">*</span></label>
+                        <input type="tel" id="mobile" placeholder="Enter your mobile number" required />
+
+                        <label htmlFor="course">Course <span className="redstar">*</span></label>
+                        <select id="course" required defaultValue={course.title}>
+                            <option value={course.title}>{course.title}</option>
+                            {coursesData.filter(c => c.title !== course.title).map((c, i) => (
+                                <option key={i} value={c.title}>{c.title}</option>
+                            ))}
+                        </select>
+
+                        <button type="submit" className="download-btn">
+                            <span>Submit</span>
+                            <div className="liquid"></div>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            {/* The Gyantrix Advantage - Redesigned Offering Section */}
+            <section className="advantage-section">
+                <div className="advantage-bg-elements">
+                    <div className="adv-shape-1"></div>
+                    <div className="adv-shape-2"></div>
+                </div>
+
+                <div className="section-header-v2">
+                    <span className="adv-eyebrow">Why Choose Us?</span>
+                    <h2 className="adv-title">The Gyantrix <span className="text-gradient">Advantage</span></h2>
+                    <p className="adv-subtitle">We don't just teach code; we forge industry-ready professionals with a curriculum designed for the future.</p>
+                </div>
+
+                <div className="adv-grid">
+                    <div className="adv-card">
+                        <div className="adv-icon-wrap">
+                            <i className="fas fa-broadcast-tower"></i>
+                        </div>
+                        <h3>Live Interactive Learning</h3>
+                        <p>Engage in real-time with veteran mentors. Clear your doubts instantly and participate in collaborative discussions that simulate real-world workspace dynamics.</p>
+                        <div className="adv-card-shine"></div>
                     </div>
-                    <div className="offer-card">
-                        <div className="icon-circle">📖</div>
-                        <h3>Structured learning</h3>
-                        <p>Follow a step-by-step, industry-relevant curriculum designed by top professionals. Each module builds on the last, ensuring you master every concept with clarity and confidence.</p>
+
+                    <div className="adv-card">
+                        <div className="adv-icon-wrap">
+                            <i className="fas fa-layer-group"></i>
+                        </div>
+                        <h3>IIT-Inspired Curriculum</h3>
+                        <p>Follow a meticulously structured roadmap designed by top professionals. Each module is optimized for depth and clarity, ensuring mastery over every technical nuance.</p>
+                        <div className="adv-card-shine"></div>
                     </div>
-                    <div className="offer-card">
-                        <div className="icon-circle">💬</div>
-                        <h3>Community & Networking</h3>
-                        <p>Connect with a vibrant community of learners, mentors, and industry experts. Collaborate, share ideas, and grow your network with people who share your passion and goals.</p>
+
+                    <div className="adv-card">
+                        <div className="adv-icon-wrap">
+                            <i className="fas fa-users-viewfinder"></i>
+                        </div>
+                        <h3>Elite Alumni Network</h3>
+                        <p>Gain access to a powerful ecosystem of successful graduates, mentors, and industry experts. Networking that opens doors to exclusive career opportunities and partnerships.</p>
+                        <div className="adv-card-shine"></div>
                     </div>
-                    <div className="offer-card">
-                        <div className="icon-circle">👩‍🏫</div>
-                        <h3>Learn with the best</h3>
-                        <p>Get guided by top instructors and domain experts who have shaped real-world projects. Gain practical insights and personalized feedback that accelerate your learning journey.</p>
+
+                    <div className="adv-card">
+                        <div className="adv-icon-wrap">
+                            <i className="fas fa-microchip"></i>
+                        </div>
+                        <h3>Practical Project Mastery</h3>
+                        <p>Move beyond theory with 8+ high-impact live projects. Build a portfolio that commands attention, featuring real-world applications and industry-standard practices.</p>
+                        <div className="adv-card-shine"></div>
                     </div>
-                    <div className="offer-card">
-                        <div className="icon-circle">📝</div>
-                        <h3>Practice tests</h3>
-                        <p>Test your skills with regular quizzes, coding challenges, and mock interviews. Track your growth and build the confidence to ace technical rounds and assessments.</p>
+
+                    <div className="adv-card">
+                        <div className="adv-icon-wrap">
+                            <i className="fas fa-vial-circle-check"></i>
+                        </div>
+                        <h3>Technical Assessment Lab</h3>
+                        <p>Validate your skills with rigorous quizzes, live coding challenges, and mock technical interviews. Receive detailed feedback that sharpens your competitive edge.</p>
+                        <div className="adv-card-shine"></div>
                     </div>
-                    <div className="offer-card">
-                        <div className="icon-circle">🎓</div>
-                        <h3>Get certified</h3>
-                        <p>Earn globally recognized certificates that validate your skills. Showcase them on LinkedIn or your portfolio — and stand out to recruiters with proof of your expertise.</p>
+
+                    <div className="adv-card">
+                        <div className="adv-icon-wrap">
+                            <i className="fas fa-award"></i>
+                        </div>
+                        <h3>Global Certification</h3>
+                        <p>Earn industry-recognized credentials that validate your expertise. Our certifications are respected by top MNCs and serve as a powerful testament to your professional capabilities.</p>
+                        <div className="adv-card-shine"></div>
                     </div>
                 </div>
             </section>
@@ -263,7 +306,10 @@ const CourseDetail = () => {
                                 <strong>280+</strong>
                                 <span>Live Session Hours</span>
                             </div>
-                            <button className="download-btn">Download Syllabus ⬇️</button>
+                            <button className="download-btn">
+                                <span>Download Syllabus ⬇️</span>
+                                <div className="liquid"></div>
+                            </button>
                         </div>
 
                         <div className="right-panel">
@@ -330,13 +376,16 @@ const CourseDetail = () => {
                 <h2>Globally Recognized Certifications</h2>
                 <div className="cert-buttons">
                     <button className={`cert-btn ${activeCert === 'gyantrix' ? 'active' : ''}`} onClick={() => setActiveCert('gyantrix')}>
-                        GYANTRIX CERTIFICATION
+                        <span>GYANTRIX CERTIFICATION</span>
+                        <div className="liquid"></div>
                     </button>
                     <button className={`cert-btn ${activeCert === 'intern' ? 'active' : ''}`} onClick={() => setActiveCert('intern')}>
-                        INTERNSHIP CERTIFICATION
+                        <span>INTERNSHIP CERTIFICATION</span>
+                        <div className="liquid"></div>
                     </button>
                     <button className={`cert-btn ${activeCert === 'module' ? 'active' : ''}`} onClick={() => setActiveCert('module')}>
-                        MODULE-WISE CERTIFICATION
+                        <span>MODULE-WISE CERTIFICATION</span>
+                        <div className="liquid"></div>
                     </button>
                 </div>
                 <div className="cert-container">
@@ -346,7 +395,10 @@ const CourseDetail = () => {
                             Receive the {course.title} Certification validating your end-to-end development capabilities.
                             Earn progress badges and demonstrate your expertise to potential employers.
                         </p>
-                        <Link to="/contact" className="cert-btn-cta">Inquire Now →</Link>
+                        <Link to="/contact" className="cert-btn-cta">
+                            <span>Inquire Now →</span>
+                            <div className="liquid"></div>
+                        </Link>
                     </div>
                     <div className="cert-image">
                         <img src="https://images.besttemplates.com/3698/Custom-made-Certificate-Design-for-Completion-of-Course.jpg" alt="Certificate Sample" />
@@ -366,7 +418,10 @@ const CourseDetail = () => {
                         <li>Gain expertise in modern frameworks and cloud deployment</li>
                         <li>Build a strong developer portfolio and become industry-ready for top IT roles</li>
                     </ul>
-                    <Link to="/contact" className="contact-btn">Contact Us</Link>
+                    <Link to="/contact" className="contact-btn">
+                        <span>Contact Us</span>
+                        <div className="liquid"></div>
+                    </Link>
                 </div>
                 <div className="jrny-img">
                     <img src="https://www.itpt.co.uk/wp-content/uploads/2022/02/Web-Application-Development-Full-Stack-Developer.png" alt="Learning Illustration" />
@@ -496,7 +551,10 @@ const CourseDetail = () => {
                                         required
                                     ></textarea>
                                 </div>
-                                <button type="submit">Submit Review</button>
+                                <button type="submit">
+                                    <span>Submit Review</span>
+                                    <div className="liquid"></div>
+                                </button>
                             </form>
                         </div>
                     </div>

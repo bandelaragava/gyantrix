@@ -8,7 +8,7 @@
 }
 
 /* === Top Bar === */
-.site-header .top-bar {
+/* .site-header .top-bar {
   background-color: #0c2d57;
   color: white;
   display: flex;
@@ -58,7 +58,7 @@
 
 .site-header .top-right .svgicon {
   margin-right: -0.5rem;
-}
+} */
 
 .student-btn {
   display: inline-block;
@@ -129,13 +129,13 @@
     margin-bottom: 10rem;
   }
 
-  .site-header .top-bar {
+  /* .site-header .top-bar {
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 10px 12px;
     gap: 8px;
-  }
+  } */
 
   .site-header .top-left,
   .site-header .top-right {

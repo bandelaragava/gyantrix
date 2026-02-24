@@ -20,14 +20,23 @@ const PlacementGuarantee = () => {
                         <div className="content">
                             <h3>{course.title}</h3>
                             <div className="buttons">
-                                <Link to={course.link} className="btn btn-outline">View Programme</Link>
-                                <Link to="/contact" className="btn btn-fill">Schedule Appointment</Link>
+                                <Link to={course.link} className="btn btn-outline">
+                                    <span>View Programme</span>
+                                    <div className="liquid"></div>
+                                </Link>
+                                <Link to="/contact" className="btn btn-fill">
+                                    <span>Schedule Appointment</span>
+                                    <div className="liquid"></div>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
-            <Link to="/placement-guarantee" className="view-all-btn">View All</Link>
+            <Link to="/placement-guarantee" className="btn view-all-btn">
+                <span>View All</span>
+                <div className="liquid"></div>
+            </Link>
         </section>
     );
 };

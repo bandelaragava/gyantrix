@@ -140,8 +140,9 @@ const LeadFormPage = () => {
                                 />
                             </div>
 
-                            <button type="submit" disabled={loading}>
-                                {loading ? 'Submitting...' : 'Submit'}
+                            <button type="submit" className="btn" disabled={loading}>
+                                <span>{loading ? 'Submitting...' : 'Submit'}</span>
+                                <div className="liquid"></div>
                             </button>
                         </form>
 

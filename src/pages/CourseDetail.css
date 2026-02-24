@@ -4,6 +4,8 @@
 }
 
 .course-detail-page {
+    position: relative;
+    top: -1.5rem;
     width: 100%;
     min-height: 100vh;
     background-color: rgb(249, 246, 246);
@@ -19,7 +21,7 @@
     color: #fff;
     flex-wrap: wrap;
     background: linear-gradient(90deg, #08132c, #5fd7f2);
-    margin-top: 4rem;
+    margin-top: 0.1rem;
 }
 
 .course-banner h1 {
@@ -89,38 +91,55 @@
 /* Buttons */
 .enroll-btn,
 .download-btn {
+    position: relative;
     background: transparent;
     color: #fff;
-    background-color: #ff4d4d;
-    border: none;
-    padding: 0.8rem 1.8rem;
-    border-radius: 10px;
-    font-size: 1rem;
+    border: 2px solid #3bc5f8;
+    padding: 0.7rem 1.7rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
     margin-top: 1rem;
     text-decoration: none;
     display: inline-block;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .enroll-btn:hover,
 .download-btn:hover {
-    background-color: #f35e18;
+    color: #081221;
+}
+
+.enroll-btn span,
+.download-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.enroll-btn .liquid,
+.download-btn .liquid {
+    position: absolute;
+    top: -121px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: #3bc5f8;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.enroll-btn:hover .liquid,
+.download-btn:hover .liquid {
+    top: -30px;
 }
 
 /* Center the download button */
 .download-btn {
     display: block;
     margin: 1.5rem auto 0 auto;
-    padding: 0.8rem 1.8rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.download-btn:hover {
-    background-color: #ff4d4d;
 }
 
 
@@ -409,44 +428,7 @@
     gap: 3rem;
 }
 
-.liquid-btn {
-    position: relative;
-    padding: 0.7rem 2.8rem;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #fff;
-    background: transparent;
-    border: 2px solid #3bc5f8;
-    border-radius: 50px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: 0.5s;
-    z-index: 1;
-}
 
-.liquid-btn span {
-    position: relative;
-    z-index: 2;
-}
-
-.liquid-btn .liquid {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: #3bc5f8;
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
-    transition: 0.5s;
-}
-
-.liquid-btn:hover {
-    color: #081221;
-}
-
-.liquid-btn:hover .liquid {
-    top: -30px;
-}
 
 .verification-pill {
     display: flex;
@@ -686,76 +668,241 @@
     }
 }
 
-/* ===== OFFER SECTION ===== */
-.offer-section {
-    background-color: #fff;
-    padding: 3rem 2rem;
+/* ===== ADVANTAGE SECTION (REDESIGNED) ===== */
+.advantage-section {
+    padding: 6rem 5%;
+    background: #f8fafc;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.section-title {
-    text-align: left;
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-.offer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    justify-items: center;
-}
-
-.offer-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    padding: 1.8rem;
+.advantage-bg-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 360px;
-    transition: all 0.3s ease;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
 }
 
-.offer-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-.icon-circle {
-    width: 55px;
-    height: 55px;
-    background-color: #053368;
-    color: #fff;
+.adv-shape-1 {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(29, 78, 216, 0.05) 0%, transparent 70%);
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
+}
+
+.adv-shape-2 {
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(234, 179, 8, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.section-header-v2 {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.adv-eyebrow {
+    display: inline-block;
+    color: #1d4ed8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    font-weight: 700;
     margin-bottom: 1rem;
+    position: relative;
 }
 
-.offer-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #052d68;
+.adv-eyebrow::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: #1d4ed8;
 }
 
-.offer-card p {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
+.adv-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 992px) {
-    .offer-grid {
-        grid-template-columns: repeat(2, 1fr);
+.text-gradient {
+    background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.adv-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* Floating Animations for BG Shapes */
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, 15px);
+    }
+
+    100% {
+        transform: translate(0, 0);
     }
 }
 
-@media (max-width: 600px) {
-    .offer-grid {
+.adv-shape-1 {
+    animation: float 15s infinite ease-in-out;
+}
+
+.adv-shape-2 {
+    animation: float 12s infinite ease-in-out reverse;
+}
+
+.adv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.adv-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.adv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.adv-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: #1d4ed8;
+    transition: height 0.3s ease;
+}
+
+.adv-card:hover::before {
+    height: 100%;
+}
+
+.adv-icon-wrap {
+    width: 64px;
+    height: 64px;
+    background: rgba(29, 78, 216, 0.08);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.adv-icon-wrap i {
+    font-size: 1.75rem;
+    color: #1d4ed8;
+}
+
+.adv-card:hover .adv-icon-wrap {
+    transform: scale(1.1) rotate(-5deg);
+    background: #1d4ed8;
+}
+
+.adv-card:hover .adv-icon-wrap i {
+    color: #fff;
+}
+
+.adv-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.adv-card p {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.adv-card-shine {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    transition: all 0s;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.adv-card:hover .adv-card-shine {
+    top: -50%;
+    left: -50%;
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+
+/* RESPONSIVE ADVANTAGE */
+@media (max-width: 1024px) {
+    .adv-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .adv-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .adv-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .advantage-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .adv-title {
+        font-size: 2rem;
+    }
+
+    .adv-card {
+        padding: 2rem;
     }
 }
 
@@ -771,7 +918,7 @@
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 2.5rem;
-    color: #fff;
+    color: #66D6FF;
 }
 
 .curriculum-container {
@@ -840,12 +987,12 @@
 }
 
 .download-btn {
-    background: #c6ed2d;
-    color: #000;
-    border: none;
-    font-weight: 600;
+    /* background: #c6ed2d; */
+    color: #f8f4f4;
+    border: 2px solid #66D6FF;
+    font-weight: 540;
     padding: 0.9rem 1.5rem;
-    border-radius: 5px;
+    border-radius: 1.5rem;
     cursor: pointer;
     margin-top: 1rem;
     width: 100%;
@@ -853,7 +1000,7 @@
 }
 
 .download-btn:hover {
-    background: #b8df20;
+    /* background: #b8df20; */
     transform: translateY(-2px);
 }
 
@@ -1200,19 +1347,53 @@
 }
 
 .cert-btn {
+    position: relative;
     border: 1px solid #ccc;
     border-radius: 25px;
     padding: 0.6rem 1.5rem;
-    background: #fff;
+    background: transparent;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 1;
+    color: #333;
+}
+
+.cert-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.cert-btn .liquid {
+    position: absolute;
+    top: -121px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: #000;
+    box-shadow: inset 0 0 50px rgba(255, 255, 255, .1);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.cert-btn:hover {
+    color: #fff;
+    border-color: #000;
+}
+
+.cert-btn:hover .liquid {
+    top: -30px;
 }
 
 .cert-btn.active {
     background: #000;
     color: #fff;
     border-color: #000;
+}
+
+.cert-btn.active .liquid {
+    top: -30px;
 }
 
 .cert-container {
@@ -1243,21 +1424,45 @@
 }
 
 .cert-btn-cta {
+    position: relative;
     display: inline-block;
-    background: #c6ed2d;
+    background: transparent;
     color: #000;
     font-weight: 600;
-    border: none;
+    border: 2px solid #c6ed2d;
     padding: 0.8rem 1.8rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.5s;
     text-decoration: none;
     margin-top: 2rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cert-btn-cta span {
+    position: relative;
+    z-index: 2;
+}
+
+.cert-btn-cta .liquid {
+    position: absolute;
+    top: -121px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: #c6ed2d;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .1);
+    transition: 0.5s;
+    z-index: 1;
 }
 
 .cert-btn-cta:hover {
-    background: #b5dd20;
+    color: #000;
+}
+
+.cert-btn-cta:hover .liquid {
+    top: -30px;
 }
 
 .cert-image {
@@ -1320,19 +1525,44 @@
 }
 
 .contact-btn {
+    position: relative;
     display: inline-block;
-    background: #ff4c4c;
-    color: #fff;
+    background: transparent;
+    color: #161616;
     font-weight: 600;
     padding: 0.8rem 1.8rem;
     border-radius: 5px;
+    border: 2px solid #ff4c4c;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: 0.5s;
     margin-top: 2rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.contact-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-btn .liquid {
+    position: absolute;
+    top: -121px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: #ff4c4c;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .2);
+    transition: 0.5s;
+    z-index: 1;
 }
 
 .contact-btn:hover {
-    background: #e03b3b;
+    color: #fff;
+}
+
+.contact-btn:hover .liquid {
+    top: -30px;
 }
 
 .jrny-img {

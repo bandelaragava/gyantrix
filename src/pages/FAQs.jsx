@@ -40,7 +40,10 @@ const FAQs = () => {
         <section className="faq-section">
             <h2>Frequently Asked Questions</h2>
             <p>Got more questions? Feel free to contact us for more information.</p>
-            <Link to="/contact" className="contact-button">Contact Us</Link>
+            <Link to="/contact" className="contact-button btn" style={{ width: 'auto', padding: '0.8rem 2.5rem' }}>
+                <span>Contact Us</span>
+                <div className="liquid"></div>
+            </Link>
 
             <div className="faq-content">
                 {faqItems.map((col, colIdx) => (

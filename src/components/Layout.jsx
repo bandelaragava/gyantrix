@@ -1,20 +1,23 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import FloatingWidgets from './FloatingWidgets';
 import SparkleCanvas from './SparkleCanvas';
 
 const Layout = () => {
+    const location = useLocation();
+    const isAuthPage = location.pathname === '/login' || location.pathname === '/forgot-password' || location.pathname === '/signup';
+
     return (
         <>
             <SparkleCanvas />
-            <Header />
+            {!isAuthPage && <Header />}
             <main>
                 <Outlet />
             </main>
-            <Footer />
-            <FloatingWidgets />
+            {!isAuthPage && <Footer />}
+            {!isAuthPage && <FloatingWidgets />}
         </>
     );
 };

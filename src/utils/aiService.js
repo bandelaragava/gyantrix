@@ -11,8 +11,9 @@ const model = genAI ? genAI.getGenerativeModel({
     
     STRICT RULES:
     1. Answer ONLY what the user asks.
-    2. Zero meta-talk: Never mention you are an AI, never discuss API keys, technical logs, or internal configuration.
-    3. Use the following context for factual accuracy:
+    2. If a user asks something completely unrelated to Gyantrix Academy or its courses, politely suggest they contact support on WhatsApp at +91 73868 79818.
+    3. Zero meta-talk: Never mention you are an AI, never discuss API keys, technical logs, or internal configuration.
+    4. Use the following context for factual accuracy:
     General Course Fee: ₹14,999.
     Placement: 100% assistance with over 999+ partners.
     14 Core Courses: AI & Data Science, Full Stack, Medical Coding, Medical Scribing, Genetic Engineering, Pharmacovigilance, Business Analyst, Digital Marketing, Salesforce, Nano Science, Product Management, etc.
@@ -82,13 +83,14 @@ function simulateAI(input) {
     });
 
     if (matchedCourse) {
-        // Handle "meaning", "what is", "about" or general info requests (Highest Quality Explanation)
-        if (query.includes('meaning') || query.includes('what is') || query.includes('about') || query.includes('explain') || query.includes('define')) {
-            return `**${matchedCourse.title}**: ${matchedCourse.desc}\n\nThis professional track at Gyantrix is designed to equip you with ${matchedCourse.level} level expertise. During the course, you will master essential industry tools like ${matchedCourse.tools.slice(0, 3).map(t => t.name).join(', ')}. It’s an excellent choice if you're looking to build a high-growth career in this field. Would you like to see the detailed curriculum?`;
+        // Handle "What will I learn" / "meaning" / "about"
+        if (query.includes('learn') || query.includes('meaning') || query.includes('what is') || query.includes('about') || query.includes('explain') || query.includes('define')) {
+            const modulesList = matchedCourse.modules ? matchedCourse.modules.slice(0, 3).map(m => m.title).join(', ') : 'core industry concepts';
+            return `In the **${matchedCourse.title}** program, you will learn comprehensive skills including ${modulesList}, and much more. ${matchedCourse.desc} This course is designed to take you from a ${matchedCourse.level || 'foundational'} to professional level.`;
         }
 
-        // Handle "tools", "software", "technologies" or "stack" requests
-        if (query.includes('tool') || query.includes('software') || query.includes('technology') || query.includes('stack')) {
+        // Handle "Which technologies" / "tools" / "software"
+        if (query.includes('tool') || query.includes('software') || query.includes('technology') || query.includes('stack') || query.includes('technologies')) {
             const toolExplanations = {
                 'python': 'an essential language for data automation and backend logic.',
                 'react': 'a powerful library for building interactive, lightning-fast user interfaces.',
@@ -105,13 +107,33 @@ function simulateAI(input) {
                 'css': 'the styling language used to create beautiful, modern web designs.'
             };
 
-            const toolsList = matchedCourse.tools.map(t => {
+            const toolsList = matchedCourse.tools ? matchedCourse.tools.map(t => {
                 const nameLower = t.name.toLowerCase();
                 const explanation = toolExplanations[nameLower] || 'an industry-standard tool used for professional projects.';
                 return `• **${t.name}**: ${explanation}`;
-            }).join('\n');
+            }).join('\n') : 'industry-standard technologies';
 
-            return `In the **${matchedCourse.title}** program, you will master these powerful tools:\n\n${toolsList}\n\nOur curriculum ensures you gain practical, job-ready skills with each of these technologies.`;
+            return `In the **${matchedCourse.title}** program, you will master these powerful technologies:\n\n${toolsList}\n\nOur curriculum ensures you gain practical, job-ready skills with each of these technologies.`;
+        }
+
+        // Handle "How long is the course"
+        if (query.includes('long') || query.includes('duration') || query.includes('time') || query.includes('period')) {
+            return `The **${matchedCourse.title}** program typically spans **${matchedCourse.duration || '6-8 months'}**. We offer flexible batches (weekday and weekend) to accommodate student and working professional schedules.`;
+        }
+
+        // Handle "Will I receive a certificate" / "recognized"
+        if (query.includes('certificate') || query.includes('certification') || query.includes('recognize') || query.includes('valid')) {
+            return `Yes! Upon successful completion of the **${matchedCourse.title}** course, you will receive an **Industry-Recognized Professional Certification** from Gyantrix Academy. This certificate is globally valid and highly valued by our 999+ hiring partners.`;
+        }
+
+        // Handle "job roles" / "careers"
+        if (query.includes('role') || query.includes('job') || query.includes('career') || query.includes('position')) {
+            return `Graduates of our **${matchedCourse.title}** program are eligible for various high-paying roles such as Specialists, Analysts, and Developers in their respective fields. We offer 100% placement assistance to help you land these positions.`;
+        }
+
+        // Handle "Who can join" / "experience" / "prior"
+        if (query.includes('who') || query.includes('join') || query.includes('experience') || query.includes('prior') || query.includes('eligible')) {
+            return `The **${matchedCourse.title}** course is open to students, graduates, and working professionals. **No prior experience is required** as we start from the absolute fundamentals and gradually move to advanced industry concepts.`;
         }
 
         // Handle fee/price request
@@ -119,13 +141,13 @@ function simulateAI(input) {
             return `The investment for the ${matchedCourse.title} program is ${matchedCourse.price}. This covers all training materials, projects, and 100% placement assistance.`;
         }
 
-        // Handle job/career/placement request
-        if (query.includes('placement') || query.includes('job') || query.includes('career') || query.includes('salary')) {
-            return `For ${matchedCourse.title}, we offer 100% placement assistance. Our graduates land roles at top companies with starting packages up to 6.5 LPA. We help with resume building and mock interviews.`;
+        // Handle placement specifically
+        if (query.includes('placement') || query.includes('assistance') || query.includes('support')) {
+            return `We provide **100% Placement Assistance** for the ${matchedCourse.title} course. This includes resume building, mock interviews with industry experts, and direct referrals to our network of 999+ corporate partners.`;
         }
 
         // Default course info (Comprehensive summary)
-        return `**${matchedCourse.title}**: ${matchedCourse.desc}\n\nAt Gyantrix, this program offers hands-on training using tools like ${matchedCourse.tools.slice(0, 4).map(t => t.name).join(', ')} with full placement support. What specific details (like fees or modules) can I help you with?`;
+        return `**${matchedCourse.title}**: ${matchedCourse.desc}\n\nAt Gyantrix, this program offers hands-on training using professional tools with full placement support. What specific details (like duration, fees, or certification) can I help you with?`;
     }
 
     // 2. Generic administrative queries
@@ -142,5 +164,9 @@ function simulateAI(input) {
         return `We offer 14 core programs including ${titles}. Which field interests you most?`;
     }
 
-    return "I am here to help you with information about our career tracks and training at Gyantrix Academy. Could you please specify which course or career domain you would like to know about?";
+    if (query.includes('certificate') || query.includes('certification')) {
+        return "All our courses include a professional certification recognized by industry leaders. We have over 999+ hiring partners who value Gyantrix certifications.";
+    }
+
+    return "For other queries or specialized assistance, please contact us directly on WhatsApp at +91 73868 79818. We're happy to help!";
 }

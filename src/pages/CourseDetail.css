@@ -14,12 +14,12 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 3rem 2rem;
+    padding: 1.5rem 2rem 3rem;
+    /* Reduced top padding from 3rem */
     gap: 2rem;
     color: #fff;
     flex-wrap: wrap;
-    background: linear-gradient(90deg, #08132c, #5fd7f2);
-    margin-top: 0.1rem;
+    background: #081221;
 }
 
 .course-banner h1 {
@@ -91,11 +91,11 @@
 .download-btn {
     position: relative;
     background: transparent;
-    color: #fff;
+    color: #f2f1f1;
     border: 2px solid #3bc5f8;
     padding: 0.7rem 1.7rem;
     border-radius: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: 0.5s;
     margin-top: 1rem;
@@ -119,7 +119,7 @@
 .enroll-btn .liquid,
 .download-btn .liquid {
     position: absolute;
-    top: -121px;
+    top: -161px;
     left: 0;
     width: 200%;
     height: 200%;
@@ -148,6 +148,7 @@
 .download-btn {
     display: block;
     margin: 1.5rem auto 0 auto;
+    color: #000;
 }
 
 
@@ -689,12 +690,12 @@
     --primary: #00f2ff;
     --secondary: #7000ff;
     --accent: #ff00c8;
-    --bg-deep: #000005;
+    --bg-deep: #081221;
     --glass-v1: rgba(255, 255, 255, 0.03);
     --glass-v2: rgba(255, 255, 255, 0.01);
     --border-v1: rgba(255, 255, 255, 0.08);
 
-    padding: 12rem 10%;
+    padding: 6rem 10%;
     background: var(--bg-deep);
     position: relative;
     overflow: hidden;
@@ -757,7 +758,7 @@
     position: relative;
     z-index: 10;
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
 }
 
 .quantum-tag {
@@ -862,7 +863,7 @@
     background: var(--glass-v2);
     border: 1px solid var(--border-v1);
     border-radius: 12px;
-    padding: 3rem;
+    padding: 2rem;
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(30px);
@@ -870,6 +871,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .card-top-bar {
@@ -911,7 +914,22 @@
     font-size: 2rem;
     color: var(--primary);
     position: relative;
-    margin-bottom: 2.5rem;
+    margin: 0 auto 2.5rem auto;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 5;
+}
+
+.quantum-logo-img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.3));
+    transition: all 0.5s ease;
+}
+
+.quantum-card:hover .quantum-logo-img {
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.4)) brightness(1.2);
+    transform: scale(1.1);
 }
 
 .icon-ripple {
@@ -1048,242 +1066,408 @@
     }
 }
 
-.curriculum {
-    padding: 3rem 1rem;
-    max-width: 1200px;
-    margin: auto;
-    background-color: #000;
-}
-
-.curriculum h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-    color: #66D6FF;
-}
-
-.curriculum-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-/* LEFT PANEL */
-.left-panel {
-    background-color: #0d2d4f;
-    flex: 1 1 300px;
-    border-radius: 8px;
-    padding: 2rem;
-    color: #fff;
-    transition: all 0.3s ease;
-}
-
-.left-panel:hover {
-    box-shadow: 0 0 15px rgba(198, 237, 45, 0.3);
-    transform: translateY(-4px);
-}
-
-.left-panel h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.left-panel h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.left-panel p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-    color: #d0d0d0;
-}
-
-.info-box {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
-}
-
-.info-box:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px);
-}
-
-.info-box strong {
-    font-size: 1.2rem;
-    color: #fff;
-    display: block;
-}
-
-.info-box span {
-    font-size: 0.9rem;
-    color: #ddd;
-}
-
-.download-btn {
-    /* background: #c6ed2d; */
-    color: #111010;
-    border: 2px solid #66D6FF;
-    font-weight: 540;
-    padding: 0.9rem 1.5rem;
-    border-radius: 1.5rem;
-    cursor: pointer;
-    margin-top: 1rem;
-    width: 100%;
-    transition: all 0.3s ease;
-}
-
-.download-btn:hover {
-    /* background: #b8df20; */
-    transform: translateY(-2px);
-}
-
-/* RIGHT PANEL */
-.right-panel {
-    flex: 2 1 600px;
+/* CURRICULUM NEXUS HUB */
+.curriculum-nexus {
     position: relative;
-    padding-left: 2rem;
-}
-
-.timeline-line {
-    position: absolute;
-    left: 15px;
-    top: 10px;
-    bottom: 0;
-    width: 3px;
-    background: #c6ed2d;
-}
-
-.module {
-    background: #2d2d2d;
-    margin-bottom: 1rem;
-    border-radius: 6px;
+    padding: 3rem 8%;
+    background: #081221;
+    color: #fff;
     overflow: hidden;
-    border: 1px solid #fff;
+    min-height: 650px;
+    /* Reduced Height */
+    display: flex;
+    flex-direction: column;
+}
+
+.nexus-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.nexus-orb {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(150px);
+    opacity: 0.08;
+    z-index: 0;
+}
+
+.nexus-orb-1 {
+    background: #00f2ff;
+    top: -200px;
+    right: -200px;
+}
+
+.nexus-orb-2 {
+    background: #7000ff;
+    bottom: -200px;
+    left: -200px;
+}
+
+.nexus-header {
     position: relative;
-    transition: all 0.3s ease;
+    z-index: 10;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
-.module:hover {
-    transform: translateY(-3px);
-    border-color: #c6ed2d;
-    box-shadow: 0 0 10px rgba(198, 237, 45, 0.3);
+.nexus-badge {
+    display: inline-block;
+    padding: 0.6rem 1.8rem;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 242, 255, 0.4);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #00f2ff;
+    margin-bottom: 1.5rem;
+    font-family: 'Space Mono', monospace;
 }
 
-.module.active {
-    border-color: #c6ed2d;
-    box-shadow: 0 0 15px rgba(198, 237, 45, 0.4);
+.nexus-header h2 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin-bottom: 1.5rem;
+    line-height: 1;
 }
 
-.module::before {
+.gradient-text {
+    background: linear-gradient(135deg, #fff 0%, #00f2ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nexus-header p {
+    color: #94a3b8;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.nexus-container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 4rem;
+    position: relative;
+    z-index: 10;
+    flex-grow: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Nexus Navigation Tabs */
+.nexus-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.nexus-tab-item {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.nexus-tab-item:hover {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(0, 242, 255, 0.3);
+    transform: translateX(10px);
+}
+
+.nexus-tab-item.active {
+    background: rgba(0, 242, 255, 0.08);
+    border-color: #00f2ff;
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.1);
+}
+
+.tab-id {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    color: #475569;
+    font-weight: 800;
+}
+
+.nexus-tab-item.active .tab-id {
+    color: #00f2ff;
+}
+
+.tab-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #64748b;
+    transition: color 0.4s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nexus-tab-item.active .tab-title {
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.tab-active-bar {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) scaleY(0);
+    width: 4px;
+    height: 60%;
+    background: #00f2ff;
+    border-radius: 0 4px 4px 0;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 15px #00f2ff;
+}
+
+.nexus-tab-item.active .tab-active-bar {
+    transform: translateY(-50%) scaleY(1);
+}
+
+/* Nexus Main Viewport (The Deck) */
+.nexus-deck {
+    height: 100%;
+    min-height: 450px;
+}
+
+.deck-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.2));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 32px;
+    padding: 3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(30px);
+    position: relative;
+    overflow: hidden;
+}
+
+.deck-card::before {
     content: '';
     position: absolute;
-    left: -23px;
-    top: 1.4rem;
-    width: 10px;
-    height: 10px;
-    background: #c6ed2d;
-    border-radius: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 242, 255, 0.4), transparent);
 }
 
-.module-header {
+.deck-card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
-    padding: 1rem 1rem;
-    transition: background 0.3s;
+    margin-bottom: 2rem;
 }
 
-.module-header:hover {
-    background: #383838;
+.module-phase {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: #00f2ff;
+    letter-spacing: 4px;
+    font-weight: 700;
 }
 
-.module-header h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-}
-
-.tag {
-    background: #333;
-    color: #c6ed2d;
+.module-tag-glow {
+    padding: 0.75rem 2rem;
+    background: rgba(112, 0, 255, 0.15);
+    color: #d8b4fe;
+    border: 1px solid rgba(112, 0, 255, 0.3);
     border-radius: 4px;
-    font-size: 0.7rem;
-    padding: 0.2rem 0.6rem;
-    position: absolute;
-    right: 1.5rem;
-    top: 1.2rem;
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
 }
 
-.tag_arrow {
-    font-size: 1rem;
-    padding: 0.2rem 0.6rem;
-    position: absolute;
-    right: 0.1rem;
-    top: 0.9rem;
-    text-align: center;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+.deck-card-body {
+    flex-grow: 1;
 }
 
-.module.active .tag_arrow {
-    transform: rotate(180deg);
+.deck-card-body h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
 }
 
-.duration {
-    font-size: 0.9rem;
-    color: #ddd;
+.deck-card-body p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #94a3b8;
+    margin-bottom: 3rem;
+    font-weight: 300;
 }
 
-.plus {
-    font-weight: 650;
-    font-size: 1.3rem;
-    transition: transform 0.3s, color 0.3s;
+.nexus-deliverables {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.deliv-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.deliv-item i {
+    font-size: 2rem;
+    color: #00f2ff;
+    filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.3));
+}
+
+.deliv-item div strong {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 800;
     color: #fff;
+    margin-bottom: 0.5rem;
 }
 
-.module.active .plus {
-    transform: rotate(45deg);
-    color: #c6ed2d;
-}
-
-.module-content {
-    background: #1e1e1e;
-    padding: 0 1.5rem;
+.deliv-item div span {
     font-size: 0.9rem;
-    color: #ccc;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
+    color: #64748b;
+    line-height: 1.5;
 }
 
-.module.active .module-content {
-    max-height: 150px;
-    padding: 1rem 1.5rem;
+.deck-card-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .curriculum-container {
+.footer-stats {
+    display: flex;
+    gap: 4rem;
+}
+
+.footer-stats span {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Space Mono', monospace;
+}
+
+.footer-stats i {
+    color: #00f2ff;
+}
+
+.nexus-download-btn {
+    padding: 1.5rem 3rem;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+}
+
+.nexus-download-btn:hover {
+    background: #00f2ff;
+    box-shadow: 0 0 50px rgba(0, 242, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1300px) {
+    .nexus-container {
+        grid-template-columns: 300px 1fr;
+        gap: 2rem;
+    }
+
+    .deck-card {
+        padding: 3rem;
+    }
+
+    .deck-card-body h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nexus-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nexus-tabs {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 2rem;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .nexus-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nexus-tab-item {
+        min-width: 280px;
+        flex-shrink: 0;
+    }
+
+    .nexus-tab-item.active {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .curriculum-nexus {
+        padding: 6rem 1.5rem;
+    }
+
+    .nexus-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .deck-card-body h3 {
+        font-size: 1.8rem;
+    }
+
+    .nexus-deliverables {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .deck-card-footer {
         flex-direction: column;
-        align-items: stretch;
-    }
-
-    .right-panel {
-        padding-left: 1rem;
-    }
-
-    .timeline-line {
-        left: 10px;
+        gap: 3rem;
+        align-items: flex-start;
     }
 }
 

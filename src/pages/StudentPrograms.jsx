@@ -11,10 +11,9 @@ const StudentPrograms = () => {
 
     const categories = [
         { id: 'popular', label: 'All Programs' },
-        { id: 'it', label: 'Tech & AI' },
-        { id: 'pharma', label: 'Life Sciences' },
-        { id: 'management', label: 'Management' },
-        { id: 'non-it-marketing', label: 'Business' },
+        { id: 'it', label: 'IT' },
+        { id: 'pharma', label: 'Pharma' },
+        { id: 'nonit', label: 'Non IT & Management' },
         { id: 'agriculture', label: 'Agriculture' }
     ];
 
@@ -28,7 +27,19 @@ const StudentPrograms = () => {
 
     const filteredCourses = useMemo(() => {
         return coursesData.filter(course => {
-            const matchesCategory = activeCategory === 'popular' || course.category.includes(activeCategory);
+            const courseCategories = course.category.split(' ');
+            let matchesCategory = false;
+
+            if (activeCategory === 'popular') {
+                matchesCategory = true;
+            } else if (activeCategory === 'nonit') {
+                // Matches both Non IT and Management as per Navbar label
+                matchesCategory = courseCategories.includes('non-it-marketing') || courseCategories.includes('management');
+            } else {
+                // Exact whole word check (e.g., 'it' won't match 'non-it')
+                matchesCategory = courseCategories.includes(activeCategory);
+            }
+
             const matchesSearch = course.title.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesSearch;
         });

@@ -2,8 +2,9 @@
 
 .catalog-masterclass {
     position: relative;
-    padding: 80px 5%;
-    /* Reduced from 140px */
+    padding: 5.5rem 5% 80px 5%;
+    /* Increased top padding for Courses ONLY */
+    /* Aligned with other pages */
     background: #ffffff;
     overflow: hidden;
     font-family: 'Inter', -apple-system, sans-serif;
@@ -35,11 +36,14 @@
 
 /* Header Re-styling */
 .catalog-header {
-    text-align: left;
+    text-align: center;
     max-width: 1400px;
     margin: 0 auto 3rem;
     position: relative;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header-meta {
@@ -110,7 +114,8 @@
 
 /* Glassmorphism Search */
 .search-bench {
-    max-width: 700px;
+    max-width: 900px;
+    /* Slightly wider as requested */
     margin: 0 auto;
     position: relative;
     z-index: 20;
@@ -124,7 +129,7 @@
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 20px;
-    padding: 4px 20px;
+    padding: 4px 30px;
     /* Reduced from 8px 30px */
     box-shadow:
         0 4px 6px rgba(0, 0, 0, 0.02),
@@ -182,6 +187,7 @@
 /* Category Navigation (Minimalist Scroll) */
 .catalog-nav {
     display: flex;
+    justify-content: center;
     gap: 35px;
     /* Reduced from 50px */
     margin-bottom: 2rem;
@@ -447,7 +453,7 @@
 }
 
 .val {
-    font-size: 2.2rem;
+    font-size: 1.3rem;
     /* Reduced from 3.5rem */
     font-weight: 950;
     line-height: 1;
@@ -595,6 +601,11 @@
 }
 
 @media (max-width: 1024px) {
+    .catalog-masterclass {
+        padding-top: 170px;
+        /* Increased Tablet clearance */
+    }
+
     .program-grid-immersive {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -602,12 +613,15 @@
 
 @media (max-width: 768px) {
     .catalog-masterclass {
-        padding: 40px 5%;
+        padding: 110px 5% 40px 5%;
+        /* Larger mobile spacing for Courses ONLY */
     }
 
     .catalog-header {
         text-align: center;
         margin-bottom: 30px;
+        margin-top: 40px;
+        /* Extra breathing room */
     }
 
     .header-meta {

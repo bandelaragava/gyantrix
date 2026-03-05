@@ -181,55 +181,81 @@ const Home = () => {
                     </div>
 
                     <div className="stepper-layout">
-                        {/* Left: Navigation Steps */}
+                        {/* Navigation Container (Responsive Accordion + Desktop Sidebar) */}
                         <div className="stepper-nav">
                             {offers.map((offer, index) => (
-                                <button
-                                    key={index}
-                                    className={`stepper-item ${activeOffer === index ? 'active' : ''}`}
-                                    onClick={() => setActiveOffer(index)}
-                                    onMouseEnter={() => setActiveOffer(index)}
-                                >
-                                    <div className="stepper-icon-box">
-                                        <i className={offer.icon}></i>
-                                    </div>
-                                    <div className="stepper-text">
-                                        <h3>{offer.title}</h3>
-                                        <span>{offer.subtitle}</span>
-                                    </div>
-                                    <div className="active-indicator"></div>
-                                </button>
+                                <div key={index} className="stepper-wrapper">
+                                    <button
+                                        className={`stepper-item ${activeOffer === index ? 'active' : ''}`}
+                                        onClick={() => setActiveOffer(index)}
+                                        onMouseEnter={() => { if (window.innerWidth > 992) setActiveOffer(index); }}
+                                    >
+                                        <div className="stepper-icon-box">
+                                            <i className={offer.icon}></i>
+                                        </div>
+                                        <div className="stepper-text">
+                                            <h3>{offer.title}</h3>
+                                            <span>{offer.subtitle}</span>
+                                        </div>
+                                        <div className="active-indicator"></div>
+                                        <i className={`fas fa-chevron-${activeOffer === index ? 'up' : 'down'} accordion-arrow mobile-only`}></i>
+                                    </button>
+
+                                    {/* Mobile/Tablet Inline Content (Accordion) */}
+                                    {activeOffer === index && (
+                                        <div className="stepper-content-inline">
+                                            <div className="showcase-content">
+                                                <div className="showcase-info">
+                                                    <span className="showcase-tag">Features Overview</span>
+                                                    <h1>{offer.title}</h1>
+                                                    <p>{offer.description}</p>
+                                                    <div className="feature-tags">
+                                                        {offer.features.map((feat, i) => (
+                                                            <span key={i} className="feat-tag">
+                                                                <i className="fas fa-check-circle"></i> {feat}
+                                                            </span>
+                                                        ))}
+                                                    </div>
+                                                    <Link to="/courses" className="btn showcase-btn">
+                                                        <span>Explore Programs</span>
+                                                        <div className="liquid"></div>
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
                             ))}
                         </div>
 
-                        {/* Right: Feature Showcase */}
-                        <div className="stepper-showcase">
-                            <div className="showcase-content" key={activeOffer}>
-                                <div className="showcase-info">
-                                    <span className="showcase-tag">Features Overview</span>
-                                    <h1>{offers[activeOffer].title}</h1>
-                                    <p>{offers[activeOffer].description}</p>
-
-                                    <div className="feature-tags">
-                                        {offers[activeOffer].features.map((feat, i) => (
-                                            <span key={i} className="feat-tag">
-                                                <i className="fas fa-check-circle"></i> {feat}
-                                            </span>
-                                        ))}
+                        {/* Desktop Showcase (Side-by-side) */}
+                        <div className="stepper-showcase desktop-only">
+                            {offers[activeOffer] && (
+                                <div className="showcase-content" key={activeOffer}>
+                                    <div className="showcase-info">
+                                        <span className="showcase-tag">Features Overview</span>
+                                        <h1>{offers[activeOffer].title}</h1>
+                                        <p>{offers[activeOffer].description}</p>
+                                        <div className="feature-tags">
+                                            {offers[activeOffer].features.map((feat, i) => (
+                                                <span key={i} className="feat-tag">
+                                                    <i className="fas fa-check-circle"></i> {feat}
+                                                </span>
+                                            ))}
+                                        </div>
+                                        <Link to="/courses" className="btn showcase-btn">
+                                            <span>Explore Programs</span>
+                                            <div className="liquid"></div>
+                                        </Link>
                                     </div>
-
-                                    <Link to="/courses" className="btn showcase-btn">
-                                        <span>Explored Programs</span>
-                                        <div className="liquid"></div>
-                                    </Link>
-                                </div>
-                                <div className="showcase-visual">
-                                    <div className="floating-sphere"></div>
-                                    <div className="icon-large">
-                                        <i className={offers[activeOffer].icon}></i>
+                                    <div className="showcase-visual">
+                                        <div className="floating-sphere"></div>
+                                        <div className="icon-large">
+                                            <i className={offers[activeOffer].icon}></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
                     </div>
                 </div>

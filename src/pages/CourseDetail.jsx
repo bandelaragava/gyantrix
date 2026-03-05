@@ -7,7 +7,7 @@ import './CourseDetail.css';
 const CourseDetail = () => {
     const { courseId } = useParams();
     const sectionRef = useRef(null);
-    const [activeModule, setActiveModule] = useState(null);
+    const [activeModule, setActiveModule] = useState(0);
     const [activeFaq, setActiveFaq] = useState(null);
     const [activeCert, setActiveCert] = useState('gyantrix');
     const [reviews, setReviews] = useState([]);
@@ -45,12 +45,13 @@ const CourseDetail = () => {
             setReviews([]);
         }
         // Reset states when course changes
-        setActiveModule(null);
+        setActiveModule(0);
         setActiveFaq(null);
     }, [course]);
 
     const toggleModule = (index) => {
-        setActiveModule(activeModule === index ? null : index);
+        // In the Nexus view, we don't allow closing the active tab (stays active)
+        setActiveModule(index);
     };
 
     const toggleFaq = (index) => {
@@ -184,7 +185,7 @@ const CourseDetail = () => {
             <section className="course-banner">
                 <div className="banner-left">
                     <div className="rating">
-                        <span className="rating-value">5.0 <span className="str">★★★★★</span></span>
+                        <span className="rating-value">4.5 <span className="str">★★★★★</span></span>
                         <span className="reviews">{reviews.length > 0 ? `${reviews.length + 2300} Reviews` : '2000+ Reviews'}</span>
                     </div>
                     <h1>Best {course.title} Training</h1>
@@ -242,36 +243,32 @@ const CourseDetail = () => {
                         <span className="pulse-dot"></span>
                         ADVANTAGE ANALYTICS v4.0
                     </div>
-                    <h2 className="quantum-title">The Gyantrix <span className="glitch-text" data-text="Advantage">Advantage</span></h2>
+                    <h2 className="quantum-title">The Gyantrix <span className="glitch-text" data-text="Advantage">Advantages</span></h2>
                     <p className="quantum-subtitle">Deploying a hyper-structured ecosystem for elite technical evolution.</p>
                 </div>
 
                 <div className="quantum-grid-layout">
                     {[
-                        { icon: "fas fa-broadcast-tower", title: "Synapse Hub", desc: "Real-time interactive neuro-learning environment." },
-                        { icon: "fas fa-layer-group", title: "Architect Roadmap", desc: "Precision-engineered curriculum for technical dominance." },
-                        { icon: "fas fa-users-viewfinder", title: "Global Nexus", desc: "Ultra-high value network of industry commanders." },
-                        { icon: "fas fa-microchip", title: "Forge Projects", desc: "Industrial-grade project deployment with 24/7 support." },
-                        { icon: "fas fa-vial-circle-check", title: "Stress Labs", desc: "High-pressure technical assessment & simulation." },
-                        { icon: "fas fa-award", title: "Verified Elite", desc: "Globally accredited credentials for the top 1%." }
+                        { icon: "fas fa-broadcast-tower", img: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png", title: "Synapse Hub", desc: "Real-time interactive neuro-learning environment." },
+                        { icon: "fas fa-layer-group", img: "https://cdn-icons-png.flaticon.com/512/4359/4359738.png", title: "Architect Roadmap", desc: "Precision-engineered curriculum for technical dominance." },
+                        { icon: "fas fa-users-viewfinder", img: "https://cdn-icons-png.flaticon.com/512/3845/3845815.png", title: "Global Nexus", desc: "Ultra-high value network of industry commanders." },
+                        { icon: "fas fa-microchip", img: "https://cdn-icons-png.flaticon.com/512/2082/2082405.png", title: "Forge Projects", desc: "Industrial-grade project deployment with 24/7 support." },
+                        { icon: "fas fa-vial-circle-check", img: "https://cdn-icons-png.flaticon.com/512/4320/4320350.png", title: "Stress Labs", desc: "High-pressure technical assessment & simulation." },
+                        { icon: "fas fa-award", img: "https://cdn-icons-png.flaticon.com/512/1904/1904425.png", title: "Verified Elite", desc: "Globally accredited credentials for the top 1%." }
                     ].map((item, index) => (
                         <div key={index} className="quantum-card-wrapper scroll-reveal" style={{ transitionDelay: `${index * 0.1}s` }}>
                             <div className="quantum-card">
-                                <div className="card-top-bar">
-                                    <div className="bar-dots"><span></span><span></span><span></span></div>
-                                    <span className="cid">UID: 0x0{index + 1}</span>
-                                </div>
                                 <div className="card-body-v4">
                                     <div className="icon-quantum-wrap">
-                                        <i className={item.icon}></i>
+                                        {item.img ? (
+                                            <img src={item.img} alt={item.title} className="quantum-logo-img" />
+                                        ) : (
+                                            <i className={item.icon}></i>
+                                        )}
                                         <div className="icon-ripple"></div>
                                     </div>
                                     <h3>{item.title}</h3>
                                     <p>{item.desc}</p>
-                                </div>
-                                <div className="card-footer-v4">
-                                    <div className="footer-line"></div>
-                                    <span className="status">OPERATIONAL</span>
                                 </div>
 
                                 <div className="quantum-glare"></div>
@@ -281,47 +278,82 @@ const CourseDetail = () => {
                 </div>
             </section>
 
-            {/* Curriculum Section */}
+            {/* The Curriculum Nexus Hub */}
             {modules.length > 0 && (
-                <section className="curriculum">
-                    <h2>{course.title} Curriculum</h2>
-                    <div className="curriculum-container">
-                        <div className="left-panel">
-                            <h2>Gyantrix</h2>
-                            <h3>Industry Oriented Curriculum</h3>
-                            <p>Master every topic with interactive classes, real-life examples, and tool-driven practice. Go beyond theory to build the practical expertise that helps you stand out in your career.</p>
-                            <div className="info-box">
-                                <strong>{modules.length * 3}+</strong>
-                                <span>Case Studies & Projects</span>
-                            </div>
-                            <div className="info-box">
-                                <strong>{tools.length > 0 ? tools.length : '10'}+</strong>
-                                <span>Languages & Tools</span>
-                            </div>
-                            <div className="info-box">
-                                <strong>280+</strong>
-                                <span>Live Session Hours</span>
-                            </div>
-                            <button className="download-btn">
-                                <span>Download Syllabus ⬇️</span>
-                                <div className="liquid"></div>
-                            </button>
+                <section className="curriculum-nexus">
+                    <div className="nexus-grid-bg"></div>
+                    <div className="nexus-orb nexus-orb-1"></div>
+                    <div className="nexus-orb nexus-orb-2"></div>
+
+                    <div className="nexus-header">
+                        <div className="nexus-badge">SYSTEMS ARCHITECTURE v3.0</div>
+                        <h2>The <span className="gradient-text">Curriculum Nexus</span></h2>
+                        <p>An interactive, multi-dimensional learning experience engineered for rapid industry scaling.</p>
+                    </div>
+
+                    <div className="nexus-container">
+                        {/* Nexus Navigation Side-Bar (Horizontal on mobile) */}
+                        <div className="nexus-tabs">
+                            {modules.map((module, index) => (
+                                <button
+                                    key={index}
+                                    className={`nexus-tab-item ${activeModule === index ? 'active' : ''}`}
+                                    onMouseEnter={() => toggleModule(index)}
+                                >
+                                    <span className="tab-id">0{index + 1}</span>
+                                    <span className="tab-title">{module.title}</span>
+                                    <div className="tab-active-bar"></div>
+                                </button>
+                            ))}
                         </div>
 
-                        <div className="right-panel">
-                            <div className="timeline-line"></div>
-                            {modules.map((module, index) => (
-                                <div key={index} className={`module ${activeModule === index ? 'active' : ''}`}>
-                                    <div className="module-header" onClick={() => toggleModule(index)}>
-                                        <h4>{module.title} <span className="tag">{module.tag}</span><span className="tag_arrow">⮟</span></h4>
-                                    </div>
-                                    {activeModule === index && (
-                                        <div className="module-content">
-                                            {module.content}
-                                        </div>
-                                    )}
+                        {/* Nexus Content Deck - Keeps height 'Medium' and constant */}
+                        <div className="nexus-deck">
+                            <div className="deck-card">
+                                <div className="deck-card-header">
+                                    <div className="module-phase">PHASE_{activeModule + 1} // INITIALIZED</div>
+                                    <div className="module-tag-glow">{modules[activeModule].tag}</div>
                                 </div>
-                            ))}
+
+                                <div className="deck-card-body">
+                                    <h3>{modules[activeModule].title}</h3>
+                                    <p>{modules[activeModule].content}</p>
+
+                                    <div className="nexus-deliverables">
+                                        <div className="deliv-item">
+                                            <i className="fas fa-layer-group"></i>
+                                            <div>
+                                                <strong>Core Architecture</strong>
+                                                <span>Theoretical Grounding</span>
+                                            </div>
+                                        </div>
+                                        <div className="deliv-item">
+                                            <i className="fas fa-vial"></i>
+                                            <div>
+                                                <strong>Practical Lab</strong>
+                                                <span>Hands-on Implementation</span>
+                                            </div>
+                                        </div>
+                                        <div className="deliv-item">
+                                            <i className="fas fa-shield-alt"></i>
+                                            <div>
+                                                <strong>Industry Validation</strong>
+                                                <span>Final Sync & Review</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="deck-card-footer">
+                                    <div className="footer-stats">
+                                        <span><i className="fas fa-clock"></i> 40+ HOURS</span>
+                                        <span><i className="fas fa-tasks"></i> 3 PROJECTS</span>
+                                    </div>
+                                    <button className="nexus-download-btn">
+                                        <i className="fas fa-file-code"></i> DOWNLOAD PDF
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -420,12 +452,25 @@ const CourseDetail = () => {
                 <div className="jrny-text">
                     <h2>Transform Your Career with Most Trusted Institute</h2>
                     <p>
-                        Step into the world of end-to-end development and innovation. At our institute, you don't just code — you craft complete digital solutions.
+                        {course.category?.includes('it') ?
+                            "Step into the world of end-to-end development and innovation. At our institute, you don't just code — you craft complete digital solutions." :
+                            `Master the core principles of ${course.title} and drive innovation in your field. Our IIT-inspired curriculum ensures you're ready for elite professional roles.`
+                        }
                     </p>
                     <ul>
-                        <li>Master front-end, back-end, and database technologies with real-world projects</li>
-                        <li>Gain expertise in modern frameworks and cloud deployment</li>
-                        <li>Build a strong developer portfolio and become industry-ready for top IT roles</li>
+                        {course.category?.includes('it') ? (
+                            <>
+                                <li>Master front-end, back-end, and database technologies with real-world projects</li>
+                                <li>Gain expertise in modern frameworks and cloud deployment</li>
+                                <li>Build a strong developer portfolio and become industry-ready for top IT roles</li>
+                            </>
+                        ) : (
+                            <>
+                                <li>Gain specialized expertise with industry-validated curriculum</li>
+                                <li>Work on real-world case studies and industrial-grade projects</li>
+                                <li>Accelerate your career with 100% placement assistance and expert mentoring</li>
+                            </>
+                        )}
                     </ul>
                     <Link to="/contact" className="contact-btn">
                         <span>Contact Us</span>
@@ -433,7 +478,7 @@ const CourseDetail = () => {
                     </Link>
                 </div>
                 <div className="jrny-img">
-                    <img src="https://www.itpt.co.uk/wp-content/uploads/2022/02/Web-Application-Development-Full-Stack-Developer.png" alt="Learning Illustration" />
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600" alt="Professional Education" />
                 </div>
             </section>
 

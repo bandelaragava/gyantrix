@@ -192,6 +192,9 @@
 }
 
 .gyantrix_content {
+    position: relative;
+    left: -0.4rem;
+    bottom: -0.4rem;
     font-size: 1.5rem;
     font-weight: 700;
     font-family: serif;

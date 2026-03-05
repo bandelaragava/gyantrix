@@ -45,15 +45,9 @@ export const coursesData = [
             { question: "What are the career opportunities after completing this course?", answer: "Graduates can apply for roles like AI Engineer, Data Scientist, ML Engineer, and Business Intelligence Analyst across various industries." },
             { question: "Is this course suitable for non-technical backgrounds?", answer: "Yes, we start with Python and SQL basics, making it ideal for anyone looking to transition into the AI field." },
             { question: "Will I get hands-on experience?", answer: "Absolutely. The course includes multiple real-world projects and a final Capstone project to build your portfolio." },
-            { question: "What will I learn in this course?", answer: "You will master the end-to-end lifecycle of Artificial Intelligence and Data Analytics, from core Python programming and machine learning to building neural networks and AI-powered automation solutions." },
-            { question: "Which technologies will I learn?", answer: "You will gain hands-on expertise in Python, TensorFlow, Scikit-Learn, SQL, Power BI, and Tableau, along with advanced AI frameworks like Keras and PyTorch." },
-            { question: "How long is the course?", answer: "The program duration is 9-12 months, featuring a comprehensive curriculum with flexible weekend and weekday slots." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will earn a professional certification from Gyantrix Academy that validates your skills in AI and Data Analytics." },
-            { question: "Is the certificate recognized?", answer: "Absolutely. Our certification is industry-recognized and highly valued by our 999+ hiring partners for all career transitions." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, including dedicated resume building, LinkedIn optimization, and mock interview sessions with industry experts." },
-            { question: "What job roles can I get after this course?", answer: "Graduates qualify for high-impact roles such as Data Scientist, AI Engineer, Machine Learning Specialist, and Business Intelligence Analyst." },
-            { question: "Who can join this course?", answer: "This course is designed for graduates, final-year students, and working professionals from both technical and non-technical backgrounds looking to thrive in the AI era." },
-            { question: "Do I need prior experience?", answer: "No prior experience is required. we start from the absolute basics of programming and data logic before advancing to expert-level AI concepts." }
+            { question: "Do you provide placement assistance?", answer: "Yes, we offer 100% placement support, including resume building and mock interviews with industry experts." },
+            { question: "What certifications will I receive?", answer: "You will receive a globally recognized certification from Gyantrix Academy upon successful completion." },
+            { question: "What is the duration of the course?", answer: "The course is typically 9-12 months long with flexible weekend and weekday sessions." }
         ]
     },
     {
@@ -94,15 +88,12 @@ export const coursesData = [
             { name: 'Karthik Goud', role: 'MERN Developer', review: 'The practical approach with real projects helped me build confidence and land a high-paying job.', img: 'https://ui-avatars.com/api/?name=Karthik+Goud&background=FF5722&color=fff&size=128' }
         ],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will master both frontend and backend development, including HTML/CSS, React, Node.js, and database management, to build complete and scalable web applications." },
-            { question: "Which technologies will I learn?", answer: "The stack includes React, Node.js, Python/Django, Java, MongoDB, SQL, AWS, and Docker for a comprehensive full-stack experience." },
-            { question: "How long is the course?", answer: "The intensive Full Stack Development program is 8 months long, designed for deep skill acquisition." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will receive a Professional Full Stack Developer certification from Gyantrix Academy." },
-            { question: "Is the certificate recognized?", answer: "Yes, our certification is recognized by global MNCs and reflects the practical project work you complete during the program." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, including mock interviews, portfolio reviews, and connections to our network of 999+ hiring partners." },
-            { question: "What job roles can I get after this course?", answer: "Roles include Full Stack Developer, MERN Stack Developer, Frontend Lead, Backend Engineer, and Web Architect." },
-            { question: "Who can join this course?", answer: "Anyone with an interest in coding—including freshers, career switchers, and professionals wanting to upgrade their technical skills." },
-            { question: "Do I need prior experience?", answer: "No, we start from the fundamentals of web design and coding before moving to advanced server-side architecture." }
+            { question: "What is the primary focus of the Full Stack course?", answer: "We focus on end-to-end development, covering React for frontend, Node/Python/Java for backend, and MongoDB/SQL for databases." },
+            { question: "Do you cover both frontend and backend?", answer: "Yes, you will master the complete MERN stack (MongoDB, Express, React, Node) along with other essential technologies." },
+            { question: "Are there any projects included?", answer: "Yes, you will build 5+ real-world projects, including a fully functional e-commerce app and a social media platform." },
+            { question: "What kind of job support do you offer?", answer: "We provide dedicated placement assistance, portfolio reviews, and mock technical interviews." },
+            { question: "Is this course for beginners?", answer: "Yes, we start from the very basics of HTML and CSS and gradually move to advanced concepts." },
+            { question: "Can I choose between Python and Java for backend?", answer: "Our curriculum includes modules for both, giving you the flexibility to specialize based on your preference." }
         ]
     },
     {
@@ -139,15 +130,12 @@ export const coursesData = [
             { name: "Ananya Gupta", role: "Data Scientist", review: "The program at Gyantrix helped me gain job-ready skills and land my first internship in less than three months.", img: "https://ui-avatars.com/api/?name=Ananya+Gupta&background=4CAF50&color=fff&size=128" }
         ],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will learn the entire data science pipeline including data cleaning, EDA, Machine Learning, Deep Learning, Big Data processing, and Generative AI." },
-            { question: "Which technologies will I learn?", answer: "The course covers Python, TensorFlow, PyTorch, Hadoop, Spark, and advanced visualization tools like Tableau." },
-            { question: "How long is the course?", answer: "This is an expert-level program spanning 10 months to ensure mastery of all advanced concepts." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will receive an Expert Certification in Data Science & AI from Gyantrix Academy." },
-            { question: "Is the certificate recognized?", answer: "Yes, it is highly recognized in the tech industry and serves as evidence of your capability to handle complex data challenges." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, including mock interviews and direct referrals to top tech firms." },
-            { question: "What job roles can I get after this course?", answer: "Target roles include Data Scientist, Machine Learning Engineer, Big Data Architect, and Research Scientist." },
-            { question: "Who can join this course?", answer: "It's ideal for graduates and IT professionals who want to transition into high-paying data science and AI research roles." },
-            { question: "Do I need prior experience?", answer: "While we start from core Python, a basic understanding of mathematics and logic is beneficial for this expert track." }
+            { question: "Is Python mandatory for Data Science?", answer: "Python is the most popular language for Data Science due to its extensive library support, and it is a core part of our training." },
+            { question: "Will I learn about Big Data?", answer: "Yes, the course includes modules on Hadoop and Spark for processing large-scale datasets." },
+            { question: "What is the difference between this and the Data Analyst course?", answer: "This course is more advanced, covering Machine Learning, Deep Learning, and AI in depth." },
+            { question: "Do you cover Generative AI?", answer: "Yes, we have a specialized module on Large Language Models (LLMs) and Generative AI." },
+            { question: "What kind of projects will I work on?", answer: "Projects include predictive modeling, sentiment analysis, and building recommendation engines." },
+            { question: "Is career guidance provided?", answer: "Yes, we have dedicated sessions for resume building, LinkedIn optimization, and placement support." }
         ]
     },
     {
@@ -183,15 +171,12 @@ export const coursesData = [
             { name: "Ritu Singh", role: "Business Analyst", review: "The Agile and Scrum modules were incredibly practical. I learned how to manage stakeholders effectively.", img: "https://ui-avatars.com/api/?name=Ritu+Singh&background=F44336&color=fff&size=128" }
         ],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will learn how to bridge the gap between business needs and technical solutions, master requirements gathering, and understand SDLC/Agile frameworks." },
-            { question: "Which technologies will I learn?", answer: "You will master Jira, SQL, Excel, and Visio for process mapping and requirement management." },
-            { question: "How long is the course?", answer: "The Business Analyst certification is a 6-month specialized program." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will receive a Professional Business Analyst certification from Gyantrix Academy." },
-            { question: "Is the certificate recognized?", answer: "Yes, our certification is industry-standard and recognized by top firms across IT, E-commerce, and Finance sectors." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, including behavioral interview prep and resume reviews." },
-            { question: "What job roles can I get after this course?", answer: "Target roles include Junior Business Analyst, Technical BA, Analyst Consultant, and Product Owner." },
-            { question: "Who can join this course?", answer: "Ideal for fresh graduates (BS/MS), MBAs, and professionals wanting to move into strategic management roles." },
-            { question: "Do I need prior experience?", answer: "No, we start from the absolute basics of business processes and documentation before moving to advanced analytical tools." }
+            { question: "What is the primary role of a Business Analyst?", answer: "A BA acts as a bridge between business stakeholders and technical teams, translating business needs into technical requirements." },
+            { question: "Do I need technical skills for this role?", answer: "While not strictly a technical role, basic knowledge of SQL, Jira, and SDLC is essential and covered in our course." },
+            { question: "Is this course suitable for freshers?", answer: "Yes, the course is designed to take you from a beginner level to being ready for a junior BA role." },
+            { question: "Will I learn how to use Jira?", answer: "Yes, Jira is a core part of our training for project management and issue tracking." },
+            { question: "What industries hire Business Analysts?", answer: "BAs are hired across all major sectors including IT, Finance, Healthcare, and E-commerce." },
+            { question: "Do you offer interview preparation?", answer: "Yes, we focus on behavioral and case-study based interviews common for BA positions." }
         ]
     },
     {
@@ -227,15 +212,12 @@ export const coursesData = [
             { name: "Suresh Raina", role: "Junior Data Analyst", review: "The visualization modules in Power BI and Tableau were excellent. I can now create dashboards that wow my team.", img: "https://ui-avatars.com/api/?name=Suresh+Raina&background=2196F3&color=fff&size=128" }
         ],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will learn how to turn raw data into meaningful insights using advanced Excel, SQL, and professional visualization tools." },
-            { question: "Which technologies will I learn?", answer: "The tools include Excel, SQL, Power BI, Tableau, and foundational Python for data cleaning." },
-            { question: "How long is the course?", answer: "The Data Analyst program is 6 months long, focusing on practical implementation." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will earn a Professional Data Analyst certification from Gyantrix Academy." },
-            { question: "Is the certificate recognized?", answer: "Yes, our certified graduates work at leading firms in IT, banking, and retail industries." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, including LinkedIn optimization and mock data-science interviews." },
-            { question: "What job roles can I get after this course?", answer: "Graduates can apply for roles like Junior Data Analyst, BI Analyst, and Reporting Specialist." },
-            { question: "Who can join this course?", answer: "Fresh graduates and professionals looking to transition from non-analytical to analytical roles." },
-            { question: "Do I need prior experience?", answer: "No, we start from basic Excel and SQL and build up to professional storytelling with data." }
+            { question: "What is the difference between Data Science and Data Analytics?", answer: "Data Analytics focuses more on interpreting existing data to provide insights, while Data Science involves building predictive models." },
+            { question: "Do I need to be good at math?", answer: "Basic math and logical reasoning are sufficient. We cover the necessary statistical concepts during the course." },
+            { question: "Which tool is more important: Power BI or Tableau?", answer: "Both are widely used in the industry. Our course covers both to make you versatile in the job market." },
+            { question: "Will I learn how to clean data?", answer: "Yes, data cleaning is a critical step, and you will learn how to do it efficiently with both Excel and Python." },
+            { question: "Is SQL hard to learn?", answer: "SQL is very intuitive and easy to pick up. We start from the basics and move to advanced join operations." },
+            { question: "What kind of jobs can I apply for?", answer: "You can apply for roles like Junior Data Analyst, BI Analyst, and Reporting Specialist." }
         ]
     },
     {
@@ -271,15 +253,12 @@ export const coursesData = [
             { name: "Neha Gupta", role: "Medical Coder", review: "The certification exam preparation was extremely helpful. I cleared my CPC on the first attempt.", img: "https://ui-avatars.com/api/?name=Neha+Gupta&background=00BCD4&color=fff&size=128" }
         ],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will learn how to translate healthcare diagnoses and procedures into universal medical codes using ICD-10, CPT, and HCPCS standards." },
-            { question: "Which technologies will I learn?", answer: "You will learn to use professional Medical Coding software (Encoders) and master standard classification systems." },
-            { question: "How long is the course?", answer: "The program is 4-6 months long, focusing on preparing you for the CPC certification." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will receive a Professional Medical Coder certificate from Gyantrix Academy." },
-            { question: "Is the certificate recognized?", answer: "Yes, our training aligns with AAPC standards, making it highly recognized across the global healthcare sector." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, including mock CPC exams and resume building for RCM companies." },
-            { question: "What job roles can I get after this course?", answer: "Graduates qualify for roles such as Junior Medical Coder, Quality Auditor, and Billing Specialist." },
-            { question: "Who can join this course?", answer: "Ideal for freshers from life sciences, pharmacy, or any graduate looking for an entry into the healthcare industry." },
-            { question: "Do I need prior experience?", answer: "No, we teach all necessary medical terminology and anatomy from the very beginning." }
+            { question: "What certifications are covered?", answer: "We prepare you for global certifications like AAPC (CPC) and AHIMA, which are highly recognized in the healthcare industry." },
+            { question: "Is medical coding a good career choice?", answer: "Absolutely. With the increase in healthcare documentation needs, professional coders are in high demand globally." },
+            { question: "Do I need a medical background?", answer: "No, while helpful, we teach all the necessary anatomy and terminology from scratch." },
+            { question: "What is the CPC exam?", answer: "The CPC (Certified Professional Coder) is a globally recognized certification provided by AAPC." },
+            { question: "What is the job salary for a medical coder?", answer: "Salaries are competitive and grow significantly with experience and subsequent certifications." },
+            { question: "Can I work remotely as a medical coder?", answer: "Yes, many medical coding roles, especially in RCM companies, offer work-from-home opportunities." }
         ]
     },
     {
@@ -309,15 +288,12 @@ export const coursesData = [
             { name: "Siddharth Verma", role: "Medical Scribe", review: "The EHR training was fantastic. I felt completely prepared when I started my first day at the clinic.", img: "https://ui-avatars.com/api/?name=Siddharth+Verma&background=607D8B&color=fff&size=128" }
         ],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will learn how to document clinical patient visits in real-time, master medical terminology, and manage EHR workflows." },
-            { question: "Which technologies will I learn?", answer: "You will get hands-on experience with leading EHR systems like Epic and Cerner." },
-            { question: "How long is the course?", answer: "The Medical Scribing training is typically a 4-6 month specialized program." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will receive a Professional Medical Scribe certification from Gyantrix Academy." },
-            { question: "Is the certificate recognized?", answer: "Yes, our graduates are working at top healthcare institutions and hospitals locally and abroad." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, focused on hospital and clinic roles." },
-            { question: "What job roles can I get after this course?", answer: "Primary roles include Medical Scribe, Clinical Documentation Specialist, and EHR Administrator." },
-            { question: "Who can join this course?", answer: "Graduates and individuals aiming for a clinical-adjacent career path in healthcare." },
-            { question: "Do I need prior experience?", answer: "No, the course covers all medical terminology and documentation standards from scratch." }
+            { question: "What exactly does a Medical Scribe do?", answer: "A scribe works alongside doctors to document patient encounters in real-time within the EHR system, freeing the physician to focus on care." },
+            { question: "Is this training useful for future medical students?", answer: "Yes, it provides invaluable clinical experience that is highly regarded by medical and PA school admissions committees." },
+            { question: "Do I need to be fast at typing?", answer: "A good typing speed (typically 50-60 WPM) is recommended. We include modules to help you improve your clinical typing speed." },
+            { question: "Is there a lot of medical terminology to memorize?", answer: "There is quite a bit, but our course is structured to make it easy to learn through context and practice." },
+            { question: "Can I work part-time as a scribe?", answer: "Yes, many clinics and hospitals offer flexible shifts suitable for students." },
+            { question: "What is EHR?", answer: "EHR stands for Electronic Health Record, which is the digital version of a patient's paper chart." }
         ]
     },
     {
@@ -348,15 +324,12 @@ export const coursesData = [
             { name: "Simran Kaur", role: "Geneticist", review: "The CRISPR and gene editing modules were world-class. Excellent research support provided here.", img: "https://ui-avatars.com/api/?name=Simran+Kaur&background=8BC34A&color=fff&size=128" }
         ],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will master molecular biology, CRISPR technology, gene cloning, and genomic analysis for therapeutic and agricultural uses." },
-            { question: "Which technologies will I learn?", answer: "The course covers CRISPR/Cas9 techniques, PCR operation, and various bioinformatics software tools." },
-            { question: "How long is the course?", answer: "The Genetic Engineering program is an advanced 8-month course." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will earn a Professional Certification in Genetic Engineering from Gyantrix Academy." },
-            { question: "Is the certificate recognized?", answer: "Absolutely. Our certification is recognized in biotech and pharmaceutical research sectors." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, including connections to research labs and pharma firms." },
-            { question: "What job roles can I get after this course?", answer: "Roles include Research Associate, Geneticist, Lab Specialist, and Biotech Consultant." },
-            { question: "Who can join this course?", answer: "Ideally suited for graduates in life sciences, biotechnology, or pharmacy." },
-            { question: "Do I need prior experience?", answer: "A basic foundation in biology and chemistry is required for this advanced-level program." }
+            { question: "What is the focus of the Genetic Engineering course?", answer: "The course focuses on molecular biology, CRISPR/Cas9 gene editing, and recombinant DNA technology." },
+            { question: "What are the career prospects?", answer: "Graduates can work in biotech research, pharmaceutical companies, agricultural development, and clinical genetics." },
+            { question: "Is this a laboratory-intensive course?", answer: "Yes, we provide hands-on training with modern lab equipment and bioinformatics software." },
+            { question: "Do I need a background in biology?", answer: "A basic understanding of biology and chemistry is required for this advanced-level course." },
+            { question: "What is CRISPR?", answer: "CRISPR (Clustered Regularly Interspaced Short Palindromic Repeats) is a revolutionary gene-editing technology." },
+            { question: "How does genetic engineering help in agriculture?", answer: "It allows for the creation of crops that are more nutritional, pest-resistant, and adaptable to climate change." }
         ]
     },
     {
@@ -386,15 +359,12 @@ export const coursesData = [
             { name: "Sandeep Rao", role: "PV Specialist", review: "The deep dive into MedDRA coding and Argus Safety was exactly what I needed for my promotion.", img: "https://ui-avatars.com/api/?name=Sandeep+Rao&background=FF9800&color=fff&size=128" }
         ],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will learn the science of monitoring drug safety, including ADR reporting, global regulatory compliance, and periodic safety updates." },
-            { question: "Which technologies will I learn?", answer: "You will gain hands-on training with industry-standard Pharmacovigilance software like Argus Safety and MedDRA coding." },
-            { question: "How long is the course?", answer: "The Pharmacovigilance certification program is 6 months long." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will receive a Professional Certification in Pharmacovigilance from Gyantrix Academy." },
-            { question: "Is the certificate recognized?", answer: "Yes, our training is aligned with ICH-GCP guidelines, making it highly recognized by MNC pharmaceutical firms." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, including mock interviews and resume building for global pharma firms." },
-            { question: "What job roles can I get after this course?", answer: "Roles include Drug Safety Associate, PV Officer, and Regulatory Compliance Specialist." },
-            { question: "Who can join this course?", answer: "Graduates in pharmacy, life sciences, nursing, or medicine." },
-            { question: "Do I need prior experience?", answer: "No, the course is designed to take you from a baseline concept to being job-ready for the pharmaceutical industry." }
+            { question: "What is Pharmacovigilance (PV)?", answer: "PV is the science and activities relating to the detection, assessment, understanding, and prevention of adverse effects of medicines." },
+            { question: "Who can pursue a career in PV?", answer: "Graduates from life sciences, pharmacy, medicine, or nursing are ideal candidates." },
+            { question: "Is this field different from Clinical Research?", answer: "Yes, while related, PV specifically focuses on the long-term safety and risk/benefit ratio of drugs." },
+            { question: "Will I learn how to use Argus?", answer: "Yes, our course includes hands-on training with Argus, one of the most widely used PV databases in the industry." },
+            { question: "Are these certifications recognized by MNCs?", answer: "Absolutely. Our certification is built on ICH-GCP guidelines followed by all global pharmaceutical companies." },
+            { question: "What is the typical job role for a beginner?", answer: "Common entry-level roles include Drug Safety Associate and Junior PV Officer." }
         ]
     },
     {
@@ -427,15 +397,12 @@ export const coursesData = [
             { name: "Priya Sharma", role: "Digital Marketer", review: "The Google Ads module changed my perspective on PPC. I saw immediate results in my client projects.", img: "https://ui-avatars.com/api/?name=Priya+Sharma&background=E91E63&color=fff&size=128" }
         ],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will learn how to design and execute high-growth digital marketing strategies covering SEO, SMM, Content Marketing, and PPC." },
-            { question: "Which technologies will I learn?", answer: "The tools include Google Ads, Google Analytics, Semrush, and Mailchimp." },
-            { question: "How long is the course?", answer: "The Digital Marketing program is a 6-month intensive course." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will earn a Professional Certification from Gyantrix Academy along with guidance for Google and Meta certifications." },
-            { question: "Is the certificate recognized?", answer: "Absolutely. Our certification is recognized across all modern business sectors in the digital economy." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, including building your digital brand and portfolio." },
-            { question: "What job roles can I get after this course?", answer: "Target roles include SEO Specialist, Performance Marketer, Social Media Manager, and Content Strategist." },
-            { question: "Who can join this course?", answer: "This course is ideal for entrepreneurs, graduates, and professionals wanting to grow in the digital space." },
-            { question: "Do I need prior experience?", answer: "No, our course is designed to take you from a beginner level to being ready for a junior or mid-level marketing role." }
+            { question: "What are the most in-demand skills in Digital Marketing?", answer: "SEO, Performance Marketing (Ads), Social Media Strategy, and Content Marketing are currently the top skills sought by employers." },
+            { question: "Do I need a large budget to practice?", answer: "No, many modules focus on organic (free) growth, and we provide dummy accounts for paid ad practice." },
+            { question: "Will I get Google certifications?", answer: "Yes, we guide you to clear major certifications from Google, Meta, and HubSpot." },
+            { question: "Is this course suitable for business owners?", answer: "Absolutely, it's designed to help both job seekers and entrepreneurs grow their online presence." },
+            { question: "How technical is this course?", answer: "It's non-technical. You don't need to know coding, though basic web literacy is helpful." },
+            { question: "What is ROI in digital marketing?", answer: "ROI stands for Return on Investment, and we teach you how to track and maximize it for every advertising rupee spent." }
         ]
     },
     {
@@ -467,15 +434,12 @@ export const coursesData = [
             { name: "Varun Mehta", role: "Associate PM", review: "The case study methodology used here is excellent. It really taught me how to think like a product owner.", img: "https://ui-avatars.com/api/?name=Varun+Mehta&background=3F51B5&color=fff&size=128" }
         ],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will learn the end-to-end product lifecycle, including strategy, user research, wireframing, metrics analysis, and Agile management." },
-            { question: "Which technologies will I learn?", answer: "The program covers Jira for management, Figma for design, Miro for brainstorming, and Amplitude for metrics." },
-            { question: "How long is the course?", answer: "The Product Management certification is a 6-month intensive track." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will earn a Professional Certification in Product Management from Gyantrix Academy." },
-            { question: "Is the certificate recognized?", answer: "Yes, our certification is highly valued by modern tech companies and product-led organizations." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, including product-sense interview prep and case study reviews." },
-            { question: "What job roles can I get after this course?", answer: "Graduates qualify for roles like Associate Product Manager, Technical PM, and Product Analyst." },
-            { question: "Who can join this course?", answer: "Ideally suited for engineering or marketing graduates who wish to move into management roles." },
-            { question: "Do I need prior experience?", answer: "No, while career switchers from tech are common, we teach the foundations of problem solving and leadership from scratch." }
+            { question: "What is an MVP?", answer: "An MVP (Minimum Viable Product) is the simplest version of a product that allows a team to collect maximum validated learning about customers with the least effort." },
+            { question: "Do PMs need to know how to code?", answer: "Not necessarily. While a technical background is helpful, good PMs focus more on problem-solving, user empathy, and business strategy." },
+            { question: "What is the RICE framework?", answer: "RICE stands for Reach, Impact, Confidence, and Effort—a tool for prioritizing tasks and features." },
+            { question: "How do I build a PM portfolio?", answer: "We help you create detailed case studies of product problems you've solved during the course." },
+            { question: "Is this course for experienced professionals?", answer: "Yes, it's ideal for career changers from engineering, marketing, or design who want to move into management." },
+            { question: "What is the difference between a Project and Product Manager?", answer: "A Product Manager focuses on the 'What' and 'Why', while a Project Manager focuses more on the 'How' and 'When' (timelines and resources)." }
         ]
     },
     {
@@ -506,15 +470,12 @@ export const coursesData = [
             { name: "Megha Rao", role: "HR Generalist", review: "The module on HR Analytics opened my eyes to how much impact data can have on hiring efficiency.", img: "https://ui-avatars.com/api/?name=Megha+Rao&background=009688&color=fff&size=128" }
         ],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will master the full HR lifecycle including recruitment, performance management, labor laws, and advanced HR analytics." },
-            { question: "Which technologies will I learn?", answer: "The learning stack includes LinkedIn Recruiter, Workday, and SAP SuccessFactors for HRIS management." },
-            { question: "How long is the course?", answer: "The Human Resources certification is a 6-month specialized program." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will receive a Professional Human Resources certification from Gyantrix Academy." },
-            { question: "Is the certificate recognized?", answer: "Yes, it is highly valued across diverse industries from IT to Manufacturing and Healthcare." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, including soft skills and interview coaching." },
-            { question: "What job roles can I get after this course?", answer: "Roles include HR Generalist, Talent Acquisition Specialist, HR Analyst, and Learning & Development Coordinator." },
-            { question: "Who can join this course?", answer: "Perfect for any graduate or professional looking to move into people management and strategy roles." },
-            { question: "Do I need prior experience?", answer: "No, the course is designed to take you from foundational people skills to strategic HR leadership." }
+            { question: "What is the most important skill for an HR professional?", answer: "A mix of empathy, communication, and organizational skills is essential for success in HR." },
+            { question: "Will I learn how to use HR software?", answer: "Yes, we cover popular HRIS tools that are used globally by major corporations." },
+            { question: "Is HR all about hiring and firing?", answer: "Not at all. HR also encompasses culture building, employee well-being, strategic planning, and performance growth." },
+            { question: "What is HR Analytics?", answer: "It's the application of data science to manage people more effectively, from predicting turnover to measuring training success." },
+            { question: "Are there remote HR jobs?", answer: "Yes, many recruitment and talent acquisition roles are now remote or hybrid." },
+            { question: "Do you help with SHRM or PHR exam prep?", answer: "We provide foundational knowledge that is highly applicable for major HR certifications." }
         ]
     },
     {
@@ -543,15 +504,12 @@ export const coursesData = [
         ],
         reviews: [],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will master the synthesis and characterization of nanomaterials and their groundbreaking applications in medicine, energy, and agriculture." },
-            { question: "Which technologies will I learn?", answer: "You will gain hands-on knowledge of SEM, AFM, and specialized nanotech design software." },
-            { question: "How long is the course?", answer: "The Nano Science & Technology certification is an expert-level 8-month program." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will receive a Professional Certification in Nanotechnology from Gyantrix Academy." },
-            { question: "Is the certificate recognized?", answer: "Yes, our certification is highly recognized in advanced material science and R&D sectors." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance for R&D centers and high-tech manufacturing firms." },
-            { question: "What job roles can I get after this course?", answer: "Potential roles include Nanotechnologist, Materials Scientist, Research Engineer, and Quality Control Specialist." },
-            { question: "Who can join this course?", answer: "Ideal for freshers and professionals from physics, chemistry, or engineering backgrounds." },
-            { question: "Do I need prior experience?", answer: "A fundamental understanding of chemistry and physics is recommended for this specialized track." }
+            { question: "What is Nanoscience?", answer: "Nanoscience is the study of manipulating matter at the molecular and atomic scale, primarily structures between 1 and 100 nanometres." },
+            { question: "Is this a theoretical or practical course?", answer: "It's a mix of both. We cover the deep physics/chemistry and the hands-on characterization techniques." },
+            { question: "What industries use Nanotechnology?", answer: "Electronics, Healthcare, Aerospace, Energy, and specialized manufacturing are the primary users." },
+            { question: "Do I need a PhD to work in this field?", answer: "While research roles often require high degrees, many engineering and quality control roles are open to graduates with specialized training." },
+            { question: "What is a Carbon Nanotube?", answer: "Carbon Nanotubes are cylindrical molecules of carbon with extraordinary structural and electrical properties." },
+            { question: "Can nanotechnology help clean the environment?", answer: "Yes, nanomaterials are used in highly efficient water filters and for removing pollutants from soil." }
         ]
     },
     {
@@ -582,15 +540,12 @@ export const coursesData = [
             { name: "Rahul Deshmukh", role: "Salesforce Admin", review: "The hands-on Flow Builder training was a lifesaver. I can now automate complex business logic in minutes.", img: "https://ui-avatars.com/api/?name=Rahul+Deshmukh&background=795548&color=fff&size=128" }
         ],
         faqs: [
-            { question: "What will I learn in this course?", answer: "You will learn how to manage the global #1 CRM platform, from admin configuration and low-code flow building to advanced Apex programming." },
-            { question: "Which technologies will I learn?", answer: "The course focuses on Salesforce, Flow Builder, Trailhead, and Apex Programming." },
-            { question: "How long is the course?", answer: "The comprehensive Salesforce certification program is 6 months long." },
-            { question: "Will I receive a certificate after completion?", answer: "Yes, you will receive a Professional Salesforce Specialist certification from Gyantrix Academy." },
-            { question: "Is the certificate recognized?", answer: "Yes, it is highly recognized globally, and we prepare you for the official Salesforce Administrator exam." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we provide 100% placement assistance, including mock interviews and portfolio creation in the Salesforce ecosystem." },
-            { question: "What job roles can I get after this course?", answer: "Roles include Salesforce Administrator, Salesforce Developer, Business Analyst, and CRM Consultant." },
-            { question: "Who can join this course?", answer: "Freshers looking for a high-growth IT career and professionals wanting to specialize in CRM." },
-            { question: "Do I need prior experience?", answer: "No, we start with the no-code Admin track before moving to Apex development, making it accessible for everyone." }
+            { question: "Do I need to know coding for Salesforce?", answer: "Not initially. You can start as a Salesforce Administrator (No-Code). Coding (Apex) is needed for the Developer track, which we also cover." },
+            { question: "What is Trailhead?", answer: "Trailhead is Salesforce's official learning platform, and we use it as a core part of our training." },
+            { question: "Is the Salesforce Admin certification hard?", answer: "It's a comprehensive exam, but our structured mock tests and project-based learning make it very achievable." },
+            { question: "What is CRM?", answer: "CRM stands for Customer Relationship Management, a technology for managing all your company's relationships with customers." },
+            { question: "What is the job market like for Salesforce professionals?", answer: "Demand for Salesforce talent continues to grow globally as more companies adopt the platform for their operations." },
+            { question: "What is Apex?", answer: "Apex is a strongly typed, object-oriented programming language that allows developers to execute flow and transaction control statements on the Salesforce platform." }
         ]
     }
 ];

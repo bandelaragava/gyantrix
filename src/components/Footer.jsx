@@ -85,7 +85,7 @@ const Footer = () => {
                 {/* FOOTER BOTTOM */}
                 <div className="footer-bottom">
                     <p>Made with <span className="heart">❤️</span> in Hyderabad, India</p>
-                    <p>Copyright © 2025 <Link to="/" className="company">Gyantrix Academy</Link> || All Rights Reserved</p>
+                    <p>Copyright © 2025 <Link to="/" className="company">Gyantrix</Link> || All Rights Reserved</p>
                     <p>Developed By <a href="https://www.futureinvo.com/" className="dev" target="_blank" rel="noopener noreferrer">Future Invo Solutions</a></p>
                 </div>
             </footer>

@@ -12,6 +12,14 @@ import skillIndiaLogo from '../assets/skillindia.png';
 const Home = () => {
     const [openFaq, setOpenFaq] = useState(null);
     const [activeOffer, setActiveOffer] = useState(0);
+    const [showAllFaqs, setShowAllFaqs] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    React.useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const offers = [
         {
@@ -335,22 +343,111 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Why Choose Section */}
-            <section className="why-choose">
-                <h3>Why Learners Choose Gyantrix</h3>
-                <div className="why-grid">
+            {/* Why Choose Section — Redesigned */}
+            <section className="why-choose-v2">
+                <div className="wc2-bg-orb wc2-orb1"></div>
+                <div className="wc2-bg-orb wc2-orb2"></div>
+                <div className="wc2-bg-orb wc2-orb3"></div>
+
+                <div className="wc2-header">
+                    <span className="wc2-eyebrow">
+                        <i className="fas fa-star"></i> Our Edge
+                    </span>
+                    <h2 className="wc2-title">Why Learners <span>Choose Gyantrix</span></h2>
+                    <p className="wc2-subtitle">Six powerful pillars that transform learners into industry-ready professionals</p>
+                </div>
+
+                <div className="wc2-grid">
                     {[
-                        { img: "doubtclear.jpg", title: "Instant Clarity, Lasting Growth", p: "Clear your doubts instantly and move forward with the clarity, confidence, and skills essential for career advancement." },
-                        { img: "careergrowth.webp", title: "Turn Challenges into Triumphs", p: "Embrace the right approach, transforming every challenge into a powerful opportunity to build clarity, confidence, and accelerate your career growth." },
-                        { img: "interview.jpeg", title: "Master the Interview, Secure Your Future", p: "Master interview techniques with expert training—build confidence, refine your answers, and secure the career you've always envisioned." },
-                        { img: "certificate.jpg", title: "Globally Recognized, Credibly Certified", p: "Earn globally recognized certifications that validate your expertise, boost your credibility, and unlock doors to international career opportunities." },
-                        { img: "dcfd.png", title: "Expert Guidance, Your Path to Confidence", p: "Get your doubts cleared instantly with expert guidance, transforming confusion into clarity and boosting your confidence to succeed." },
-                        { img: "profile.png", title: "Build a Profile That Commands Attention", p: "Develop a powerful professional profile—designed to impress recruiters, highlight your unique strengths, and unlock unparalleled career opportunities." }
+                        {
+                            icon: "fas fa-bolt",
+                            num: "01",
+                            color: "#6366f1",
+                            glow: "rgba(99,102,241,0.35)",
+                            tag: "DOUBT CLEARING",
+                            title: "Instant Clarity,\nLasting Growth",
+                            p: "Clear your doubts instantly with live expert sessions and move forward with the clarity, confidence, and skills essential for career advancement.",
+                            stat: "2x",
+                            statLabel: "Faster Learning"
+                        },
+                        {
+                            icon: "fas fa-fire-flame-curved",
+                            num: "02",
+                            color: "#f97316",
+                            glow: "rgba(249,115,22,0.35)",
+                            tag: "RESILIENCE BUILDING",
+                            title: "Turn Challenges\ninto Triumphs",
+                            p: "Embrace the right approach, transforming every challenge into a powerful opportunity to build clarity, confidence, and accelerate career growth.",
+                            stat: "98%",
+                            statLabel: "Learner Satisfaction"
+                        },
+                        {
+                            icon: "fas fa-microphone-lines",
+                            num: "03",
+                            color: "#10b981",
+                            glow: "rgba(16,185,129,0.35)",
+                            tag: "INTERVIEW PREP",
+                            title: "Master the Interview,\nSecure Your Future",
+                            p: "Master interview techniques with expert-led mock sessions — build unshakeable confidence, refine every answer, and land the career you've envisioned.",
+                            stat: "500+",
+                            statLabel: "Placements Done"
+                        },
+                        {
+                            icon: "fas fa-medal",
+                            num: "04",
+                            color: "#f59e0b",
+                            glow: "rgba(245,158,11,0.35)",
+                            tag: "CERTIFICATION",
+                            title: "Globally Recognized,\nCredibly Certified",
+                            p: "Earn globally recognized certifications that validate your expertise, boost your credibility, and unlock doors to international career opportunities.",
+                            stat: "50+",
+                            statLabel: "Global Certifications"
+                        },
+                        {
+                            icon: "fas fa-user-shield",
+                            num: "05",
+                            color: "#ec4899",
+                            glow: "rgba(236,72,153,0.35)",
+                            tag: "EXPERT MENTORSHIP",
+                            title: "Expert Guidance,\nYour Path to Confidence",
+                            p: "Get access to seasoned industry mentors who transform confusion into clarity and equip you with the skills and confidence to tackle any challenge.",
+                            stat: "1-on-1",
+                            statLabel: "Mentor Sessions"
+                        },
+                        {
+                            icon: "fas fa-id-badge",
+                            num: "06",
+                            color: "#06b6d4",
+                            glow: "rgba(6,182,212,0.35)",
+                            tag: "PROFILE BUILDING",
+                            title: "Build a Profile That\nCommands Attention",
+                            p: "Develop a powerful professional profile — engineered to impress top recruiters, showcase your unique strengths, and unlock unparalleled career opportunities.",
+                            stat: "999+",
+                            statLabel: "Hiring Partners"
+                        },
                     ].map((item, i) => (
-                        <div key={i} className="why-card">
-                            <img src={getAssetUrl(`/images/${item.img}`)} alt={item.title} />
-                            <h4>{item.title}</h4>
-                            <p>{item.p}</p>
+                        <div key={i} className="wc2-card" style={{ '--card-color': item.color, '--card-glow': item.glow }}>
+                            <div className="wc2-card-shimmer"></div>
+                            <div className="wc2-card-top">
+                                <div className="wc2-icon-wrap">
+                                    <i className={item.icon}></i>
+                                </div>
+                                <span className="wc2-num">{item.num}</span>
+                            </div>
+                            <span className="wc2-tag">{item.tag}</span>
+                            <h3 className="wc2-card-title">
+                                {item.title.split('\n').map((line, idx) => (
+                                    <span key={idx}>{line}{idx === 0 && <br />}</span>
+                                ))}
+                            </h3>
+                            <p className="wc2-card-desc">{item.p}</p>
+                            <div className="wc2-card-footer">
+                                <div className="wc2-stat">
+                                    <span className="wc2-stat-num">{item.stat}</span>
+                                    <span className="wc2-stat-lbl">{item.statLabel}</span>
+                                </div>
+                            </div>
+                            <div className="wc2-card-bar"></div>
                         </div>
                     ))}
                 </div>
@@ -480,7 +577,7 @@ const Home = () => {
                             { id: "1-6", q: "Are these certifications valid for government or overseas jobs?", a: "Our industry-recognized certifications are highly valued globally. While specific government requirements vary, they significantly support applications for both domestic and overseas roles." },
                             { id: "1-7", q: "What certifications will I receive after completing the program?", a: "You will receive a program completion certificate from Gyantrix, in addition to preparation support for external vendor certifications (e.g., AWS, Microsoft, Cisco)." },
                             { id: "1-8", q: "What training modes are available in Gyantrix Academy?", a: "We offer online live classes, self-paced learning modules, and dedicated corporate on-site or virtual bootcamps." }
-                        ].map((item) => (
+                        ].slice(0, showAllFaqs ? undefined : 3).map((item) => (
                             <div key={item.id} className="faq-item">
                                 <input type="checkbox" id={`faq-${item.id}`} className="faq-toggle" checked={openFaq === item.id} onChange={() => setOpenFaq(openFaq === item.id ? null : item.id)} />
                                 <label htmlFor={`faq-${item.id}`} className="faq-question">{item.q}</label>
@@ -497,7 +594,7 @@ const Home = () => {
                             { id: "2-5", q: "Do you provide internship opportunity with MNCs and IT companies?", a: "We facilitate internship opportunities and project-based learning through our partnerships, helping candidates gain relevant work experience." },
                             { id: "2-6", q: "How do these certifications benefit my career?", a: "The certifications enhance your profile credibility, demonstrate specialized skills to recruiters, and significantly boost your chances of securing higher-paying jobs." },
                             { id: "2-7", q: "Is 100% placement assistance guaranteed?", a: "While we cannot guarantee 100% job placement, we provide dedicated, continuous placement support and interview opportunities until a candidate is successfully placed." }
-                        ].map((item) => (
+                        ].slice(0, showAllFaqs ? undefined : (isMobile ? 2 : 3)).map((item) => (
                             <div key={item.id} className="faq-item">
                                 <input type="checkbox" id={`faq-${item.id}`} className="faq-toggle" checked={openFaq === item.id} onChange={() => setOpenFaq(openFaq === item.id ? null : item.id)} />
                                 <label htmlFor={`faq-${item.id}`} className="faq-question">{item.q}</label>
@@ -505,6 +602,13 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+
+                <div style={{ textAlign: "center", marginTop: "2rem" }}>
+                    <button className="btn" onClick={() => setShowAllFaqs(!showAllFaqs)} style={{ width: 'auto', padding: '0.8rem 2rem' }}>
+                        <span>{showAllFaqs ? 'Show Less' : 'View More FAQs'}</span>
+                        <div className="liquid"></div>
+                    </button>
                 </div>
             </section>
 

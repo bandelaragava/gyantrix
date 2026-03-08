@@ -205,12 +205,149 @@ const Blog = () => {
         };
     }, []);
 
+    const blogPosts = [
+        {
+            title: "New Courses Launched",
+            description: "Discover what new programs were introduced in the last 4 months.",
+            details: [
+                {
+                    subtitle: "AI Python Program Launched",
+                    text: "Focus: Python, Machine Learning basics, automation tools."
+                },
+                {
+                    subtitle: "Data Analytics Course Introduced",
+                    text: "Covers Excel, SQL, Power BI, and real-world datasets."
+                }
+            ],
+            icon: "🚀"
+        },
+        {
+            title: "Student Projects Completed",
+            description: "Practical work is the core of active learning. Take a look at the projects our students have delivered.",
+            details: [
+                {
+                    subtitle: "Sales Data Analysis",
+                    text: "Students built interactive Power BI dashboards for sales data analysis."
+                },
+                {
+                    subtitle: "Process Automation",
+                    text: "Python students created automation scripts for advanced data processing."
+                }
+            ],
+            icon: "⚙️"
+        },
+        {
+            title: "Student Job Placements",
+            description: "Securing a bright future for our students is our ultimate goal. Here are the latest placement updates.",
+            details: [
+                {
+                    subtitle: "25+ Students Placed",
+                    text: "Successfully placed as Data Analysts and Python Developers."
+                },
+                {
+                    subtitle: "Top MNC Hirings",
+                    text: "Students hired by leading companies like Infosys, TCS, and Accenture."
+                }
+            ],
+            icon: "💼"
+        },
+        {
+            title: "Certifications Achieved",
+            description: "Validating skills with recognized certifications to increase credibility.",
+            details: [
+                {
+                    subtitle: "Salesforce Administrator",
+                    text: "Students successfully earned their Salesforce Administrator Certification."
+                },
+                {
+                    subtitle: "Power BI Certification",
+                    text: "Data Analytics students completed comprehensive Power BI certification training."
+                }
+            ],
+            icon: "📜"
+        },
+        {
+            title: "Workshops & Events Conducted",
+            description: "Keeping the academy active and engaging through continuous extracurriculars.",
+            details: [
+                {
+                    subtitle: "Career Guidance Workshop",
+                    text: "Conducted an extensive career guidance workshop customized for fresh graduates."
+                },
+                {
+                    subtitle: "Live Industry Webinar",
+                    text: "Hosted a highly-attended live industry webinar discussing Data Analytics careers."
+                }
+            ],
+            icon: "🎤"
+        },
+        {
+            title: "Industry Collaborations",
+            description: "Partnering with leading tech companies and trainers to provide real-world insights.",
+            details: [
+                {
+                    subtitle: "Project Mentoring",
+                    text: "Collaboration with industry experts for top-tier, real-time project mentoring."
+                },
+                {
+                    subtitle: "Guest Sessions",
+                    text: "Interactive guest sessions hosted by working Data Analysts and software Developers."
+                }
+            ],
+            icon: "🤝"
+        },
+        {
+            title: "Student Success Stories",
+            description: "Real results that attract new learners. Read about student transformations.",
+            details: [
+                {
+                    subtitle: "Non-IT to Data Analyst",
+                    text: "A student successfully transitioned from a non-IT background to a high-paying Data Analyst role."
+                },
+                {
+                    subtitle: "Fast-Track Placement",
+                    text: "A graduate secured a Python Developer job within just 3 months of intensive training."
+                }
+            ],
+            icon: "🌟"
+        }
+    ];
+
     return (
         <div className="blog-page">
             <canvas id="sparkleCanvas" ref={canvasRef}></canvas>
-            <div className="coming-soon-container">
-                <h1>🚀 We’re Coming Soon!</h1>
-                <p>Our <strong>Blog</strong> is under construction. Stay tuned for exciting updates, tips, and insights!</p>
+
+            <div className="blog-container">
+                <div className="blog-header">
+                    <h1>Updates & Insights</h1>
+                    <p>The latest news, success stories, and updates from Gyantrix.</p>
+                </div>
+
+                <div className="blog-timeline">
+                    {blogPosts.map((post, index) => (
+                        <div key={index} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
+                            <div className="timeline-dot">
+                                <span className="timeline-icon">{post.icon}</span>
+                            </div>
+                            <div className="timeline-content blog-glass-card">
+                                <h2 className="timeline-title">{post.title}</h2>
+                                <p className="timeline-intro">{post.description}</p>
+
+                                <div className="timeline-details">
+                                    {post.details.map((detail, idx) => (
+                                        <div key={idx} className="timeline-example">
+                                            <div className="example-notch"></div>
+                                            <div className="example-text">
+                                                <h4>{detail.subtitle}</h4>
+                                                <p>{detail.text}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

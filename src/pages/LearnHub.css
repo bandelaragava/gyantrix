@@ -102,7 +102,7 @@
 .hub-card h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #f8fafc;
+    color: #66D6FF;
 }
 
 .hub-card .desc {
@@ -157,7 +157,7 @@
     margin-top: 15px;
     padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: #f43f5e;
+    color: #7B2CFF;
     font-size: 0.8rem;
     font-weight: 600;
     display: flex;

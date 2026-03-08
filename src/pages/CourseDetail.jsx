@@ -4,6 +4,20 @@ import { coursesData } from '../data/courses';
 import { getAssetUrl } from '../utils/assets';
 import './CourseDetail.css';
 
+import p1 from '../assets/p1.png';
+import p2 from '../assets/p2.png';
+import p3 from '../assets/p3.png';
+import p4 from '../assets/p4.png';
+import p5 from '../assets/p5.png';
+import p6 from '../assets/p6.png';
+import p7 from '../assets/p7.png';
+import p8 from '../assets/p8.png';
+import p9 from '../assets/p9.png';
+import p10 from '../assets/p10.png';
+import p11 from '../assets/p11.png';
+import p12 from '../assets/p12.png';
+import p13 from '../assets/p13.png';
+
 const CourseDetail = () => {
     const { courseId } = useParams();
     const sectionRef = useRef(null);
@@ -80,18 +94,19 @@ const CourseDetail = () => {
     // I will use reference to the hardcoded list but maybe we should randomize or just keep it as "Institute Placements".
 
     const placementStudents = [
-        { name: 'Priya Sharma', company: 'Future Invo Solutions', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150' },
-        { name: 'Rahul Verma', company: 'Infoz IT', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150' },
-        { name: 'Neha Gupta', company: 'Wipro', img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=150&h=150' },
-        { name: 'Vikas Kumar', company: 'Tech Mahindra', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150' },
-        { name: 'Ritu Singh', company: 'Capgemini', img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150&h=150' },
-        { name: 'Amit Patel', company: 'Infosys', img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=150&h=150' },
-        { name: 'Sonal Jain', company: 'TCS', img: 'https://images.unsplash.com/photo-1567532939604-b6c5b0ad2e01?auto=format&fit=crop&q=80&w=150&h=150' },
-        { name: 'Karan Singh', company: 'HCL', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150' },
-        { name: 'Megha Rao', company: 'Genpact', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150' },
-        { name: 'Arjun Das', company: 'Accenture', img: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=150&h=150' },
-        { name: 'Tanvi Shah', company: 'Deloitte', img: 'https://images.unsplash.com/photo-1531123897727-8f129e16fd3f?auto=format&fit=crop&q=80&w=150&h=150' },
-        { name: 'Rohan Gupta', company: 'Cisco', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150&h=150' }
+        { name: 'Karthik', company: 'IBM', img: p1 },
+        { name: 'Suresh', company: 'Wipro', img: p2 },
+        { name: 'Divya', company: 'Infosys', img: p3 },
+        { name: 'Venkatesh', company: 'Amazon', img: p4 },
+        { name: 'Mothe lavanya', company: 'Genpact', img: p5 },
+        { name: 'Naveen', company: 'Accenture', img: p6 },
+        { name: 'Priya', company: 'Intel', img: p7 },
+        { name: 'Shruthi', company: 'Publicis Sapient', img: p8 },
+        { name: 'Mothe tejaswini', company: 'AWS', img: p9 },
+        { name: 'Santhosh', company: 'Google', img: p10 },
+        { name: 'Ganesh', company: 'FutureInvo Solutions', img: p11 },
+        { name: 'Jayasri', company: 'FutureInvo Solutions', img: p12 },
+        { name: 'Ruthiwk', company: 'FutureInvo Solutions', img: p13 }
     ];
 
     const [newReview, setNewReview] = useState({ name: '', role: '', review: '' });
@@ -491,29 +506,123 @@ const CourseDetail = () => {
                         <img src={getAssetUrl('/images/man.png')} alt="Student Success" />
                     </div>
                     <div className="place-right">
-                        {[1, 2, 3].map((col) => (
-                            <div key={col} className="scroll-col">
-                                {placementStudents.map((student, idx) => (
-                                    <div key={idx} className="place-card">
-                                        <img src={student.img} alt={student.name} />
-                                        <div className="place-card-content">
-                                            <h3>{student.name}</h3>
-                                            <p>{student.company}</p>
-                                        </div>
+                        {/* Column 1: Standard Order */}
+                        <div className="scroll-col col-1">
+                            {placementStudents.map((student, idx) => (
+                                <div key={idx} className="place-card">
+                                    <img src={student.img} alt={student.name} />
+                                    <div className="place-card-content">
+                                        <h3>{student.name}</h3>
+                                        <p>{student.company}</p>
                                     </div>
-                                ))}
-                                {/* Duplicate for infinite scroll */}
-                                {placementStudents.map((student, idx) => (
-                                    <div key={`dup-${idx}`} className="place-card">
-                                        <img src={student.img} alt={student.name} />
-                                        <div className="place-card-content">
-                                            <h3>{student.name}</h3>
-                                            <p>{student.company}</p>
-                                        </div>
+                                </div>
+                            ))}
+                            {/* Duplicate for infinite scroll */}
+                            {placementStudents.map((student, idx) => (
+                                <div key={`dup1-${idx}`} className="place-card">
+                                    <img src={student.img} alt={student.name} />
+                                    <div className="place-card-content">
+                                        <h3>{student.name}</h3>
+                                        <p>{student.company}</p>
                                     </div>
-                                ))}
-                            </div>
-                        ))}
+                                </div>
+                            ))}
+                            {/* Second Duplicate for seamless continuous wrapping */}
+                            {placementStudents.map((student, idx) => (
+                                <div key={`dup1-2-${idx}`} className="place-card">
+                                    <img src={student.img} alt={student.name} />
+                                    <div className="place-card-content">
+                                        <h3>{student.name}</h3>
+                                        <p>{student.company}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Column 2: Reverse Order */}
+                        <div className="scroll-col col-2">
+                            {[...placementStudents].reverse().map((student, idx) => (
+                                <div key={idx} className="place-card">
+                                    <img src={student.img} alt={student.name} />
+                                    <div className="place-card-content">
+                                        <h3>{student.name}</h3>
+                                        <p>{student.company}</p>
+                                    </div>
+                                </div>
+                            ))}
+                            {/* Duplicate for infinite scroll */}
+                            {[...placementStudents].reverse().map((student, idx) => (
+                                <div key={`dup2-${idx}`} className="place-card">
+                                    <img src={student.img} alt={student.name} />
+                                    <div className="place-card-content">
+                                        <h3>{student.name}</h3>
+                                        <p>{student.company}</p>
+                                    </div>
+                                </div>
+                            ))}
+                            {/* Second Duplicate for seamless continuous wrapping */}
+                            {[...placementStudents].reverse().map((student, idx) => (
+                                <div key={`dup2-2-${idx}`} className="place-card">
+                                    <img src={student.img} alt={student.name} />
+                                    <div className="place-card-content">
+                                        <h3>{student.name}</h3>
+                                        <p>{student.company}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Column 3: Random/Mixed Order */}
+                        <div className="scroll-col col-3">
+                            {/* Fixed mixed sequence to prevent adjacent duplicates between columns */}
+                            {[
+                                placementStudents[4], placementStudents[9], placementStudents[1],
+                                placementStudents[6], placementStudents[11], placementStudents[3],
+                                placementStudents[8], placementStudents[0], placementStudents[5],
+                                placementStudents[10], placementStudents[12], placementStudents[2],
+                                placementStudents[7]
+                            ].map((student, idx) => (
+                                <div key={idx} className="place-card">
+                                    <img src={student.img} alt={student.name} />
+                                    <div className="place-card-content">
+                                        <h3>{student.name}</h3>
+                                        <p>{student.company}</p>
+                                    </div>
+                                </div>
+                            ))}
+                            {/* Duplicate for infinite scroll */}
+                            {[
+                                placementStudents[4], placementStudents[9], placementStudents[1],
+                                placementStudents[6], placementStudents[11], placementStudents[3],
+                                placementStudents[8], placementStudents[0], placementStudents[5],
+                                placementStudents[10], placementStudents[12], placementStudents[2],
+                                placementStudents[7]
+                            ].map((student, idx) => (
+                                <div key={`dup3-${idx}`} className="place-card">
+                                    <img src={student.img} alt={student.name} />
+                                    <div className="place-card-content">
+                                        <h3>{student.name}</h3>
+                                        <p>{student.company}</p>
+                                    </div>
+                                </div>
+                            ))}
+                            {/* Second Duplicate for seamless continuous wrapping */}
+                            {[
+                                placementStudents[4], placementStudents[9], placementStudents[1],
+                                placementStudents[6], placementStudents[11], placementStudents[3],
+                                placementStudents[8], placementStudents[0], placementStudents[5],
+                                placementStudents[10], placementStudents[12], placementStudents[2],
+                                placementStudents[7]
+                            ].map((student, idx) => (
+                                <div key={`dup3-2-${idx}`} className="place-card">
+                                    <img src={student.img} alt={student.name} />
+                                    <div className="place-card-content">
+                                        <h3>{student.name}</h3>
+                                        <p>{student.company}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -544,33 +653,21 @@ const CourseDetail = () => {
                             </div>
                             <div className="chat-area">
                                 <div className="reviews-marquee">
-                                    {/* Original List */}
-                                    {reviews.map((review, index) => (
-                                        <div key={index} className="review-chat-bubble">
-                                            <div className="bubble-header">
-                                                <img src={review.img} alt={review.name} />
-                                                <div className="bubble-info">
-                                                    <h4>{review.name}</h4>
-                                                    <span>{review.role}</span>
+                                    {/* Map multiple times to ensure the height is sufficient for an infinite loop */}
+                                    {[...Array(4)].map((_, i) => (
+                                        reviews.map((review, index) => (
+                                            <div key={`${i}-${index}`} className="review-chat-bubble">
+                                                <div className="bubble-header">
+                                                    <img src={review.img} alt={review.name} />
+                                                    <div className="bubble-info">
+                                                        <h4>{review.name}</h4>
+                                                        <span>{review.role}</span>
+                                                    </div>
                                                 </div>
+                                                <p>{review.review}</p>
+                                                <span className="time-stamp">Just now</span>
                                             </div>
-                                            <p>{review.review}</p>
-                                            <span className="time-stamp">Just now</span>
-                                        </div>
-                                    ))}
-                                    {/* Duplicate List for Seamless Scroll if less than 10 reviews maybe? or just always duplicate for marquee */}
-                                    {reviews.map((review, index) => (
-                                        <div key={`dup-${index}`} className="review-chat-bubble">
-                                            <div className="bubble-header">
-                                                <img src={review.img} alt={review.name} />
-                                                <div className="bubble-info">
-                                                    <h4>{review.name}</h4>
-                                                    <span>{review.role}</span>
-                                                </div>
-                                            </div>
-                                            <p>{review.review}</p>
-                                            <span className="time-stamp">Just now</span>
-                                        </div>
+                                        ))
                                     ))}
                                 </div>
                             </div>

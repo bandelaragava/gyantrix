@@ -80,14 +80,16 @@ const About = () => {
                     </div>
 
                     {/* Stats */}
-                    <div className="grid-item area-stats-1 stat-box">
-                        <div className="big-num">95%</div>
-                        <div className="big-label">Career Success</div>
-                    </div>
+                    <div className="stats-wrapper">
+                        <div className="grid-item area-stats-1 stat-box">
+                            <div className="big-num">95%</div>
+                            <div className="big-label">Career Success</div>
+                        </div>
 
-                    <div className="grid-item area-stats-2 stat-box">
-                        <div className="big-num">10K+</div>
-                        <div className="big-label">Global Alumni</div>
+                        <div className="grid-item area-stats-2 stat-box">
+                            <div className="big-num">10K+</div>
+                            <div className="big-label">Global Alumni</div>
+                        </div>
                     </div>
 
                     {/* Visual */}
@@ -139,9 +141,9 @@ const About = () => {
                     </div>
 
                     {/* ERA 2: 2026 */}
-                    <div className="timeline-era scroll-reveal" style={{ flexDirection: 'row-reverse' }}>
+                    <div className="timeline-era era-reverse scroll-reveal">
                         <div className="era-side">
-                            <div className="era-year" style={{ right: '0', left: 'auto' }}>2026</div>
+                            <div className="era-year">2026</div>
                             <div className="era-card">
                                 <span className="holograph-tag">The Expansion</span>
                                 <h2 className="era-title">Global Nexus</h2>

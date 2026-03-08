@@ -20,44 +20,287 @@
     background-color: #05051A;
 }
 
-.coming-soon-container {
+.blog-container {
     position: relative;
     z-index: 2;
     /* Above canvas */
-    text-align: center;
-    color: #fff;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    max-width: 600px;
-    margin: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 60px;
+    width: 100%;
 }
 
-.coming-soon-container h1 {
+.blog-header {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.blog-header h1 {
     font-size: 3rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     background: linear-gradient(90deg, #ffb84d, #ffd700, #ff8c00);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-.coming-soon-container p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #e0e0e0;
+.blog-header p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.coming-soon-container strong {
+/* ====== TIMELINE ARCHITECTURE ====== */
+.blog-timeline {
+    position: relative;
+    max-width: 1050px;
+    margin: 50px auto 0;
+    padding: 20px 0;
+}
+
+/* The central glowing spine line */
+.blog-timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(to bottom, transparent, #ffb84d, #ffd700, #ff8c00, transparent);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.timeline-item {
+    padding: 0 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Left side alignment */
+.timeline-item.left {
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Right side alignment */
+.timeline-item.right {
+    left: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* The center dots with icons */
+.timeline-dot {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: #14192d;
+    border: 3px solid #ffd700;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5), inset 0 0 10px rgba(255, 184, 77, 0.4);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.timeline-item.left .timeline-dot {
+    right: -22.5px; /* Half of dot width to center on line */
+}
+
+.timeline-item.right .timeline-dot {
+    left: -22.5px; /* Half of dot width to center on line */
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.timeline-icon {
+    font-size: 1.4rem;
+}
+
+/* ==== PREMIUM GLASS CARDS ==== */
+.timeline-content.blog-glass-card {
+    background: rgba(20, 25, 45, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 25px 25px;
+    width: 90%;
+    max-width: 480px;
+    color: #fff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Inner glow ambient effect */
+.timeline-content.blog-glass-card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 184, 77, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.timeline-item:hover .timeline-content.blog-glass-card {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.1);
+    border-color: rgba(255, 215, 0, 0.5);
+}
+
+/* Content details */
+.timeline-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #f8fafc;
+    letter-spacing: 0.5px;
+}
+
+.timeline-intro {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.timeline-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.timeline-example {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    border-radius: 12px;
+    border-left: 2px solid transparent;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.timeline-example:hover {
+    border-left: 2px solid #ffd700;
+    background: rgba(255, 215, 0, 0.05);
+}
+
+.example-notch {
+    width: 8px;
+    height: 8px;
+    background: #ffb84d;
+    border-radius: 50%;
+    margin-top: 6px;
+    box-shadow: 0 0 8px #ffb84d;
+    flex-shrink: 0;
+}
+
+.example-text h4 {
+    font-size: 1rem;
     color: #ffd700;
+    margin-bottom: 4px;
+    font-weight: 600;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .coming-soon-container h1 {
-        font-size: 2rem;
+.example-text p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 900px) {
+    .blog-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .blog-header p {
+        font-size: 1rem;
+    }
+
+    /* Shift timeline line completely to the left */
+    .blog-timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 15px;
+    }
+
+    .timeline-item.right {
+        left: 0%;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        justify-content: flex-start;
+    }
+
+    /* Adjust dots to the new left position */
+    .timeline-item.left .timeline-dot,
+    .timeline-item.right .timeline-dot {
+        left: 10px;
+        right: auto;
+    }
+
+    .timeline-content.blog-glass-card {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .blog-timeline::after {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 60px;
+        padding-right: 0;
+    }
+
+    .timeline-item.left .timeline-dot,
+    .timeline-item.right .timeline-dot {
+        left: 0;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .timeline-icon {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content.blog-glass-card {
+        padding: 25px 20px;
     }
 }

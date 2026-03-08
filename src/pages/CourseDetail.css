@@ -1541,7 +1541,7 @@
 .career-highlights {
     text-align: center;
     padding: 3rem 2rem;
-    background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+    background: linear-gradient(135deg, #fbfdfd 0%, #f2f6f6 100%);
     position: relative;
     overflow: hidden;
 }
@@ -1691,50 +1691,212 @@
 
 /* TOOLS SECTION */
 /* TOOLS SECTION */
+/* ==== PREMIUM TOOLS & TECHNOLOGIES SECTION ==== */
 .tools-section {
-    padding: 3rem 2rem;
-    background: #d4d5d6;
-    text-align: center;
+    position: relative;
+    padding: 2.5rem 2rem;
+    background: #fafafb;
+    /* Deep midnight background */
+    overflow: hidden;
+    color: #181717;
+}
+
+.tools-section::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 242, 255, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.tools-section::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(112, 0, 255, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
 }
 
 .tools-section h2 {
-    font-size: 1.8rem;
+    position: relative;
+    z-index: 1;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #66D6FF;
+    letter-spacing: -1px;
+}
+
+.tools-section h2 span {
+    display: block;
+    font-size: 1rem;
+    color: #29dee8;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+    font-family: 'Space Mono', monospace;
     font-weight: 700;
-    margin-bottom: 2rem;
-    color: #0c2d57;
 }
 
 .tools-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    max-width: 1000px;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0.5rem;
 }
 
 .tool-card {
-    background: #fff;
-    padding: 1rem;
+    position: relative;
+    background: rgba(254, 250, 250, 0.03);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(10, 10, 10, 0.05);
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 70px;
-    height: 80px;
+    padding: 1rem 0.5rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.6rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: float-tool 6s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes float-tool {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 .tool-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    background: rgba(14, 13, 13, 0.08);
+    border-color: #00f2ff;
+    transform: translateY(-20px) scale(1.05);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(0, 242, 255, 0.2);
+}
+
+.tool-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(0, 242, 255, 0.15) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 20px;
+}
+
+.tool-card:hover::before {
+    opacity: 1;
 }
 
 .tool-card img {
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+    transition: transform 0.5s ease, filter 0.5s ease;
+    z-index: 1;
+}
+
+.tool-card:hover img {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.5));
+}
+
+.tool-name {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0a0a0a;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+
+.tool-card:hover .tool-name {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+/* Tool specific glow colors (optional randomization) */
+.tool-card:nth-child(even):hover {
+    border-color: #7000ff;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(112, 0, 255, 0.2);
+}
+
+.tool-card:nth-child(even):hover::before {
+    background: radial-gradient(circle at center, rgba(112, 0, 255, 0.15) 0%, transparent 70%);
+}
+
+.tool-card:nth-child(even):hover .tool-name {
+    text-shadow: 0 0 10px rgba(112, 0, 255, 0.5);
+}
+
+.tool-card:nth-child(even):hover img {
+    filter: drop-shadow(0 0 15px rgba(112, 0, 255, 0.5));
+}
+
+@media (max-width: 768px) {
+    .tools-section {
+        padding: 2rem 1rem;
+    }
+
+    .tools-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.6rem;
+        padding: 0.3rem;
+    }
+
+    .tool-card {
+        padding: 0.7rem 0.3rem;
+        border-radius: 8px;
+    }
+
+    .tool-card img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .tool-name {
+        font-size: 0.65rem;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* ==== CERTIFICATION SECTION ==== */
@@ -2200,7 +2362,8 @@
 
 .col-2 {
     animation: scroll-down-placement 90s linear infinite;
-    transform: translateY(-50%); /* Start halfway for down scroll */
+    transform: translateY(-50%);
+    /* Start halfway for down scroll */
 }
 
 .col-3 {
@@ -2252,7 +2415,8 @@
     }
 
     100% {
-        transform: translateY(calc(-50% - 8px)); /* accounting for half the gap */
+        transform: translateY(calc(-50% - 8px));
+        /* accounting for half the gap */
     }
 }
 
@@ -2272,7 +2436,8 @@
     }
 
     100% {
-        transform: translateX(calc(-50% - 7px)); /* accounting for gaps in mobile view */
+        transform: translateX(calc(-50% - 7px));
+        /* accounting for gaps in mobile view */
     }
 }
 

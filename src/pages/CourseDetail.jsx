@@ -200,7 +200,7 @@ const CourseDetail = () => {
             <section className="course-banner">
                 <div className="banner-left">
                     <div className="rating">
-                        <span className="rating-value">4.5 <span className="str">★★★★★</span></span>
+                        <span className="rating-value">{course.rating || '4.5'} <span className="str">★★★★★</span></span>
                         <span className="reviews">{reviews.length > 0 ? `${reviews.length + 2300} Reviews` : '2000+ Reviews'}</span>
                     </div>
                     <h1>Best {course.title} Training</h1>
@@ -403,11 +403,20 @@ const CourseDetail = () => {
             {/* Tools & Technologies */}
             {tools.length > 0 && (
                 <section className="tools-section">
-                    <h2>Tools & Technologies You’ll Master in {course.title} Course</h2>
+                    <h2>
+                        <span>TECH STACK</span>
+                        Tools & Technologies You’ll Master
+                    </h2>
                     <div className="tools-grid">
                         {tools.map((tool, index) => (
-                            <div key={index} className="tool-card" title={tool.name}>
-                                <img src={tool.img} alt={tool.name} />
+                            <div 
+                                key={index} 
+                                className="tool-card" 
+                                title={tool.name}
+                                style={{ '--delay': `${index * 0.2}s` }}
+                            >
+                                <img src={getAssetUrl(tool.img)} alt={tool.name} />
+                                <span className="tool-name">{tool.name}</span>
                             </div>
                         ))}
                     </div>
@@ -633,7 +642,7 @@ const CourseDetail = () => {
                     <h2>{course.title} – Student Reviews</h2>
                     <div className="review-summary">
                         <div className="summary-left">
-                            <h1>4.5</h1>
+                            <h1>{course.rating || '4.5'}</h1>
                             <div className="stars">★★★★★</div>
                             <p>Course Rating</p>
                         </div>

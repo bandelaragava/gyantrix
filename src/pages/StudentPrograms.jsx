@@ -114,7 +114,7 @@ const StudentPrograms = () => {
                                     <div className="info-header">
                                         <div className="rating-pill">
                                             <i className="fas fa-star"></i>
-                                            <span>4.5</span>
+                                            <span>{course.rating || '4.5'}</span>
                                         </div>
                                         <span className="course-id">#{course.category?.split(' ')[0].toUpperCase() || 'P'}</span>
                                     </div>

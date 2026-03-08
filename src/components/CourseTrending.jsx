@@ -73,12 +73,16 @@ const CourseTrending = ({ initialCategory = null, showTitle = true }) => {
 
     const filteredCourses = (initialCategory && initialCategory !== 'trending')
         ? coursesData.filter(c => {
-            const cat = c.category.toLowerCase();
+            const categories = c.category.toLowerCase().split(' ');
             const search = initialCategory.toLowerCase();
-            if (search === 'nonit') {
-                return cat.includes('non-it') || cat.includes('management');
+            
+            if (search === 'it') {
+                return categories.includes('it');
             }
-            return cat.includes(search);
+            if (search === 'nonit' || search === 'non-it-marketing') {
+                return categories.includes('non-it-marketing') || categories.includes('management');
+            }
+            return categories.includes(search);
         })
         : coursesData.filter(c => c.isTrending2026);
 
@@ -134,7 +138,7 @@ const CourseTrending = ({ initialCategory = null, showTitle = true }) => {
                                     </div>
                                     <div className="rating">
                                         <span className="stars">★★★★★</span>
-                                        <span className="rating-text">4.5</span>
+                                        <span className="rating-text">{course.rating || '4.5'}</span>
                                     </div>
                                 </div>
 

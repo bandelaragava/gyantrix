@@ -9,6 +9,7 @@ export const coursesData = [
         desc: "Artificial Intelligence is the development of computer systems that can perform tasks requiring human-like intelligence.",
         link: "/courses/artificialintelligence",
         isTrending2026: true,
+        rating: 4.8,
         duration: "9-12 Months",
         level: "Advanced",
         studentCount: "13.5k+",
@@ -24,18 +25,16 @@ export const coursesData = [
             { title: 'Capstone Project', tag: '#Project', content: 'Apply all your skills to solve a real-world business problem in a comprehensive project.' }
         ],
         tools: [
-            { name: 'Python', img: 'https://cdn-icons-png.flaticon.com/512/5968/5968350.png' },
-            { name: 'TensorFlow', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png' },
-            { name: 'Pandas', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1200px-Pandas_logo.svg.png' },
-            { name: 'NumPy', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/1200px-NumPy_logo_2020.svg.png' },
-            { name: 'Scikit-Learn', img: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg' },
-            { name: 'Keras', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Keras_logo.svg/1200px-Keras_logo.svg.png' },
-            { name: 'PyTorch', img: 'https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg' },
-            { name: 'Tableau', img: 'https://cdn.simpleicons.org/tableau' },
-            { name: 'Power BI', img: 'https://cdn.simpleicons.org/powerbi' },
-            { name: 'SQL', img: 'https://cdn.iconscout.com/icon/free/png-256/sql-4-190807.png' },
-            { name: 'Excel', img: 'https://cdn.iconscout.com/icon/free/png-256/microsoft-excel-4-1175163.png' },
-            { name: 'Jupyter', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png' }
+            { name: 'Python', img: 'https://img.icons8.com/color/48/python.png' },
+            { name: 'TensorFlow', img: 'https://img.icons8.com/color/48/tensorflow.png' },
+            { name: 'Pandas', img: 'https://img.icons8.com/color/48/pandas.png' },
+            { name: 'NumPy', img: 'https://img.icons8.com/color/48/numpy.png' },
+            { name: 'Scikit-Learn', img: 'https://cdn.simpleicons.org/scikitlearn' },
+            { name: 'Keras', img: 'https://cdn.simpleicons.org/keras' },
+            { name: 'PyTorch', img: 'https://cdn.simpleicons.org/pytorch' },
+            { name: 'Tableau', img: 'https://img.icons8.com/color/48/tableau-software.png' },
+            { name: 'SQL', img: 'https://img.icons8.com/color/48/mysql-logo.png' },
+            { name: 'Excel', img: 'https://img.icons8.com/color/48/microsoft-excel-2019.png' }
         ],
         reviews: [
             { name: "Arun Kumar", role: "Data Analyst", review: "The AI & Data Science course specific curriculum helped me switch from a non-tech role.", img: "https://ui-avatars.com/api/?name=Arun+Kumar&background=0D8ABC&color=fff&size=128" },
@@ -58,6 +57,7 @@ export const coursesData = [
         desc: "Master both front-end and back-end skills to build complete, scalable web applications from scratch.",
         link: "/courses/fullstack",
         isTrending2026: true,
+        rating: 4.7,
         duration: "8 Months",
         level: "Intermediate",
         studentCount: "18.2k+",
@@ -74,14 +74,14 @@ export const coursesData = [
             { title: 'Java Backend', tag: '#Backend', content: 'Learn Java basics and OOP principles to strengthen enterprise backend skills.' }
         ],
         tools: [
-            { name: 'HTML5', img: 'https://cdn.iconscout.com/icon/free/png-256/html5-40-1175193.png' },
-            { name: 'CSS3', img: 'https://cdn.iconscout.com/icon/free/png-256/css3-11-1175239.png' },
-            { name: 'JavaScript', img: 'https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png' },
-            { name: 'React', img: 'https://cdn-icons-png.flaticon.com/512/1126/1126012.png' },
-            { name: 'Node.js', img: 'https://cdn-icons-png.flaticon.com/512/5968/5968322.png' },
-            { name: 'MongoDB', img: 'https://cdn.iconscout.com/icon/free/png-256/mongodb-4-1175139.png' },
-            { name: 'Docker', img: 'https://cdn-icons-png.flaticon.com/512/919/919853.png' },
-            { name: 'AWS', img: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' }
+            { name: 'HTML5', img: 'https://img.icons8.com/color/48/html-5.png' },
+            { name: 'CSS3', img: 'https://img.icons8.com/color/48/css3.png' },
+            { name: 'JavaScript', img: 'https://img.icons8.com/color/48/javascript.png' },
+            { name: 'React', img: 'https://img.icons8.com/color/48/react-native.png' },
+            { name: 'Node.js', img: 'https://img.icons8.com/color/48/nodejs.png' },
+            { name: 'MongoDB', img: 'https://img.icons8.com/color/48/mongodb.png' },
+            { name: 'Docker', img: 'https://img.icons8.com/color/48/docker.png' },
+            { name: 'AWS', img: 'https://img.icons8.com/color/48/amazon-web-services.png' }
         ],
         reviews: [
             { name: 'Swati Nair', role: 'Full Stack Developer', review: 'Gyantrix Academy completely changed my career path. The mentors are industry experts who guide you at every step.', img: 'https://ui-avatars.com/api/?name=Swati+Nair&background=9C27B0&color=fff&size=128' },
@@ -104,6 +104,7 @@ export const coursesData = [
         desc: "Transform data into intelligence and insights through the power of Artificial Intelligence and Analytics.",
         link: "/courses/ds-analytics-ai",
         isTrending2026: true,
+        rating: 4.8,
         duration: "10 Months",
         level: "Expert",
         studentCount: "9.8k+",
@@ -120,11 +121,11 @@ export const coursesData = [
             { title: 'Advanced Visualization (Tableau/Power BI)', tag: '#Visualization', content: 'Creating professional dashboards for business communication.' }
         ],
         tools: [
-            { name: 'Python', img: 'https://cdn-icons-png.flaticon.com/512/5968/5968350.png' },
-            { name: 'TensorFlow', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png' },
-            { name: 'PyTorch', img: 'https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg' },
-            { name: 'Hadoop', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Hadoop_logo.svg/1200px-Hadoop_logo.svg.png' },
-            { name: 'Spark', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Apache_Spark_logo.svg/1200px-Apache_Spark_logo.svg.png' }
+            { name: 'Python', img: 'https://cdn.simpleicons.org/python' },
+            { name: 'TensorFlow', img: 'https://cdn.simpleicons.org/tensorflow' },
+            { name: 'PyTorch', img: 'https://cdn.simpleicons.org/pytorch' },
+            { name: 'Hadoop', img: 'https://cdn.simpleicons.org/apachehadoop' },
+            { name: 'Spark', img: 'https://cdn.simpleicons.org/apachespark' }
         ],
         reviews: [
             { name: "Ananya Gupta", role: "Data Scientist", review: "The program at Gyantrix helped me gain job-ready skills and land my first internship in less than three months.", img: "https://ui-avatars.com/api/?name=Ananya+Gupta&background=4CAF50&color=fff&size=128" }
@@ -146,6 +147,7 @@ export const coursesData = [
         desc: "A Business Analyst identifies business needs and recommends effective solutions.",
         link: "/courses/businessanalyst",
         isTrending2026: true,
+        rating: 4.7,
         duration: "6 Months",
         level: "Beginner",
         studentCount: "7.4k+",
@@ -162,10 +164,10 @@ export const coursesData = [
             { title: 'Stakeholder Management', tag: '#SoftSkills', content: 'Effective communication and negotiation with project stakeholders.' }
         ],
         tools: [
-            { name: 'Excel', img: 'https://cdn.iconscout.com/icon/free/png-256/microsoft-excel-4-1175163.png' },
-            { name: 'Jira', img: 'https://cdn.iconscout.com/icon/free/png-256/jira-1-1175159.png' },
-            { name: 'SQL', img: 'https://cdn.iconscout.com/icon/free/png-256/sql-4-190807.png' },
-            { name: 'Visio', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Microsoft_Visio_logo_%282019-present%29.svg/1200px-Microsoft_Visio_logo_%282019-present%29.svg.png' }
+            { name: 'Excel', img: 'https://img.icons8.com/color/48/microsoft-excel-2019.png' },
+            { name: 'Jira', img: 'https://img.icons8.com/color/48/jira.png' },
+            { name: 'SQL', img: 'https://img.icons8.com/color/48/mysql-logo.png' },
+            { name: 'Visio', img: 'https://img.icons8.com/color/48/microsoft-visio.png' }
         ],
         reviews: [
             { name: "Ritu Singh", role: "Business Analyst", review: "The Agile and Scrum modules were incredibly practical. I learned how to manage stakeholders effectively.", img: "https://ui-avatars.com/api/?name=Ritu+Singh&background=F44336&color=fff&size=128" }
@@ -186,6 +188,7 @@ export const coursesData = [
         img: "/images/dataAnalystjpg.jpg",
         desc: "A Data Analyst interprets and transforms data into actionable insights for decision-making.",
         link: "/courses/dataanalyst",
+        rating: 4.6,
         duration: "6 Months",
         level: "Beginner",
         studentCount: "11.2k+",
@@ -202,11 +205,10 @@ export const coursesData = [
             { title: 'Project: Retail Sales Analysis', tag: '#Project', content: 'Apply all tools to analyze and report on a real retail dataset.' }
         ],
         tools: [
-            { name: 'Excel', img: 'https://cdn.iconscout.com/icon/free/png-256/microsoft-excel-4-1175163.png' },
-            { name: 'SQL', img: 'https://cdn.iconscout.com/icon/free/png-256/sql-4-190807.png' },
-            { name: 'Power BI', img: 'https://cdn.simpleicons.org/powerbi' },
-            { name: 'Tableau', img: 'https://cdn.simpleicons.org/tableau' },
-            { name: 'Python', img: 'https://cdn-icons-png.flaticon.com/512/5968/5968350.png' }
+            { name: 'Excel', img: 'https://img.icons8.com/color/48/microsoft-excel-2019.png' },
+            { name: 'SQL', img: 'https://img.icons8.com/color/48/mysql-logo.png' },
+            { name: 'Tableau', img: 'https://img.icons8.com/color/48/tableau-software.png' },
+            { name: 'Python', img: 'https://img.icons8.com/color/48/python.png' }
         ],
         reviews: [
             { name: "Suresh Raina", role: "Junior Data Analyst", review: "The visualization modules in Power BI and Tableau were excellent. I can now create dashboards that wow my team.", img: "https://ui-avatars.com/api/?name=Suresh+Raina&background=2196F3&color=fff&size=128" }
@@ -228,6 +230,7 @@ export const coursesData = [
         desc: "Medical Coding is the process of translating healthcare diagnoses, procedures, and treatments into standardized codes for records and billing.",
         link: "/courses/medicalCoding",
         isTrending2026: true,
+        rating: 4.8,
         duration: "4-6 Months",
         level: "Beginner",
         studentCount: "15.9k+",
@@ -245,9 +248,9 @@ export const coursesData = [
             { title: 'Software Training (Encoder)', tag: '#Tools', content: 'Hands-on practice with coding software used by industry professionals.' }
         ],
         tools: [
-            { name: 'ICD-10', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966334.png' },
-            { name: 'CPT', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966448.png' },
-            { name: 'AAPC', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966436.png' }
+            { name: 'ICD-10', img: 'ICD-10.png.png' },
+            { name: 'CPT', img: 'https://img.icons8.com/color/48/health-book.png' },
+            { name: 'AAPC', img: 'https://img.icons8.com/color/48/medical-doctor.png' }
         ],
         reviews: [
             { name: "Neha Gupta", role: "Medical Coder", review: "The certification exam preparation was extremely helpful. I cleared my CPC on the first attempt.", img: "https://ui-avatars.com/api/?name=Neha+Gupta&background=00BCD4&color=fff&size=128" }
@@ -267,7 +270,7 @@ export const coursesData = [
         price: "₹14,999",
         img: "/images/medicalScribingjpg.jpg",
         desc: "Medical Scribing involves documenting patient encounters and clinical information on behalf of healthcare providers in real-time.",
-        link: "/courses/medicalscribing",
+        rating: 4.5,
         modules: [
             { title: 'Role of a Medical Scribe', tag: '#Intro', content: 'Understanding the importance of scribes in the modern healthcare ecosystem.' },
             { title: 'Medical Terminology & Abbreviations', tag: '#Medical', content: 'Learning the language of medicine used during physician-patient encounters.' },
@@ -281,8 +284,9 @@ export const coursesData = [
             { title: 'Career Path for Scribes', tag: '#Career', content: 'Transitioning to medical school, PA school, or senior scribe roles.' }
         ],
         tools: [
-            { name: 'Epic EHR', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966486.png' },
-            { name: 'Cerner', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966504.png' }
+            { name: 'Epic', img: 'https://img.icons8.com/color/48/hospital.png' },
+            { name: 'Cerner', img: 'https://img.icons8.com/color/48/medical-records.png' },
+            { name: 'Dragon', img: 'https://img.icons8.com/color/48/microphone.png' }
         ],
         reviews: [
             { name: "Siddharth Verma", role: "Medical Scribe", review: "The EHR training was fantastic. I felt completely prepared when I started my first day at the clinic.", img: "https://ui-avatars.com/api/?name=Siddharth+Verma&background=607D8B&color=fff&size=128" }
@@ -303,6 +307,7 @@ export const coursesData = [
         img: "/images/geneticjpg.jpg",
         desc: "Genetic Engineering is the science of altering an organism’s genes to achieve specific traits or outcomes.",
         link: "/courses/geneticeng",
+        rating: 4.3,
         modules: [
             { title: 'Molecular Biology Fundamentals', tag: '#Genetics', content: 'Detailed study of DNA, RNA, and protein synthesis.' },
             { title: 'Recombinant DNA Technology', tag: '#Advanced', content: 'Core techniques for cloning and manipulating genetic material.' },
@@ -316,9 +321,9 @@ export const coursesData = [
             { title: 'Laboratory Safety and Techniques', tag: '#Practical', content: 'Standard operating procedures for working in a high-tech genetics lab.' }
         ],
         tools: [
-            { name: 'CRISPR', img: 'https://cdn-icons-png.flaticon.com/512/3208/3208726.png' },
-            { name: 'PCR Machine', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966378.png' },
-            { name: 'Bioinformatics Tools', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966367.png' }
+            { name: 'CRISPR', img: 'CRISPR.png.png' },
+            { name: 'PCR', img: 'https://img.icons8.com/color/48/test-tube.png' },
+            { name: 'Microscope', img: 'https://img.icons8.com/color/48/microscope.png' }
         ],
         reviews: [
             { name: "Simran Kaur", role: "Geneticist", review: "The CRISPR and gene editing modules were world-class. Excellent research support provided here.", img: "https://ui-avatars.com/api/?name=Simran+Kaur&background=8BC34A&color=fff&size=128" }
@@ -339,6 +344,7 @@ export const coursesData = [
         img: "/images/pharmacojpg.jpg",
         desc: "Pharmacovigilance is the science of monitoring drug safety and ensuring the legal compliance of medicines.",
         link: "/courses/pharmacovigilance",
+        rating: 4.5,
         modules: [
             { title: 'Introduction to PV & Drug Safety', tag: '#Basic', content: 'Understanding the importance of drug safety surveillance in the pharma industry.' },
             { title: 'Adverse Drug Reactions (ADR) Monitoring', tag: '#ADR', content: 'Techniques for identifying and reporting unexpected side effects.' },
@@ -352,8 +358,9 @@ export const coursesData = [
             { title: 'PV Inspections and Audits', tag: '#Quality', content: 'Preparing for and managing regulatory inspections.' }
         ],
         tools: [
-            { name: 'Argus Safety', img: 'https://cdn-icons-png.flaticon.com/512/906/906324.png' },
-            { name: 'MedDRA', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966468.png' }
+            { name: 'Argus Safety', img: 'argusSafety.png.png' },
+            { name: 'MedDRA', img: 'MedDRAlogo.png.png' },
+            { name: 'Oracle', img: 'https://img.icons8.com/color/48/oracle-logo.png' }
         ],
         reviews: [
             { name: "Sandeep Rao", role: "PV Specialist", review: "The deep dive into MedDRA coding and Argus Safety was exactly what I needed for my promotion.", img: "https://ui-avatars.com/api/?name=Sandeep+Rao&background=FF9800&color=fff&size=128" }
@@ -375,6 +382,7 @@ export const coursesData = [
         desc: "Empower brands to reach, engage, and grow through data-driven digital marketing strategies.",
         link: "/courses/digitalmarketing",
         isTrending2026: true,
+        rating: 4.7,
         modules: [
             { title: 'Search Engine Optimization (SEO)', tag: '#SEO', content: 'Master on-page, off-page, and technical SEO strategies to improve website rankings.' },
             { title: 'Search Engine Marketing (Google Ads)', tag: '#SEM', content: 'Build and optimize high-converting PPC campaigns and display ads.' },
@@ -388,10 +396,10 @@ export const coursesData = [
             { title: 'Digital Marketing Capstone', tag: '#Project', content: 'Build a complete 360-degree digital marketing plan for a real business.' }
         ],
         tools: [
-            { name: 'Google Ads', img: 'https://cdn.iconscout.com/icon/free/png-256/google-ads-2038788-1721678.png' },
-            { name: 'Analytics', img: 'https://cdn.iconscout.com/icon/free/png-256/google-analytics-2038788-1721678.png' },
-            { name: 'Mailchimp', img: 'https://cdn.iconscout.com/icon/free/png-256/mailchimp-3-1175151.png' },
-            { name: 'Semrush', img: 'https://cdn.iconscout.com/icon/free/png-256/semrush-1-1175065.png' }
+            { name: 'Google Ads', img: 'https://cdn.simpleicons.org/googleads' },
+            { name: 'Analytics', img: 'https://cdn.simpleicons.org/googleanalytics' },
+            { name: 'Mailchimp', img: 'https://cdn.simpleicons.org/mailchimp' },
+            { name: 'Semrush', img: 'https://cdn.simpleicons.org/semrush' }
         ],
         reviews: [
             { name: "Priya Sharma", role: "Digital Marketer", review: "The Google Ads module changed my perspective on PPC. I saw immediate results in my client projects.", img: "https://ui-avatars.com/api/?name=Priya+Sharma&background=E91E63&color=fff&size=128" }
@@ -412,6 +420,7 @@ export const coursesData = [
         img: "/images/productjpg.jpg",
         desc: "Product Management involves planning, developing, and overseeing a product throughout its entire lifecycle.",
         link: "/courses/productmanagement",
+        rating: 4.6,
         modules: [
             { title: 'Introduction to Product Management', tag: '#Foundations', content: 'The role of a PM, product lifecycle, and different types of PM roles.' },
             { title: 'Product Strategy & Vision', tag: '#Strategy', content: 'Defining the "Why" behind a product and creating a compelling roadmap.' },
@@ -425,10 +434,9 @@ export const coursesData = [
             { title: 'Product Management Interview Prep', tag: '#Career', content: 'Mastering case studies, product sense, and behavioral interview questions.' }
         ],
         tools: [
-            { name: 'Jira', img: 'https://cdn.iconscout.com/icon/free/png-256/jira-1-1175159.png' },
-            { name: 'Figma', img: 'https://cdn.iconscout.com/icon/free/png-256/figma-1-1175147.png' },
-            { name: 'Miro', img: 'https://cdn.iconscout.com/icon/free/png-256/miro-1-1175135.png' },
-            { name: 'Amplitude', img: 'https://cdn-icons-png.flaticon.com/512/906/906314.png' }
+            { name: 'Jira', img: 'https://img.icons8.com/color/48/jira.png' },
+            { name: 'Figma', img: 'https://img.icons8.com/color/48/figma.png' },
+            { name: 'Miro', img: 'https://cdn.simpleicons.org/miro' }
         ],
         reviews: [
             { name: "Varun Mehta", role: "Associate PM", review: "The case study methodology used here is excellent. It really taught me how to think like a product owner.", img: "https://ui-avatars.com/api/?name=Varun+Mehta&background=3F51B5&color=fff&size=128" }
@@ -449,6 +457,7 @@ export const coursesData = [
         img: "/images/humanjpg.jpg",
         desc: "Human Resources manages recruitment, employee relations, and workforce development within an organization.",
         link: "/courses/humanresourse",
+        rating: 4.3,
         modules: [
             { title: 'HR Fundamentals', tag: '#HRM', content: 'The core functions of HR and its importance in modern businesses.' },
             { title: 'Talent Acquisition & Recruitment', tag: '#Recruitment', content: 'Strategies for sourcing, interviewing, and hiring top-tier talent.' },
@@ -462,9 +471,9 @@ export const coursesData = [
             { title: 'Strategic HR Leadership', tag: '#Leadership', content: 'Aligning HR goals with the overall business vision.' }
         ],
         tools: [
-            { name: 'LinkedIn Recruiter', img: 'https://cdn-icons-png.flaticon.com/512/174/174857.png' },
-            { name: 'Workday', img: 'https://cdn.iconscout.com/icon/free/png-256/workday-2-1175131.png' },
-            { name: 'SAP SuccessFactors', img: 'https://cdn.iconscout.com/icon/free/png-256/sap-4-1175133.png' }
+            { name: 'LinkedIn', img: 'https://img.icons8.com/color/48/linkedin.png' },
+            { name: 'Workday', img: 'https://img.icons8.com/color/48/workday.png' },
+            { name: 'SAP', img: 'https://img.icons8.com/color/48/sap.png' }
         ],
         reviews: [
             { name: "Megha Rao", role: "HR Generalist", review: "The module on HR Analytics opened my eyes to how much impact data can have on hiring efficiency.", img: "https://ui-avatars.com/api/?name=Megha+Rao&background=009688&color=fff&size=128" }
@@ -485,6 +494,7 @@ export const coursesData = [
         img: "/images/nanoSciencejpg.jpg",
         desc: "Nano Science & Technology studies and manipulates materials at the atomic and molecular scale for advanced applications.",
         link: "/courses/nanoscience",
+        rating: 4.5,
         modules: [
             { title: 'Fundamentals of Nanoscience', tag: '#Foundations', content: 'Properties of matter at the nanoscale and the history of nanotechnology.' },
             { title: 'Synthesis of Nanomaterials', tag: '#Advanced', content: 'Chemical and physical methods for creating nanoparticles and nanotubes.' },
@@ -498,9 +508,9 @@ export const coursesData = [
             { title: 'Nano-electronics', tag: '#Tech', content: 'The next generation of semiconductors and quantum computing.' }
         ],
         tools: [
-            { name: 'SEM', img: 'https://cdn-icons-png.flaticon.com/512/3201/3201246.png' },
-            { name: 'AFM', img: 'https://cdn-icons-png.flaticon.com/512/3201/3201258.png' },
-            { name: 'NanoDesign Soft', img: 'https://cdn-icons-png.flaticon.com/512/3201/3201201.png' }
+            { name: 'SEM', img: 'https://img.icons8.com/color/48/microscope.png' },
+            { name: 'AFM', img: 'https://img.icons8.com/color/48/atom.png' },
+            { name: 'NanoDesign', img: 'https://img.icons8.com/color/48/structural.png' }
         ],
         reviews: [],
         faqs: [
@@ -519,6 +529,7 @@ export const coursesData = [
         img: "/images/salesjpg.jpg",
         desc: "Salesforce is a powerful cloud-based CRM platform used to manage sales, customer data, and business workflows globally.",
         link: "/courses/salesForce",
+        rating: 4.6,
         modules: [
             { title: 'Salesforce CRM Basics', tag: '#CRM', content: 'Understanding the core cloud platform and navigating the ecosystem.' },
             { title: 'Admin & Configuration', tag: '#Admin', content: 'Building custom apps, objects, fields, and tabs without coding.' },
@@ -532,9 +543,9 @@ export const coursesData = [
             { title: 'Trailhead Certification Prep', tag: '#Prep', content: 'Strategies and mock tests for the Salesforce Certified Administrator exam.' }
         ],
         tools: [
-            { name: 'Salesforce', img: 'https://cdn.iconscout.com/icon/free/png-256/salesforce-2-1175067.png' },
-            { name: 'Flow Builder', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966424.png' },
-            { name: 'Trailhead', img: 'https://cdn-icons-png.flaticon.com/512/2966/2966412.png' }
+            { name: 'Salesforce', img: 'https://img.icons8.com/color/48/salesforce.png' },
+            { name: 'Trailhead', img: 'https://img.icons8.com/color/48/trail.png' },
+            { name: 'AppExchange', img: 'https://img.icons8.com/color/48/shop.png' }
         ],
         reviews: [
             { name: "Rahul Deshmukh", role: "Salesforce Admin", review: "The hands-on Flow Builder training was a lifesaver. I can now automate complex business logic in minutes.", img: "https://ui-avatars.com/api/?name=Rahul+Deshmukh&background=795548&color=fff&size=128" }

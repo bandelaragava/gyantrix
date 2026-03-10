@@ -21,6 +21,7 @@ const Contact = () => {
                         </div>
                         <h3>Central Office</h3>
                         <p className="address-text">
+                            Gyantrix,<br />
                             5th floor, cropwork.hub,<br />
                             Plot No. 81, Jubilee Enclave,<br />
                             HITEC City, Hyderabad – 500081

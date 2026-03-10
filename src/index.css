@@ -1227,7 +1227,7 @@ form button {
 
 .acrdt {
   background-color: white;
-  padding: 1.5rem;
+  padding: 1rem;
   margin-top: 0.5rem;
 
 }
@@ -1249,96 +1249,93 @@ form button {
 }
 
 /* Inner track that moves */
-.logo-track {
-  display: flex;
-  align-items: center;
-  animation: scroll 10s linear infinite;
-  width: max-content;
+/* 
+   Accreditation Section - Pixel-Perfect Infinite Scroll
+   Each logo box is exactly 250px. 6 logos = 1500px total set width.
+*/
+.acrdt .logo-track {
+  display: flex !important;
+  align-items: center !important;
+  width: max-content !important;
+  will-change: transform;
+  animation: acrdtNonStopScroll 20s linear infinite !important;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  gap: 0 !important;
 }
 
-/* Each logo box */
-.logos {
-  flex: 0 0 auto;
+.acrdt .logos {
+  flex: 0 0 250px !important;
+  width: 250px !important;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 40px;
+  padding: 0 1.5rem;
+  /* Internal spacing doesn't affect track width due to fixed flex-basis */
+  margin: 0 !important;
 }
 
-/* Logo images */
-.logos img {
-  height: 7rem;
+.acrdt .logos img {
+  height: 8.5rem;
   width: auto;
+  max-width: 100%;
   object-fit: contain;
-  vertical-align: middle;
   transition: transform 0.3s ease;
+  filter: grayscale(0.1);
 }
 
-/* Optional hover zoom effect */
-.logos img:hover {
-  transform: scale(1.1);
+.acrdt .logos img:hover {
+  transform: scale(1.08);
+  filter: grayscale(0);
 }
 
-/* Scroll animation */
-@keyframes scroll {
-  from {
-    transform: translateX(0);
+@keyframes acrdtNonStopScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
   }
 
-  to {
-    transform: translateX(-50%);
+  100% {
+    transform: translate3d(-1500px, 0, 0);
+    /* Exactly 6 logos × 250px */
   }
 }
 
 @media (max-width: 992px) {
-  .acrdt p {
-    font-size: 1.1rem;
+  .acrdt .logos {
+    flex: 0 0 180px !important;
+    width: 180px !important;
   }
 
-  .logos {
-    margin: 0 8px;
-    /* ⬅️ smaller spacing */
-  }
+  @keyframes acrdtNonStopScroll {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
 
-  .logos img {
-    height: 70px;
-  }
+    100% {
+      transform: translate3d(-1080px, 0, 0);
+    }
 
-  .logo-slider {
-    padding: 30px 0;
-  }
-
-  .logo-track {
-    animation-duration: 10s;
+    /* 6 × 180px */
   }
 }
 
-/* Mobile View */
 @media (max-width: 600px) {
-  .acrdt {
-    padding: 1rem;
+  .acrdt .logos {
+    flex: 0 0 150px !important;
+    width: 150px !important;
   }
 
-  .acrdt p {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
+  @keyframes acrdtNonStopScroll {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
 
-  .logos {
-    margin: 0 5px;
-    /* ⬅️ tighter gap on mobile */
-  }
+    100% {
+      transform: translate3d(-900px, 0, 0);
+    }
 
-  .logos img {
-    height: 60px;
-  }
-
-  .logo-slider {
-    padding: 20px 0;
-  }
-
-  .logo-track {
-    animation-duration: 5s;
+    /* 6 × 150px */
   }
 }
 
@@ -1349,7 +1346,7 @@ form button {
   }
 
   .logos img {
-    height: 50px;
+    height: 55px;
   }
 
   .logo-slider {
@@ -1554,7 +1551,6 @@ form button {
 }
 
 .feature-content-inline .sec1 a:hover {
-  background: #66D6FF;
   color: #000;
   transform: translateY(-3px);
 }
@@ -3146,13 +3142,18 @@ form button {
   flex: 1;
 }
 
+/* ==== Vertical Logo Track — Pixel-Perfect Infinite Scroll ==== */
+/* Each img is 60px + 10px top/bottom padding = 80px per item.
+   5 unique logos × 80px = 400px per set. Duplicate = 800px total.
+   Animate exactly -400px to reset seamlessly at midpoint. */
 .logo-track-vertical {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0;
-  /* No gap between logos vertically */
-  animation: scrollUp linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  animation: partnersScrollUp 20s linear infinite;
 }
 
 .logo-track-vertical img {
@@ -3161,12 +3162,12 @@ form button {
   object-fit: contain;
   background: transparent;
   padding: 10px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  flex: 0 0 80px;
+  transition: filter 0.3s ease;
   filter: grayscale(1) opacity(0.6);
 }
 
 .logo-track-vertical img:hover {
-  transform: scale(1.1);
   filter: grayscale(0) opacity(1);
 }
 
@@ -3196,27 +3197,28 @@ form button {
   display: flex;
 }
 
-/* Proper opposite animations */
-@keyframes scrollUp {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
+/* Each column with different speeds for visual variety */
 .speed-slow {
-  animation-duration: 25s;
+  animation-duration: 28s;
 }
 
 .speed-medium {
-  animation-duration: 20s;
+  animation-duration: 22s;
 }
 
 .speed-fast {
-  animation-duration: 15s;
+  animation-duration: 18s;
+}
+
+/* Vertical up keyframe — pixel-perfect: 5 logos × 80px = 400px */
+@keyframes partnersScrollUp {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, -400px, 0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -5270,38 +5272,42 @@ form button {
   letter-spacing: 2px;
 }
 
-/* Continuous Scroll Animations */
+/* ==== Testimonial Infinite Scroll — Pixel-Perfect ====
+   .crd is 320px + 30px margin-right = 350px per card.
+   5 unique cards × 350px = 1750px per set.
+   With 4 copies: total = 7000px.  -50% = 3500px = 2 full sets. Seamless. */
 .row1 .track {
-  animation: scroll-left 15s linear infinite;
-  /* Matched to 15s as per your recent update */
+  animation: testimonialsScrollLeft 30s linear infinite;
 }
 
 .row2 .track {
-  animation: scroll-right 15s linear infinite;
-  /* Matched to 15s */
+  animation: testimonialsScrollRight 30s linear infinite;
 }
 
-.track:hover {
+/* Ensure no hover pausing ever */
+.track:hover,
+.track:focus {
   animation-play-state: running !important;
-  /* Forces it to NEVER stop even on hover */
 }
 
-/* Opposite directions */
-@keyframes scroll-left {
+@keyframes testimonialsScrollLeft {
   0% {
     transform: translate3d(0, 0, 0);
   }
 
   100% {
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-1750px, 0, 0);
   }
+
+  /* 5 cards × 350px */
 }
 
-@keyframes scroll-right {
+@keyframes testimonialsScrollRight {
   0% {
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-1750px, 0, 0);
   }
 
+  /* Start at 2nd set */
   100% {
     transform: translate3d(0, 0, 0);
   }
@@ -5366,47 +5372,51 @@ form button {
 }
 
 
+/* ==== Featured In — Pixel-Perfect Infinite Scroll ====
+   Each img: flex-basis 200px (width 200px, no extra margin).
+   15 unique logos × 200px = 3000px per set.
+   With 4 copies: 12000px total.  Animate -3000px to loop seamlessly. */
+.testimonials {
+  overflow: hidden;
+  /* Ensure the feature-logos container is clipped */
+}
+
 .feature-logos {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: flex-start;
   align-items: center;
   width: max-content;
   will-change: transform;
-  animation: scrollLeft 30s linear infinite;
   backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
+  animation: featuredInScroll 35s linear infinite;
 }
 
 .feature-logos img {
-  width: 10rem;
-  /* Slightly larger */
-  height: 6rem;
-  /* Slightly larger */
+  flex: 0 0 130px;
+  width: 130px;
+  height: 4.5rem;
   object-fit: contain;
   background: #fff;
   border-radius: 0.75rem;
-  padding: 1.25rem;
-  /* Increased padding for better visibility */
-  flex: 0 0 10rem;
-  margin-right: 2.5rem;
-  /* Adjusted margin */
+  padding: 0.75rem;
+  margin-right: 20px;
+  /* Gap between logos */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  transition: filter 0.3s ease;
 }
 
 .feature-logos img:hover {
-  transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
-/* Animation: moves logos continuously left */
-@keyframes scrollLeft {
+/* 15 logos × (130px width + 20px margin) = 2250px per set */
+@keyframes featuredInScroll {
   0% {
     transform: translate3d(0, 0, 0);
   }
 
   100% {
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-2250px, 0, 0);
   }
 }
 

@@ -174,18 +174,25 @@ const Home = () => {
                 <p>We are Collaborated & Accredited by</p>
                 <div className="logo-slider">
                     <div className="logo-track">
-                        <div className="logos"><img src={getAssetUrl("/images/nsdclogo.jpg")} alt="NSDC" /></div>
-                        <div className="logos"><img src={skillIndiaLogo} alt="Skill India" /></div>
-                        <div className="logos"><img src={getAssetUrl("/images/MCA.png")} alt="MCA" /></div>
-                        <div id="msme" className="logos"><img src={msmeLogo} alt="MSME" /></div>
-                        <div className="logos"><img src={isoLogo} alt="ISO" /></div>
-                        <div className="logos"><img src={getAssetUrl("/images/nasscom1.png")} alt="NASSCOM" /></div>
-                        <div className="logos"><img src={getAssetUrl("/images/nsdclogo.jpg")} alt="NSDC" /></div>
-                        <div className="logos"><img src={skillIndiaLogo} alt="Skill India" /></div>
-                        <div className="logos"><img src={getAssetUrl("/images/MCA.png")} alt="MCA" /></div>
-                        <div className="logos"><img src={msmeLogo} alt="MSME" /></div>
-                        <div className="logos"><img src={isoLogo} alt="ISO" /></div>
-                        <div className="logos"><img src={getAssetUrl("/images/nasscom1.png")} alt="NASSCOM" /></div>
+                        {[
+                            { src: "/images/nsdclogo.jpg", alt: "NSDC" },
+                            { src: skillIndiaLogo, alt: "Skill India", isImported: true },
+                            { src: "/images/MCA.png", alt: "MCA" },
+                            { src: msmeLogo, alt: "MSME", isImported: true },
+                            { src: isoLogo, alt: "ISO", isImported: true },
+                            { src: "/images/nasscom1.png", alt: "NASSCOM" }
+                        ].concat([
+                            { src: "/images/nsdclogo.jpg", alt: "NSDC" },
+                            { src: skillIndiaLogo, alt: "Skill India", isImported: true },
+                            { src: "/images/MCA.png", alt: "MCA" },
+                            { src: msmeLogo, alt: "MSME", isImported: true },
+                            { src: isoLogo, alt: "ISO", isImported: true },
+                            { src: "/images/nasscom1.png", alt: "NASSCOM" }
+                        ]).map((logo, index) => (
+                            <div key={index} className="logos">
+                                <img src={logo.isImported ? logo.src : getAssetUrl(logo.src)} alt={logo.alt} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -678,6 +685,7 @@ const Home = () => {
                         </div>
                         <h3>Central Office</h3>
                         <p className="address-text">
+                            Gyantrix,<br />
                             5th floor, cropwork.hub,<br />
                             Plot No. 81, Jubilee Enclave,<br />
                             HITEC City, Hyderabad – 500081

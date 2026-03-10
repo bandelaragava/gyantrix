@@ -2356,22 +2356,46 @@
     min-height: max-content;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
 }
 
+/* 
+   Placement scroll: Each card is 160px height + 16px gap = 176px.
+   13 unique students × 176px = 2288px per set.
+   With 2 copies: 4576px total.  Animate -50% = -2288px. Seamless.
+*/
 .col-1 {
-    animation: scroll-up-placement 90s linear infinite;
+    animation: placementScrollUp 40s linear infinite;
 }
 
 .col-2 {
-    animation: scroll-down-placement 90s linear infinite;
-    transform: translateY(-50%);
-    /* Start halfway for down scroll */
+    animation: placementScrollDown 43s linear infinite;
 }
 
 .col-3 {
-    animation: scroll-up-placement 95s linear infinite;
+    animation: placementScrollUp 37s linear infinite;
 }
+
+@keyframes placementScrollUp {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+@keyframes placementScrollDown {
+    0% {
+        transform: translate3d(0, -50%, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 
 /* Placement Card */
 .place-card {
@@ -2391,7 +2415,7 @@
 .place-card img {
     width: 60px;
     height: 60px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 50%;
     margin-bottom: 10px;
 }
@@ -2411,48 +2435,8 @@
     text-align: center;
 }
 
-/* Scroll Animations */
-@keyframes scroll-up-placement {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
+/* === Retired old placement keyframes — now using placementScrollUp/Down above === */
 
-    100% {
-        transform: translate3d(0, calc(-50% - 8px), 0);
-        /* accounting for half the gap */
-    }
-}
-
-@keyframes scroll-down-placement {
-    0% {
-        transform: translate3d(0, calc(-50% - 8px), 0);
-    }
-
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes scroll-left-placement {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-
-    100% {
-        transform: translate3d(calc(-50% - 7px), 0, 0);
-        /* accounting for gaps in mobile view */
-    }
-}
-
-@keyframes scroll-right-placement {
-    0% {
-        transform: translate3d(calc(-50% - 7px), 0, 0);
-    }
-
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
 
 /* Responsive Design */
 @media (max-width: 1200px) {
@@ -2564,16 +2548,16 @@
     .scroll-col {
         flex-direction: row;
         width: max-content;
-        animation: scroll-left-placement 10s linear infinite;
+        animation: scroll-left-placement 20s linear infinite;
     }
 
     .col-2 {
-        animation: scroll-right-placement 10s linear infinite;
+        animation: scroll-right-placement 20s linear infinite;
         transform: translateX(calc(-50% - 7px));
     }
 
     .col-3 {
-        animation: scroll-left-placement 12s linear infinite;
+        animation: scroll-left-placement 24s linear infinite;
     }
 
     .place-card {

@@ -153,10 +153,10 @@ const Navbar = () => {
                 </div>
 
                 <Link to="/contact" onClick={closeAll}>Contact us</Link>
-                {/* <Link to="/login" className="login-nav-btn" onClick={closeAll}>
+                <Link to="/login" className="login-nav-btn" onClick={closeAll}>
                     <span>Login</span>
                     <div className="liquid"></div>
-                </Link> */}
+                </Link>
             </nav>
         </header>
     );

@@ -77,7 +77,7 @@ const CourseDetail = () => {
     const faqs = course.faqs || [
         { question: `What is ${course.title}?`, answer: course.desc },
         { question: 'What are the prerequisites?', answer: 'Basic computer knowledge.' },
-        { question: 'Is placement assistance provided?', answer: 'Yes, we provide 100% placement assistance.' }
+        { question: 'Is placement assistance provided?', answer: 'Yes, we provide placement assistance and hiring partner interview opportunities.' }
     ];
     // Generic tools if none provided (optional, or show empty)
     const tools = course.tools || [];
@@ -209,7 +209,7 @@ const CourseDetail = () => {
                         <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> Master core technologies</li>
                         <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> Learn industry practices</li>
                         <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> Develop professional portfolios</li>
-                        <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> 100% Placement Assistance</li>
+                        <li><img className="tick" src={getAssetUrl('/images/correcticon.webp')} alt="Tick" /> Placement Assistance & Interviews</li>
                     </ul>
                     <Link to="/contact" className="enroll-btn">
                         <span>Enroll Now</span>
@@ -481,7 +481,7 @@ const CourseDetail = () => {
                     <ul>
                         <li>Master {course.title} concepts with real-world, hands-on projects</li>
                         <li>Gain expertise in {course.tools && course.tools.length > 0 ? course.tools.map(t => t.name).slice(0, 3).join(', ') : 'modern tools and technologies'} and industry practices</li>
-                        <li>Accelerate your career with 100% placement assistance and expert mentoring</li>
+                        <li>Accelerate your career with placement assistance and hiring partner interview opportunities</li>
                     </ul>
                     <Link to="/contact" className="contact-btn">
                         <span>Contact Us</span>

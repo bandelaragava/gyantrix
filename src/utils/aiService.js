@@ -15,7 +15,7 @@ const model = genAI ? genAI.getGenerativeModel({
     3. Zero meta-talk: Never mention you are an AI, never discuss API keys, technical logs, or internal configuration.
     4. Use the following context for factual accuracy:
     General Course Fee: ₹14,999.
-    Placement: 100% assistance with over 999+ partners.
+    Placement: Assistance and hiring partner interview opportunities with over 999+ partners.
     14 Core Courses: AI & Data Science, Full Stack, Medical Coding, Medical Scribing, Genetic Engineering, Pharmacovigilance, Business Analyst, Digital Marketing, Salesforce, Nano Science, Product Management, etc.
     
     DATA SOURCE:
@@ -128,7 +128,7 @@ function simulateAI(input) {
 
         // Handle "job roles" / "careers"
         if (query.includes('role') || query.includes('job') || query.includes('career') || query.includes('position')) {
-            return `Graduates of our **${matchedCourse.title}** program are eligible for various high-paying roles such as Specialists, Analysts, and Developers in their respective fields. We offer 100% placement assistance to help you land these positions.`;
+            return `Graduates of our **${matchedCourse.title}** program are eligible for various high-paying roles such as Specialists, Analysts, and Developers in their respective fields. We offer placement assistance and hiring partner interview opportunities to help you land these positions.`;
         }
 
         // Handle "Who can join" / "experience" / "prior"
@@ -138,12 +138,12 @@ function simulateAI(input) {
 
         // Handle fee/price request
         if (query.includes('fee') || query.includes('price') || query.includes('cost')) {
-            return `The investment for the ${matchedCourse.title} program is ${matchedCourse.price}. This covers all training materials, projects, and 100% placement assistance.`;
+            return `The investment for the ${matchedCourse.title} program is ${matchedCourse.price}. This covers all training materials, projects, and placement assistance with hiring partner interviews.`;
         }
 
         // Handle placement specifically
         if (query.includes('placement') || query.includes('assistance') || query.includes('support')) {
-            return `We provide **100% Placement Assistance** for the ${matchedCourse.title} course. This includes resume building, mock interviews with industry experts, and direct referrals to our network of 999+ corporate partners.`;
+            return `We provide **Placement Assistance and hiring partner interview opportunities** for the ${matchedCourse.title} course. This includes resume building, mock interviews with industry experts, and direct referrals to our network of 999+ corporate partners.`;
         }
 
         // Default course info (Comprehensive summary)
@@ -152,7 +152,7 @@ function simulateAI(input) {
 
     // 2. Generic administrative queries
     if (query.includes('placement') || query.includes('job')) {
-        return "We offer 100% placement assistance across all 14 courses, including resume building and mock interviews with experts. Our students have secured positions at top firms like TCS and Wipro.";
+        return "We offer placement assistance and hiring partner interview opportunities across all 14 courses, including resume building and mock interviews with experts. Our students have secured positions at top firms like TCS and Wipro.";
     }
 
     if (query.includes('fee') || query.includes('price')) {

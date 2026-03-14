@@ -12,7 +12,7 @@ const PlacementGuarantee = () => {
 
     return (
         <section className="placement-section">
-            <h2>Placement Guarantee Courses</h2>
+            <h2>Career Launch Programs</h2>
             <div className="placement-grid">
                 {placementCourses.map((course, index) => (
                     <div key={index} className="placement-card">

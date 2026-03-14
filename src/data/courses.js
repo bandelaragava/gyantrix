@@ -44,7 +44,7 @@ export const coursesData = [
             { question: "What are the career opportunities after completing this course?", answer: "Graduates can apply for roles like AI Engineer, Data Scientist, ML Engineer, and Business Intelligence Analyst across various industries." },
             { question: "Is this course suitable for non-technical backgrounds?", answer: "Yes, we start with Python and SQL basics, making it ideal for anyone looking to transition into the AI field." },
             { question: "Will I get hands-on experience?", answer: "Absolutely. The course includes multiple real-world projects and a final Capstone project to build your portfolio." },
-            { question: "Do you provide placement assistance?", answer: "Yes, we offer 100% placement support, including resume building and mock interviews with industry experts." },
+            { question: "Do you provide placement assistance?", answer: "Yes, we offer Placement assistance and hiring partner interview opportunities, including resume building and mock interviews with industry experts." },
             { question: "What certifications will I receive?", answer: "You will receive a globally recognized certification from Gyantrix Academy upon successful completion." },
             { question: "What is the duration of the course?", answer: "The course is typically 9-12 months long with flexible weekend and weekday sessions." }
         ]

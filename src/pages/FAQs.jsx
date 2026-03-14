@@ -27,7 +27,7 @@ const FAQs = () => {
                 { id: "2-5", q: "How are trainers selected at Gyantrix Academy?", a: "Our trainers are industry veterans with extensive experience, selected through a rigorous process that ensures both deep domain knowledge and teaching proficiency." },
                 { id: "2-6", q: "Do you provide internship opportunities with MNCs and IT companies?", a: "We facilitate internship opportunities and project-based learning through our partnerships, helping candidates gain relevant work experience." },
                 { id: "1-7", q: "How do these certifications benefit my career?", a: "The certifications enhance your profile credibility, demonstrate specialized skills to recruiters, and significantly boost your chances of securing higher-paying jobs." },
-                { id: "1-8", q: "Is 100% placement assistance guaranteed?", a: "While we cannot guarantee 100% job placement, we provide dedicated, continuous placement support and interview opportunities until a candidate is successfully placed." }
+                { id: "1-8", q: "Is placement assistance provided?", a: "We provide dedicated placement support and hiring partner interview opportunities until a candidate is successfully placed." }
             ]
         }
     ];

@@ -13,7 +13,7 @@ const PlacementCourses = () => {
     return (
         <div className="placement-page" style={{ padding: '8rem 5% 4rem' }}>
             <h1 style={{ textAlign: 'center', marginBottom: '3rem', fontSize: '2.5rem', fontWeight: '700' }}>
-                Placement Guarantee Courses
+                Career Launch Programs
             </h1>
             <div className="placement-grid">
                 {placementCourses.map((course, index) => (
